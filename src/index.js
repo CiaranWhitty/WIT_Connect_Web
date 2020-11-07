@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom"
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import SiteHeader from './components/siteHeader'
+import HomePage from "./pages/homePage";
+import mapPage from './pages/mapPage'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+  return (
+<BrowserRouter>
+  <div className="jumbotron">
+    <SiteHeader />
+    
+    <div className="container-fluid">
+      <Switch>
+          
+          <Route path="/map" component={mapPage} />
+
+          <Route path="/" component={HomePage} />
+          <Redirect from="*" to="/" />
+        </Switch>
+      </div>
+      
+    </div>
+  </BrowserRouter>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
