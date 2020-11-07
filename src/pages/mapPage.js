@@ -1,4 +1,5 @@
 import React from "react";
+import WITMaps from '../components/witMaps'
 
 const mapPage = () => {
 
@@ -9,12 +10,13 @@ const mapPage = () => {
         <div className="col-3">
 
           <h1>Map</h1>
+          
+          <WITMaps />
 
         </div>
       </div>
 
-      
-      
+
     </>
   );
 };

@@ -1,0 +1,59 @@
+{
+"wit":[
+ 
+    {
+      "building_Name": "tl",
+      "center": [52.245268, -7.141980],
+      "north": 52.245063, 
+      "south": 52.245480, 
+      "east": -7.140905,  
+      "west": -7.142741  
+    },
+
+    {
+      "building_Name": "ftg",
+      "center": [52.246326, -7.137630],
+      "north": 52.246183, 
+      "south": 52.246518, 
+      "east": -7.137330,  
+      "west": -7.138552  
+    },
+
+    {
+      "building_Name": "main_building",
+      "center": [52.246056, -7.139711],
+      "north": 52.24569, 
+      "south": 52.24642, 
+      "east": -7.1390,  
+      "west": -7.1404  
+    },
+
+    {
+      "building_Name": "business_building",
+      "center": [52.245849, -7.138445],
+      "north": 52.245612, 
+      "south": 52.246078, 
+      "east": -7.137757,  
+      "west": -7.13899  
+    },
+
+    {
+      "building_Name": "it",
+      "center": [52.245800, -7.137233],
+      "north": 52.24558, 
+      "south": 52.245960,
+      "east": -7.137,  
+      "west": -7.137597  
+    },
+    
+    {
+      "building_Name": "nurses_building",
+      "center": [52.245557, -7.135936],
+      "north": 52.24543, 
+      "south": 52.245743, 
+      "east": -7.1357,  
+      "west": -7.136696  
+    }
+]
+
+}
