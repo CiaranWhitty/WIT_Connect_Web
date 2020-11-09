@@ -93,18 +93,14 @@ function Map(){
               }}
               
             >
+
             <div>
               <h5>{selectedBuilding.building_Name}</h5>
               
-              <table >
+              <table id="mapTable">
                 <tr>
                   <th>Floor</th>
-                  <th>| Room's</th>
-                </tr>
-
-                <tr>
-                  <td>______</td>
-                  <td>____________________________________</td>
+                  <th>Room's</th>
                 </tr>
 
                 <tr>
@@ -113,20 +109,10 @@ function Map(){
                 </tr>
 
                 <tr>
-                  <td>______</td>
-                  <td>____________________________________</td>
-                </tr>
-
-                <tr>
                   <td>1</td>
                   <td>{selectedBuilding.floor_1}</td>
                 </tr>
                 
-                <tr>
-                  <td>______</td>
-                  <td>____________________________________</td>
-                </tr>
-
                 <tr>
                   <td>2</td>
                   <td>{selectedBuilding.floor_2}</td>

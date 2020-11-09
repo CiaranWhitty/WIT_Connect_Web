@@ -66,3 +66,21 @@
   background-color: #e9ecef;
   border-radius: 0.3rem;
 }
+
+
+#mapTable {
+  font-family: arial, sans-serif;
+}
+
+#mapTable td, #mapTable th {
+  border: 1px solid #fff;
+  color:  #fff;
+  text-align: left;
+  padding: 8px;
+}
+
+#mapTable td a { 
+  display: block; 
+  border: 1px solid black;
+  padding: 16px; 
+}

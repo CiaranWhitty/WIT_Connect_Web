@@ -1,6 +1,8 @@
 import React from "react";
 import WITMaps from '../components/witMaps'
-import { Container, Header } from 'semantic-ui-react'
+import Timetable from '../components/WITTimetable'
+
+import { Container } from 'semantic-ui-react'
 
 
 const mapPage = () => {
@@ -13,6 +15,7 @@ const mapPage = () => {
 
         <WITMaps />
 
+        <Timetable/>
 
       </Container>
 
