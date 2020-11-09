@@ -1,21 +1,20 @@
 import React from "react";
 import WITMaps from '../components/witMaps'
+import { Container, Header } from 'semantic-ui-react'
+
 
 const mapPage = () => {
 
   return (
     <>
 
-      <div className="row">
-        <div className="col-3">
 
-          <h1>Map</h1>
-          
-          <WITMaps />
+      <Container fluid>
 
-        </div>
-      </div>
+        <WITMaps />
 
+
+      </Container>
 
     </>
   );

@@ -73,6 +73,7 @@ function Map(){
               onClick={() => {
                 //alert(building.building_Name);
                 setSelectedBuilding(building);
+
               }}
 
           />
@@ -152,7 +153,7 @@ const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 export default function App() {
   return (
-    <div style={{width:'90vw', height:'90vh'}}>
+    <div style={{width:'100vw', height:'85vh'}}>
       <WrappedMap
         googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_googleMaps_KEY}`}
         loadingElement={<div style={{ height: "100%"}}/>}

@@ -45,3 +45,24 @@
   rgba(255,255,255,0) 51%,
   rgba(255,255,255,0) 100%);
 }
+
+.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+  width: 100%;
+  padding-right: 0 !important; 
+  padding-left: 0 !important; 
+  margin-right: 0 !important; 
+  margin-left: 0 !important;
+}
+
+@media (min-width: 576px){
+  .jumbotron {
+      padding: 5rem 1rem;
+  }
+}
+
+.jumbotron {
+  padding: 3.5rem 0rem;
+  margin-bottom: 0rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
