@@ -1,0 +1,94 @@
+{
+  "timetableCollection": [
+    {
+      
+      "title": "Time Table 1",
+      "dateCreated": "09/11/2020",
+      "day": "Monday",
+      "times": [
+        {
+          "id": "01",
+          "Time": "9.15",
+          "Subject": "",
+          "Type": "",
+          "Duration": "",
+          "Lecturer": "",
+          "Room": ""
+        },
+        {
+          "id": "02",
+          "Time": "10.15",
+          "Subject": "",
+          "Type": "",
+          "Duration": "",
+          "Lecturer": "",
+          "Room": ""
+        },
+        {
+          "id": "03",
+          "Time": "11.15",
+          "Subject": "",
+          "Type": "",
+          "Duration": "",
+          "Lecturer": "",
+          "Room": ""
+        },
+        {
+          "id": "04",
+          "Time": "12.15",
+          "Subject": "",
+          "Type": "",
+          "Duration": "",
+          "Lecturer": "",
+          "Room": ""
+        },
+        {
+          "id": "05",
+          "Time": "13.15",
+          "Subject": "",
+          "Type": "",
+          "Duration": "",
+          "Lecturer": "",
+          "Room": ""
+        },
+        {
+          "id": "06",
+          "Time": "14.15",
+          "Subject": "",
+          "Type": "",
+          "Duration": "",
+          "Lecturer": "",
+          "Room": ""
+        },
+        {
+          "id": "07",
+          "Time": "15.15",
+          "Subject": "",
+          "Type": "",
+          "Duration": "",
+          "Lecturer": "",
+          "Room": ""
+        },
+        {
+          "id": "08",
+          "Time": "16.15",
+          "Subject": "",
+          "Type": "",
+          "Duration": "",
+          "Lecturer": "",
+          "Room": ""
+        },
+        {
+          "id": "09",
+          "Time": "17.15",
+          "Subject": "",
+          "Type": "",
+          "Duration": "",
+          "Lecturer": "",
+          "Room": ""
+        }
+      ]
+    
+    }
+  ]
+}

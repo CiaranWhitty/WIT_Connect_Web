@@ -1,0 +1,95 @@
+.timetableMainContainer{
+  padding: 3%;
+  margin-right: -50%;
+
+}
+
+@media (max-width: 1770px){
+  .timetableMainContainer{
+    padding: 3%;
+    margin-right: -40%;
+    
+  }
+}
+
+@media (max-width: 1655px){
+  .timetableMainContainer{
+    padding: 3%;
+    margin-right: -30%;
+    
+  }
+}
+
+@media (max-width: 1535px){
+  .timetableMainContainer{
+    padding: 3%;
+    margin-right: -20%;
+    
+  }
+}
+
+@media (max-width: 1415px){
+  .timetableMainContainer{
+    padding: 3%;
+    margin-right: -10%;
+    
+  }
+}
+
+@media (max-width: 1300px){
+  .timetableMainContainer{
+    padding: 3%;
+    margin-right: -5%;
+    
+  }
+}
+
+@media (max-width: 1240px){
+  .timetableMainContainer{
+    padding: 3%;
+    margin-right: 0%;
+    
+  }
+}
+
+#Table_SDD_Tuesday, #Table_SDD_Wednesday, #Table_SDD_Thursday, #Table_SDD_Friday {
+
+  display: none;
+
+}
+
+#ttTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 2% 0% 0% 5%;
+}
+
+#ttTable td, #ttTable th {
+    border: 1px solid black;
+    color: black;
+    text-align: left;
+    padding: 8px;
+}
+
+#ttTable tr:hover { 
+    
+}
+#ttTable td a { 
+    display: block; 
+    border: 1px solid black;
+    padding: 16px; 
+}
+
+#SDD_W1_Mon_9, #SDD_W1_Mon_10{
+
+background-color: Aqua
+
+}
+
+
+#SDD_W1_Mon_11, #SDD_W1_Mon_12, #SDD_W1_Mon_15, #SDD_W1_Mon_16{
+
+background-color:  orange
+
+}

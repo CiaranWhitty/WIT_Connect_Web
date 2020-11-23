@@ -1,19 +1,23 @@
 import React from "react";
+import WITMaps from '../components/witMaps'
+import Timetable from '../components/WITTimetable'
+
+import { Container } from 'semantic-ui-react'
+
 
 const mapPage = () => {
 
   return (
     <>
-      <div className="row">
-        <div className="col-3">
 
-          <h1>Map</h1>
+      <Container fluid>
 
-        </div>
-      </div>
+        <WITMaps />
 
-      
-      
+        <Timetable/>
+
+      </Container>
+
     </>
   );
 };
