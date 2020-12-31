@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { GoogleMap, withScriptjs, withGoogleMap, Rectangle, Marker, InfoWindow } from 'react-google-maps';
-import { Popup } from 'semantic-ui-react';
+import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
 import "./witMaps.css";
 
@@ -11,16 +10,16 @@ function Map(){
 
   var location = {lat: 52.245807, lng: -7.138853};
   
-  const customMaker = {
-    path:
-      "M10,0.186c-3.427,0-6.204,2.778-6.204,6.204c0,5.471,6.204,6.806,6.204,13.424c0-6.618,6.204-7.953,6.204-13.424C16.204,2.964,13.427,0.186,10,0.186z M10,14.453c-0.66-1.125-1.462-2.076-2.219-2.974C6.36,9.797,5.239,8.469,5.239,6.39C5.239,3.764,7.374,1.63,10,1.63c2.625,0,4.761,2.135,4.761,4.761c0,2.078-1.121,3.407-2.541,5.089C11.462,12.377,10.66,13.328,10,14.453z",
+  // const customMaker = {
+  //   path:
+  //     "M10,0.186c-3.427,0-6.204,2.778-6.204,6.204c0,5.471,6.204,6.806,6.204,13.424c0-6.618,6.204-7.953,6.204-13.424C16.204,2.964,13.427,0.186,10,0.186z M10,14.453c-0.66-1.125-1.462-2.076-2.219-2.974C6.36,9.797,5.239,8.469,5.239,6.39C5.239,3.764,7.374,1.63,10,1.63c2.625,0,4.761,2.135,4.761,4.761c0,2.078-1.121,3.407-2.541,5.089C11.462,12.377,10.66,13.328,10,14.453z",
 
-    fillColor: null,
-    fillOpacity: 0.8,
-    scale: 2,
-    strokeColor: "red",
-    strokeWeight: 2,
-  };
+  //   fillColor: null,
+  //   fillOpacity: 0.8,
+  //   scale: 2,
+  //   strokeColor: "red",
+  //   strokeWeight: 2,
+  // };
 
   return (
     

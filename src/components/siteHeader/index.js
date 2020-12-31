@@ -9,8 +9,6 @@ import AuthHeader from "../authentication/authHeader";
 
 import "./siteHeader.css";
 
-
-
 const SiteHeader = () => {
   
   const [isNavShowing, setIsNavShowing] = useState(true);
@@ -22,7 +20,7 @@ const SiteHeader = () => {
 
         <ul id= "b" className="navbar-nav">
           <li className="nav-item">
-            <a href="#" onClick={() => {
+            <a href="#top" onClick={() => {
               
               if(isNavShowing){
                 document.getElementById("nav2").style.display = "block"
