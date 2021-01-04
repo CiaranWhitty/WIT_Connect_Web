@@ -4,6 +4,35 @@
 }
 
 .jumbotron {
+  padding: 0rem 3rem !important;
+  background-color: inherit !important;
+}
+
+@media only screen and (max-width: 770px) {
+  .jumbotron {
+    padding: 0rem 0rem !important;
+    background-color: inherit !important;
+}
+}
+
+.ui.huge.borderless.menu {
+  height: 60px;
+}
+
+.signInButton{
+  margin-top: 10px;
+}
+
+
+
+
+/* 
+.fixed-top {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.jumbotron {
   padding: 4rem 0rem !important;
   margin-bottom: 2rem;
   background-color: #e9ecef;
@@ -18,7 +47,7 @@
     padding: 8px !important;
   }
   #logoText{
-    /*margin-right: 19rem; ?Maybe? */
+    /*margin-right: 19rem; ?Maybe? */                 /* 
       margin-right: -1rem !important;
     }
     
@@ -64,5 +93,6 @@
   text-decoration: none;
   font-size: 17px;
   
-}
+ }
 
+                                                      */
