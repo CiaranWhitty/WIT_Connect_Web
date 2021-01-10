@@ -1,25 +1,45 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../../globals/fontawesome";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../globals/fontawesome";
-
-import AuthHeader from "../authentication/authHeader";
-
 import "./siteHeader.css";
+import 'semantic-ui-css/semantic.min.css'
+import { Menu, Sticky } from 'semantic-ui-react'
+import { useAuth } from "../../contexts/AuthContext";
+import ButnLogOut from '../buttons/butnLogOut'
+import ButnSignIn from '../buttons/butnSignIn'
 
-const SiteHeader = () => {
+import { FaBars } from "react-icons/fa";
+
+export default function SiteHeader() {
+ 
+  const [isNavShowing, setIsNavShowing] = useState(false);
+
+  const context = useAuth();
   
-  const [isNavShowing, setIsNavShowing] = useState(true);
+  return context.isAuthenticated ? (
+    
+    //When logged in
+    <Sticky>
+      {/* pointing secondary or borderless */}
+      <Menu borderless size='huge' > 
+        <Menu.Item position='left'
+          name='WITConnect'
+          as={Link} to='/u/'
+          
+        />
 
-  return (
-    <div class="navContainer" id="navContainerjs">
+        <Menu.Menu position='right'>
+        
 
-      <nav id="navPadding" className="navbar  navbar-light fixed-top  bg-dark ">
+          <nav id= "nav2" >
+            <Menu.Item
+              name='Profile'
+              as={Link} to='/u/dashboard' 
+            />
 
-        <ul id= "b" className="navbar-nav">
-          <li className="nav-item">
+            <ButnLogOut />
+          </nav>
+
+          <Menu.Item>
             <a href="#top" onClick={() => {
               
               if(isNavShowing){
@@ -33,46 +53,61 @@ const SiteHeader = () => {
 
             }}>
 
-              <FontAwesomeIcon icon= "home" inverse />
+              <FaBars/>
             </a>
-          </li>
-        </ul>
+          </Menu.Item>
 
-        <nav id="logoText" className="navbar-brand text-white">
-          <Link className=" text-white" to="/">
-            WITConnect
-          </Link>
-        </nav>
-
-        <span id= "a" className="navbar-text text-light">
-          Connect, Collaborate, Create
-        </span>
-        <nav className="navbar navbar-expand ">
-          <ul id= "a" className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link text-white" to="/map">
-                Map
-              </Link>
-            </li>
-            <AuthHeader />
-          </ul>
-        </nav>
-      </nav>
-
-      <nav id= "nav2" >
-          <ul className="navbar-nav">
-            <li class="nav-item ">
-                <Link className="nav-link text-white" to="/map">
-                  Map
-                </Link>
-            </li>
-            <AuthHeader />
-          </ul>
-        </nav>
-
-    </div>
+        </Menu.Menu>
       
+      </Menu>
+      
+    </Sticky>
+
+  ) : (
+//When logged out
+    <Sticky>
+      {/* pointing secondary or borderless */}
+      <Menu borderless size='huge' > 
+        
+        <Menu.Item position='left'
+          name='WITConnect'
+          //active={activeItem === 'TMDB Client'}
+          as={Link} to='/'
+          //onClick={this.handleItemClick}
+          
+        />
+
+        <Menu.Menu position='right'>
+                      
+          <nav id= "nav2" >
+
+            <ButnSignIn />
+
+          </nav>
+
+          <Menu.Item>
+            <a href="#top" onClick={() => {
+              
+              if(isNavShowing){
+                document.getElementById("nav2").style.display = "block"
+                setIsNavShowing(false)
+              }
+              else{
+                document.getElementById("nav2").style.display = "none"
+                setIsNavShowing(true)
+              }
+
+            }}>
+
+              <FaBars/>
+            </a>
+          </Menu.Item>
+
+        </Menu.Menu>
+      
+      </Menu>
+      
+    </Sticky>
+
   );
 };
-
-export default SiteHeader;
