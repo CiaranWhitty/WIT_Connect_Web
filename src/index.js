@@ -1,6 +1,7 @@
 import React, { lazy, Suspense  } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom"
+import { Loader, Dimmer } from 'semantic-ui-react'
 
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -11,18 +12,17 @@ import PrivateRoute from "./routes/PrivateRoute";
 import AuthProvider from "./contexts/AuthContext";
 import SiteHeader from "./components/siteHeader";
 import HomePage from "./pages/homePage";
-import mapPage from './pages/mapPage';
-
-import signupPage from "./components/SignUp";
-import LoginPage from "./components/login";
-//import PrivateRoute from "./components/authentication/privateRoute";
-import AuthProvider from "./components/authentication/authContext";
 
 import signupPage from './pages/signUp'
 import loginPage from './pages/login'
-import ForgotPassword from "./pages/forgotPassword";
-import UpdateProfile from "./components/userFunction/UpdateProfile";
-const Dashboard = lazy(() => import("./pages/dashboard"));
+import ForgotPassword from "./pages/userFunction/forgotPassword";
+import UpdateProfile from "./pages/userFunction/updateProfile";
+
+const mapPage = lazy(() => import("./pages/mapPage"));
+const bounties = lazy(() => import("./pages/bounties"));
+const support = lazy(() => import("./pages/support"));
+const mentors = lazy(() => import("./pages/mentors"));
+const Profile = lazy(() => import("./pages/profile"));
 
 const App = () => {
 
@@ -35,11 +35,22 @@ const App = () => {
           <div className="jumbotron">
             <SiteHeader />
             <div className="container-fluid">
-                  <Suspense fallback={<h1>Loading page....</h1>}>
+                  <Suspense fallback={
+                  <Dimmer active>
+                    <Loader active size='massive' inline='centered' content='Loading' />
+                  </Dimmer>
+
+                  }>
+                  {/* <h2>loading...</h2> */}
+                  {/* <Loader active inline='centered' /> */}
                     <Switch>    
                       
                       {/* When logged in */}
-                      <PrivateRoute exact path="/u/dashboard" component={Dashboard} />
+                      <PrivateRoute exact path="/u/witmap" component={mapPage} />
+                      <PrivateRoute exact path="/u/bounties" component={bounties} />
+                      <PrivateRoute exact path="/u/support" component={support} />
+                      <PrivateRoute exact path="/u/mentors" component={mentors} />
+                      <PrivateRoute exact path="/u/profile" component={Profile} />
                       <PrivateRoute exact path="/u/update-profile" component={UpdateProfile} />
                       <PrivateRoute exact path="/u/" component={HomePage} />
                       
@@ -47,7 +58,11 @@ const App = () => {
                       <Route path="/forgotpassword" component={ForgotPassword} />
                       <Route path="/login" component={loginPage} />
                       <Route path="/signup" component={signupPage} />
-                    
+                      <Route path="/witmap" component={mapPage} />
+                      <Route path="/bounties" component={bounties} />
+                      <Route path="/support" component={support} />
+                      <Route path="/mentors" component={mentors} />
+
                       <Route path="/" component={HomePage} /> 
                       <Redirect from="*" to="/" />
 

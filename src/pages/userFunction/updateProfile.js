@@ -2,53 +2,64 @@ import React, { useRef, useState } from "react";
 import { Button, Form, Message, Container, Segment } from 'semantic-ui-react'
 
 import { useAuth } from "../../contexts/AuthContext";
-import { Link } from "react-router-dom"
+import { useHistory, Link } from "react-router-dom"
 
-import "./signup.css";
-
-export default function Signup() {
+export default function UpdateProfile() {
 
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
 
-  const {signup} = useAuth()
+  const {currentUser, updatePassword} = useAuth()
   
-  const [message, setMessage] = useState("")
+  const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
+  const history = useHistory()
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault()
 
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-      return setMessage("Passwords do not match")
+      return setError("Passwords do not match")
     }
 
-    try {
-      setMessage("")
-      setLoading(true)
-      await signup(emailRef.current.value, passwordRef.current.value)
-      setMessage("Congratulations Account created")
-    } catch {
-      setMessage("Failed to create an account")
-    }
+    const promises = []
+    setLoading(true)
+    setError("")
 
-    setLoading(false)
+    if(passwordRef.current.value){
+      promises.push(updatePassword(passwordRef.current.value))
+
+    }
+    Promise.all(promises)
+      .then(() => {
+        history.push("/u/profile")
+        
+      })
+      .catch(() => {
+        setError("Failed to update account")
+        
+
+      })
+      .finally(() => {
+
+        setLoading(false)
+      })
+
   }
 
   return (
     <>
-          
-    <div id="signinContainer">
 
+    <div id="signinContainer">
       <Container fluid>
         <Segment.Group>
           <Segment>
 
-            <h2>SignUp</h2>
+            <h2>UpdateProfile</h2>
             {/* testing user */}
             {/* {currentUser.email} */}
-            {message && <Message warning={true}>{message}</Message>}
+            {error && <Message warning={true}>{error}</Message>}
             <Form onSubmit={handleSubmit}>
               <Form.Field>
                 <label>Email Address:</label>
@@ -56,6 +67,7 @@ export default function Signup() {
                 name="email"
                 type="text"
                 placeholder="Email Address"
+                defaultValue={currentUser.email}
                 ref={emailRef}
                 required
                 />
@@ -65,7 +77,7 @@ export default function Signup() {
                 <input
                 name="passwordOne"
                 type="password"
-                placeholder="Password"
+                placeholder="Leave blank to keep the same"
                 ref={passwordRef}
                 required
                 />
@@ -75,22 +87,23 @@ export default function Signup() {
                 <input
                 name="passwordTwo"
                 type="password"
-                placeholder="Confirm Password"
+                placeholder="Leave blank to keep the same"
                 ref={passwordConfirmRef}
                 required
                 />
               </Form.Field>
               <Form.Field>
-                <label>Already have an account? <Link to="/login">Log In</Link></label>      
+                <Link to="/u/profile">Cancel</Link>     
               </Form.Field>
-              <Button disabled={loading} className="btnSignUp" type='submit'>Sign Up</Button>
+              <Button disabled={loading} className="btnSignUp" type='submit'>Update</Button>
             </Form>
-        
+
           </Segment>
         </Segment.Group>
       </Container>
 
     </div>
+
     </>
   )
 }

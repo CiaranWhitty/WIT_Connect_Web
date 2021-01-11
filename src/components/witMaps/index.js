@@ -9,17 +9,6 @@ function Map(){
   const [selectedBuilding, setSelectedBuilding] = useState(null);
 
   var location = {lat: 52.245807, lng: -7.138853};
-  
-  // const customMaker = {
-  //   path:
-  //     "M10,0.186c-3.427,0-6.204,2.778-6.204,6.204c0,5.471,6.204,6.806,6.204,13.424c0-6.618,6.204-7.953,6.204-13.424C16.204,2.964,13.427,0.186,10,0.186z M10,14.453c-0.66-1.125-1.462-2.076-2.219-2.974C6.36,9.797,5.239,8.469,5.239,6.39C5.239,3.764,7.374,1.63,10,1.63c2.625,0,4.761,2.135,4.761,4.761c0,2.078-1.121,3.407-2.541,5.089C11.462,12.377,10.66,13.328,10,14.453z",
-
-  //   fillColor: null,
-  //   fillOpacity: 0.8,
-  //   scale: 2,
-  //   strokeColor: "red",
-  //   strokeWeight: 2,
-  // };
 
   return (
     
@@ -32,34 +21,6 @@ function Map(){
       >
 
         {buildingData.wit.map(building => (
-          
-          // <Rectangle
-          //     key={building.building_Name}
-          //     options={{
-          //       strokeColor:"#FFFFFF00", 
-          //       strokeOpabuilds: 0.8,
-          //       strokeWeight:1,
-          //       fillColor: "#FFFFFF00",
-          //       fillOpacity:0.35       
-          //     }}
-          //     bounds={{
-          //       north: building.north,
-          //       south: building.south,
-          //       east: building.east,
-          //       west: building.west,
-          //     }}
-          //     onClick={() => {
-          //       alert(building.building_Name);
-                
-          //     }}
-
-          //     onMouseOver={() => {   
-          //       console.log(building);
-
-          //     }}
-
-          // />
-
 
           <Marker
               key={building.building_Name}
@@ -138,7 +99,7 @@ const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 export default function App() {
   return (
-    <div style={{width:'100vw', height:'85vh'}}>
+    <div class="MapContainer" >
       <WrappedMap
         googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_googleMaps_KEY}`}
         loadingElement={<div style={{ height: "100%"}}/>}

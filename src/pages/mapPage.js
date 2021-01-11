@@ -2,7 +2,7 @@ import React from "react";
 import WITMaps from '../components/witMaps'
 import Timetable from '../components/WITTimetable'
 
-import { Container } from 'semantic-ui-react'
+import { Container, Segment } from 'semantic-ui-react'
 
 
 const mapPage = () => {
@@ -11,10 +11,18 @@ const mapPage = () => {
     <>
 
       <Container fluid>
-
-        <WITMaps />
-
-        <Timetable/>
+      
+        <Segment.Group>
+          <Segment>
+            <WITMaps />
+          </Segment>
+        </Segment.Group>
+        
+        <Segment.Group>
+          <Segment>
+            <Timetable/>
+          </Segment>
+        </Segment.Group>
 
       </Container>
 

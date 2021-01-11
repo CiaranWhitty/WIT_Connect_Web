@@ -1,5 +1,5 @@
 import React, { useRef, useState} from "react";
-import { Button, Form, Message } from 'semantic-ui-react'
+import { Button, Form, Message, Container, Segment } from 'semantic-ui-react'
 
 import { useAuth } from "../../contexts/AuthContext";
 import { useHistory, Link } from "react-router-dom"
@@ -26,7 +26,7 @@ export default function LoginPage() {
       setLoading(true)
       await login(emailRef.current.value, passwordRef.current.value) 
       setIsAuthenticated(true)
-      history.push("u/dashboard")
+      history.push("u/profile")
     } catch {
       setMessage("Failed to log in")
       setIsAuthenticated(false)
@@ -36,43 +36,53 @@ export default function LoginPage() {
   }
 
   return (
-    <>
+    <>      
     
-      <div id="signinContainer">
-        <h2>Login page</h2>
+    <div id="signinContainer">
+        
+        <Container fluid>
+          <Segment.Group>
+            <Segment>
+            
+              <h2>Login page</h2>
 
-        {message && <Message warning={true}>{message}</Message>}
-        <Form onSubmit={handleSubmit}>
-          <Form.Field>
-            <label>Email Address:</label>
-            <input
-            name="email"
-            type="text"
-            placeholder="Email Address"
-            ref={emailRef}
-            required
-            />
-          </Form.Field>
-          <Form.Field>
-            <label>Password:</label>
-            <input
-            name="passwordOne"
-            type="password"
-            placeholder="Password"
-            ref={passwordRef}
-            required
-            />
-          </Form.Field>
-          <Form.Field>
-            <Link to="/forgotPassword">Forgot Password?</Link>   
-          </Form.Field>
-          <Form.Field>
-            <label>Need an account? <Link to="/signup">Sign Up</Link></label>      
-          </Form.Field>
-          <Button disabled={loading} className="btnSignUp" type='submit'>Log In</Button>
-        </Form>
+              {message && <Message warning={true}>{message}</Message>}
+              <Form onSubmit={handleSubmit}>
+                <Form.Field>
+                  <label>Email Address:</label>
+                  <input
+                  name="email"
+                  type="text"
+                  placeholder="Email Address"
+                  ref={emailRef}
+                  required
+                  />
+                </Form.Field>
+                <Form.Field>
+                  <label>Password:</label>
+                  <input
+                  name="passwordOne"
+                  type="password"
+                  placeholder="Password"
+                  ref={passwordRef}
+                  required
+                  />
+                </Form.Field>
+                <Form.Field>
+                  <Link to="/forgotPassword">Forgot Password?</Link>   
+                </Form.Field>
+                <Form.Field>
+                  <label>Need an account? <Link to="/signup">Sign Up</Link></label>      
+                </Form.Field>
+                <Button disabled={loading} className="btnSignUp" type='submit'>Log In</Button>
+              </Form>
+            
+            </Segment>
+          </Segment.Group>
+        </Container>
 
       </div>
+      
     </>
   )
 }
