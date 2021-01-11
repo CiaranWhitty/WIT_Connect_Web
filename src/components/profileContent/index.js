@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import { Accordion, Icon, Segment } from 'semantic-ui-react'
+import PortfoliosForm from '../portfolioForm'
+import PortfoliosList from '../portfolioList'
+import './style.css'
 
 export default class AccordionExampleStyled extends Component {
   state = { activeIndex: 0 }
@@ -17,9 +20,16 @@ export default class AccordionExampleStyled extends Component {
 
     return (
       
-      <Segment padded basic size={"big"}>
+      
+      <Segment id = "portfolioCon" padded basic size={"big"}>
+        <Segment attached='top'>
+        
+        <PortfoliosForm />
+        
+        </Segment>
 
         <Accordion fluid styled>
+{/*  */}
           <Accordion.Title
             active={activeIndex === 0}
             index={0}
@@ -29,11 +39,15 @@ export default class AccordionExampleStyled extends Component {
             First Year
           </Accordion.Title>
           <Accordion.Content active={activeIndex === 0}>
-            <p>
-              Content
-            </p>
-          </Accordion.Content>
+            
+            
+            
+            <h1>Items:</h1>
 
+            <PortfoliosList />
+
+          </Accordion.Content>
+{/*  */}
           <Accordion.Title
             active={activeIndex === 1}
             index={1}
@@ -46,8 +60,9 @@ export default class AccordionExampleStyled extends Component {
             <p>
               Content
             </p>
+            
           </Accordion.Content>
-
+{/*  */}
           <Accordion.Title
             active={activeIndex === 2}
             index={2}
@@ -60,8 +75,10 @@ export default class AccordionExampleStyled extends Component {
             <p>
               Content
             </p>
-          </Accordion.Content>
 
+
+          </Accordion.Content>
+{/*  */}
           <Accordion.Title
             active={activeIndex === 3}
             index={3}
@@ -74,8 +91,9 @@ export default class AccordionExampleStyled extends Component {
             <p>
               Content
             </p>
-          </Accordion.Content>
 
+          </Accordion.Content>
+{/*  */}
         </Accordion>
 
       </Segment>

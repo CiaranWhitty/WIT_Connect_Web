@@ -16,7 +16,8 @@ import HomePage from "./pages/homePage";
 import signupPage from './pages/signUp'
 import loginPage from './pages/login'
 import ForgotPassword from "./pages/userFunction/forgotPassword";
-import UpdateProfile from "./pages/userFunction/updateProfile";
+import updateProfile from "./pages/UpdateProfile";
+import updatePassword from "./pages/userFunction/updatePassword";
 
 const mapPage = lazy(() => import("./pages/mapPage"));
 const bounties = lazy(() => import("./pages/bounties"));
@@ -51,7 +52,8 @@ const App = () => {
                       <PrivateRoute exact path="/u/support" component={support} />
                       <PrivateRoute exact path="/u/mentors" component={mentors} />
                       <PrivateRoute exact path="/u/profile" component={Profile} />
-                      <PrivateRoute exact path="/u/update-profile" component={UpdateProfile} />
+                      <PrivateRoute exact path="/u/update-password" component={updatePassword} />
+                      <PrivateRoute exact path="/u/update-profile" component={updateProfile} />
                       <PrivateRoute exact path="/u/" component={HomePage} />
                       
                       {/* Normal view */}

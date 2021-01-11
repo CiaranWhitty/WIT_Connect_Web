@@ -37,6 +37,17 @@ export default function Profile() {
               >
               Update Profile
               </Button>
+              
+            </Card.Content>
+            
+            <Card.Content>
+              <Button 
+              as={Link} to="/u/update-password"  
+              size="big"
+              color="blue"
+              >
+              Update Password
+              </Button>
             </Card.Content>
 
             <Card.Content>

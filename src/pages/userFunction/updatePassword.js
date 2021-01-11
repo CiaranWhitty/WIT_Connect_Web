@@ -4,7 +4,7 @@ import { Button, Form, Message, Container, Segment } from 'semantic-ui-react'
 import { useAuth } from "../../contexts/AuthContext";
 import { useHistory, Link } from "react-router-dom"
 
-export default function UpdateProfile() {
+export default function UpdatePassword() {
 
   const emailRef = useRef()
   const passwordRef = useRef()
@@ -56,7 +56,7 @@ export default function UpdateProfile() {
         <Segment.Group>
           <Segment>
 
-            <h2>UpdateProfile</h2>
+            <h2>Update Password</h2>
             {/* testing user */}
             {/* {currentUser.email} */}
             {error && <Message warning={true}>{error}</Message>}

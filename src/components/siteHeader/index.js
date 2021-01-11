@@ -1,7 +1,7 @@
 import React from "react";
 import "./siteHeader.css";
 import 'semantic-ui-css/semantic.min.css'
-import { Sticky } from 'semantic-ui-react'
+// import { Sticky } from 'semantic-ui-react'
 import { useAuth } from "../../contexts/AuthContext";
 
 import LoggedIn from "./loggedIn";
