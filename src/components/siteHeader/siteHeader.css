@@ -4,15 +4,12 @@
 }
 
 .jumbotron {
-  padding: 0rem 3rem !important;
+  padding: 0rem 0rem !important;
   background-color: inherit !important;
 }
 
 @media (max-width: 770px){
-  .jumbotron {
-    padding: 0rem 0rem !important;
-    background-color: inherit !important;
-}
+
 .sidenav a {
   padding: 2%;
   text-decoration: none;
@@ -113,4 +110,12 @@
   
   display : "block" !important;
 
+}
+
+@media only screen and (max-width: 767px){
+  .ui.container {
+      width: auto!important;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+  }
 }
