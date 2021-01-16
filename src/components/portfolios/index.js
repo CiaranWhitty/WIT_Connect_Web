@@ -28,7 +28,7 @@ export default function Portfolio({ portfolio }){
     
     <div>
       
-      <Header as='h3' content='Item' textAlign='center' />
+      <Header as='h3' textAlign='center' />
       <Container>
         <Item.Group divided>
 
