@@ -54,9 +54,14 @@ export default function Portfolio({ portfolio }){
                   Delete Item
                   <Icon name='chevron right' />
                 </Button>
-                              
+                
+                
+
               </Item.Extra>
               
+              <Item.Description>
+                Created By: {portfolio.userEmail}
+              </Item.Description>
 
             </Item.Content>
           </Item>
