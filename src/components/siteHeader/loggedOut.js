@@ -86,23 +86,63 @@ export default function LoggedOut (){
                 <Menu.Item
                   name='Home'
                   as={Link} to='/'
+                  onClick={() => { 
+                    
+                      document.getElementById("myNav").style.width = "0%";
+    
+                      document.getElementById("buttonRemove").style.display = "block"
+                      setIsNavShowing(true)
+                    
+                  }}
                 />
 
                 <Menu.Item
                   name='Wit-Map'
                   as={Link} to='/witmap'
+                  onClick={() => { 
+                    
+                    document.getElementById("myNav").style.width = "0%";
+  
+                    document.getElementById("buttonRemove").style.display = "block"
+                    setIsNavShowing(true)
+                  
+                }}
                 />
                 <Menu.Item
                   name='Bounties'
                   as={Link} to='/bounties'
+                  onClick={() => { 
+                    
+                    document.getElementById("myNav").style.width = "0%";
+  
+                    document.getElementById("buttonRemove").style.display = "block"
+                    setIsNavShowing(true)
+                  
+                }}
                 />
                 <Menu.Item
                   name='Mentors'
                   as={Link} to='/mentors'
+                  onClick={() => { 
+                    
+                    document.getElementById("myNav").style.width = "0%";
+  
+                    document.getElementById("buttonRemove").style.display = "block"
+                    setIsNavShowing(true)
+                  
+                }}
                 />
                 <Menu.Item
                   name='Support'
                   as={Link} to='/support'
+                  onClick={() => { 
+                    
+                    document.getElementById("myNav").style.width = "0%";
+  
+                    document.getElementById("buttonRemove").style.display = "block"
+                    setIsNavShowing(true)
+                  
+                }}
                 />
 
                 <Menu.Item>

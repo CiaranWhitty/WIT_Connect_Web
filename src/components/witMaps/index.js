@@ -29,6 +29,16 @@ function Map(){
                 lng: building.center[1]
 
               }}
+
+              // icon={{
+              //   path: 'M2 2 H 100 V 60 H 2 L 2 2',
+              //   fillColor: 'white',
+              //   fillOpacity: 0,
+              //   strokeColor: '#000',
+              //   strokeWeight: 1,
+                
+              // }}
+
               //icon= {customMaker}
               onClick={() => {
                 //alert(building.building_Name);

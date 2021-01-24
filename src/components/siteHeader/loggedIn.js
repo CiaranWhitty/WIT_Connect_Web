@@ -89,27 +89,75 @@ export default function LoggedIn (){
             <Menu.Item
               name='Home'
               as={Link} to='/u/'
+              onClick={() => { 
+                    
+                document.getElementById("myNav").style.width = "0%";
+
+                document.getElementById("buttonRemove").style.display = "block"
+                setIsNavShowing(true)
+              
+            }}
             />
 
             <Menu.Item
               name='Wit-Map'
               as={Link} to='/u/witmap'
+              onClick={() => { 
+                    
+                document.getElementById("myNav").style.width = "0%";
+
+                document.getElementById("buttonRemove").style.display = "block"
+                setIsNavShowing(true)
+              
+            }}
             />
             <Menu.Item
               name='Bounties'
               as={Link} to='/u/bounties'
+              onClick={() => { 
+                    
+                document.getElementById("myNav").style.width = "0%";
+
+                document.getElementById("buttonRemove").style.display = "block"
+                setIsNavShowing(true)
+              
+            }}
             />
             <Menu.Item
               name='Mentors'
               as={Link} to='/u/mentors'
+              onClick={() => { 
+                    
+                document.getElementById("myNav").style.width = "0%";
+
+                document.getElementById("buttonRemove").style.display = "block"
+                setIsNavShowing(true)
+              
+            }}
             />
             <Menu.Item
               name='Support'
               as={Link} to='/u/support'
+              onClick={() => { 
+                    
+                document.getElementById("myNav").style.width = "0%";
+
+                document.getElementById("buttonRemove").style.display = "block"
+                setIsNavShowing(true)
+              
+            }}
             />
             <Menu.Item
               name='Profile'
               as={Link} to='/u/profile'
+              onClick={() => { 
+                    
+                document.getElementById("myNav").style.width = "0%";
+
+                document.getElementById("buttonRemove").style.display = "block"
+                setIsNavShowing(true)
+              
+            }}
             />
             
             <Menu.Item>
