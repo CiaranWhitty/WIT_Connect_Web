@@ -26,7 +26,7 @@ export default function Portfolio({ portfolio }){
 
     return (
     
-    <div>
+    <>
       
       <Header as='h3' textAlign='center' />
       <Container>
@@ -71,7 +71,7 @@ export default function Portfolio({ portfolio }){
         </Item.Group>
       </Container>
       
-      </div>
+      </>
 
     );
 }

@@ -20,6 +20,16 @@ export default function UpdateProfiles() {
 
             <Card.Content>
               <Button 
+              as={Link} to="/u/update-details"  
+              size="big"
+              color="blue"
+              >
+              Update Details
+              </Button>
+            </Card.Content>
+
+            <Card.Content>
+              <Button 
               as={Link} to="/u/update-password"  
               size="big"
               color="blue"

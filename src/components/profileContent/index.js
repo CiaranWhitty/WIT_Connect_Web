@@ -40,8 +40,6 @@ export default class AccordionExampleStyled extends Component {
           </Accordion.Title>
           <Accordion.Content active={activeIndex === 0}>
             
-            
-            
             <h1>Items:</h1>
 
             <PortfoliosList />
@@ -57,9 +55,10 @@ export default class AccordionExampleStyled extends Component {
             Second Year
           </Accordion.Title>
           <Accordion.Content active={activeIndex === 1}>
-            <p>
-              Content
-            </p>
+          
+          <h1>Items:</h1>
+
+          <PortfoliosList />
             
           </Accordion.Content>
 {/*  */}
@@ -72,11 +71,11 @@ export default class AccordionExampleStyled extends Component {
             Third Year
           </Accordion.Title>
           <Accordion.Content active={activeIndex === 2}>
-            <p>
-              Content
-            </p>
+          
+          <h1>Items:</h1>
 
-
+          <PortfoliosList />
+            
           </Accordion.Content>
 {/*  */}
           <Accordion.Title
@@ -88,10 +87,11 @@ export default class AccordionExampleStyled extends Component {
             Fourth Year
           </Accordion.Title>
           <Accordion.Content active={activeIndex === 3}>
-            <p>
-              Content
-            </p>
+          
+          <h1>Items:</h1>
 
+          <PortfoliosList />
+            
           </Accordion.Content>
 {/*  */}
         </Accordion>

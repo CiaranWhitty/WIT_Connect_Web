@@ -48,10 +48,16 @@ export default function UpdatePassword() {
 
   }
 
+  const cancelBtn = () => {
+   
+    history.push("/u/update-profile")
+
+  };
+
   return (
     <>
 
-    <div id="signinContainer">
+    <div id="Forms">
       <Container fluid>
         <Segment.Group>
           <Segment>
@@ -92,10 +98,13 @@ export default function UpdatePassword() {
                 required
                 />
               </Form.Field>
-              <Form.Field>
-                <Link to="/u/profile">Cancel</Link>     
-              </Form.Field>
-              <Button disabled={loading} className="btnSignUp" type='submit'>Update</Button>
+
+              <Button positive disabled={loading} className="btnSignUp" type='submit'>Update</Button>
+              
+              <Button negative onClick={cancelBtn}>
+                Cancel
+              </Button>
+              
             </Form>
 
           </Segment>

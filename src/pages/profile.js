@@ -2,32 +2,73 @@ import React, {  } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { Link } from "react-router-dom"
 
-import { Header, Button, Card, Grid, Image } from 'semantic-ui-react'
+import { Button, Card, Grid, Segment, Container } from 'semantic-ui-react'
 //  Icon, Image Container,
 import ButnLogOut from '../components/buttons/butnLogOut'
 import ProfileContent from '../components/profileContent'
+//import ProfileDetailsList from '../components/profileDetailsList'
 
-export default function Profile() {
+import { AiFillGithub, AiFillTwitterCircle, AiOutlineMail, AiFillYoutube} from "react-icons/ai";
+
+
+export default function Profile({ Users }) {
   // const [error, setError] = useState("")
   const { currentUser } = useAuth()
 
   return (
     <>
+  
 
-    <Grid >
+    
+    <Grid id = "portfolioCon">
       <Grid.Row textAlign='center'>
 
         <Grid.Column width={16}>
               
-          <Header as='h2'>
-            Profile
-          </Header>
+            <Container fluid>
+            <Segment.Group>
+              <Segment>
+                
+                <div id="portfolioHeader">
+                  <header>
+                    <div>
+                    
+                      <img alt="Profile_Image" src='https://res.cloudinary.com/a20085909/image/upload/v1592601611/nedjkjyve4j8j2gbr8ak.jpg' />
+                    
+                      <div>
 
-          <Image src='https://res.cloudinary.com/a20085909/image/upload/v1592601611/nedjkjyve4j8j2gbr8ak.jpg' size='medium' centered circular/>
+                        <a href="/u/update-profile">
+                          <h1>
+                            {currentUser.name || <h1>Ciaran Whitty</h1> }
+                          </h1>
+                        </a>
+                        
+                        <small>
+                          {currentUser.age || <small>(AGE),</small> }
+                        </small>
+
+                        <small>
+                          {currentUser.course || <small>(Course)</small> }
+                        </small>
+
+                      </div>
+                    </div>
+                    <nav>
+                      <ul>
+                        <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><AiFillYoutube /></a></li>
+                        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer"><AiFillGithub /></a></li>
+                        <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><AiFillTwitterCircle /></a></li>
+                        <li><a href={`mailto:${currentUser.email}`}><AiOutlineMail /></a></li>
+                      </ul>
+                    </nav>
+                  </header>
+                </div>
+              
+              </Segment>
+            </Segment.Group>
+          </Container>
+
           <Card centered>
-            <Card.Content >
-              <Card.Header><strong>Email:</strong> {currentUser.email}</Card.Header>
-            </Card.Content>
 
             <Card.Content>
               <Button 
@@ -38,16 +79,6 @@ export default function Profile() {
               Update Profile
               </Button>
               
-            </Card.Content>
-            
-            <Card.Content>
-              <Button 
-              as={Link} to="/u/update-password"  
-              size="big"
-              color="blue"
-              >
-              Update Password
-              </Button>
             </Card.Content>
 
             <Card.Content>

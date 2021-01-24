@@ -8,6 +8,7 @@ export default function PortfolioList() {
 
   useEffect(() => {
     const portfolioRef = app.database().ref('Portfolio');
+    
     portfolioRef.on('value', (snapshot) => {
       const portfolios = snapshot.val();
       const portfolioList = [];
@@ -16,6 +17,7 @@ export default function PortfolioList() {
       }
       setPortfolioList(portfolioList);
     });
+
   }, []);
 
   return (

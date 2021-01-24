@@ -28,7 +28,7 @@ export default function ForgotPassword() {
 
   return (
     <>
-    <div id="signinContainer">
+    <div id="Forms">
       
       <Container fluid>
         <Segment.Group>
