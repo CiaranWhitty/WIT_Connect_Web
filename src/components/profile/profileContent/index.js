@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Accordion, Icon, Segment } from 'semantic-ui-react'
-import PortfoliosForm from '../portfolioForm'
-import PortfoliosList from '../portfolioList'
+import PortfoliosForm from '../../portfolios/portfolioForm'
+import PortfoliosList from '../../portfolios/portfolioList'
 import './style.css'
 
 export default class AccordionExampleStyled extends Component {

@@ -61,20 +61,6 @@
   margin-left: 0 !important;
 }
 
-@media (min-width: 576px){
-  .jumbotron {
-      padding: 5rem 1rem;
-  }
-}
-
-.jumbotron {
-  padding: 3.5rem 0rem;
-  margin-bottom: 0rem;
-  background-color: #e9ecef;
-  border-radius: 0.3rem;
-}
-
-
 #mapTable {
   font-family: arial, sans-serif;
 }

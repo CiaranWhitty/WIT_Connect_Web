@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import app from "../../firebase/firebase"
-import Portfolio from '../portfolios'
+import app from "../../../firebase/firebase"
+import Portfolio from '..'
 
 export default function PortfolioList() {
   

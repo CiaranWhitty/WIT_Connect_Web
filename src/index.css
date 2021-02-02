@@ -1,54 +1,57 @@
 html {
-  height:100%;
+  height: 100%;
 }
 
 body {
-  margin:0;
+  margin: 0;
 }
 
-.container-fluid{
-
-background-color: transparent !important;
+.container-fluid {
+  background-color: transparent !important;
 }
-.bg-warning{
-
-background-color: transparent !important;
+.bg-warning {
+  background-color: transparent !important;
 }
 
 .bg {
-  animation:slide 6s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, var(--danger) 50%, var(--orange) 50%);  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
+  animation: slide 6s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    var(--danger) 50%,
+    var(--orange) 50%
+  );
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
 }
 
 .bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:8s;
+  animation-direction: alternate-reverse;
+  animation-duration: 8s;
 }
 
 .bg3 {
-  animation-duration:10s;
+  animation-duration: 10s;
 }
 
 .content {
-  padding: 0px 0 0 0;
+  padding: 0 0 0 0;
 }
 
 h1 {
-  font-family:monospace;
+  font-family: monospace;
 }
 
 @keyframes slide {
   0% {
-    transform:translateX(-25%);
+    transform: translateX(-25%);
   }
   100% {
-    transform:translateX(25%);
+    transform: translateX(25%);
   }
 }
 
@@ -57,10 +60,8 @@ h1 {
 }
 
 #portfolioHeader svg {
-
   width: 40px;
   height: 40px;
-
 }
 
 #portfolioHeader header {
@@ -68,7 +69,7 @@ h1 {
   justify-content: space-between;
 }
 
-#portfolioHeader header>div {
+#portfolioHeader header > div {
   display: flex;
   align-items: center;
 }
@@ -96,50 +97,91 @@ a {
   font-family: Lato;
   font-weight: 700;
   color: #686868;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
 }
 
 #portfolioHeader header nav ul {
   list-style: none;
   padding: 0;
-  margin-top: 25px !important; 
+  margin-top: 25px !important;
   margin-bottom: 0 !important;
 }
 
 #portfolioHeader header nav ul li {
   display: inline-block;
   color: #313131;
-  letter-spacing: .1px;
+  letter-spacing: 0.1px;
 }
 
 #portfolioHeader header nav ul li:not(:first-child) {
   margin-left: 50px;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
   #portfolioHeader header {
-      display: block;
-      text-align: center;
+    display: block;
+    text-align: center;
   }
 }
 
-@media (max-width: 800px){
-  #portfolioHeader header>div {
-      justify-content: center;
+@media (max-width: 800px) {
+  #portfolioHeader header > div {
+    justify-content: center;
   }
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
   #portfolioHeader header nav {
-      margin-top: 30px;
+    margin-top: 30px;
   }
 }
 
-#Forms{
-
+#Forms {
   width: 50%;
   text-align: center;
   margin: 5% auto 5% auto;
   padding: auto, 15px, auto, 15px;
 }
 
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 5rem 1rem;
+  }
+}
+
+#jumbotron {
+  padding: 0rem 0rem !important;
+  background-color: inherit !important;
+}
+
+#jumbotron {
+  padding: 3.5rem 0rem;
+  margin-bottom: 0rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+/* Home Page CSS */
+#homePageContainer {
+}
+
+#contentContainer {
+  margin-right: -30px;
+  margin-left: 1px;
+}
+
+#segmentContainer {
+  background-color: #ffffff;
+}
+
+#segmentBigContent {
+  width: auto;
+  height: 600px;
+  background-color: #ffffff;
+}
+
+#segmentSmallContent {
+  width: auto;
+  height: 400px;
+  background-color: #ffffff;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import app from "../../firebase/firebase"
-import { useAuth } from "../../contexts/AuthContext";
+import app from "../../../firebase/firebase"
+import { useAuth } from "../../../contexts/AuthContext";
 import { Button, Modal, TextArea, Select, Grid } from 'semantic-ui-react'
 
 import './style.css'

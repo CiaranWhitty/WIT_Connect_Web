@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import { Button, Card, Grid, Segment, Container } from 'semantic-ui-react'
 //  Icon, Image Container,
 import ButnLogOut from '../components/buttons/butnLogOut'
-import ProfileContent from '../components/profileContent'
+import ProfileContent from '../components/profile/profileContent'
 //import ProfileDetailsList from '../components/profileDetailsList'
 
 import { AiFillGithub, AiFillTwitterCircle, AiOutlineMail, AiFillYoutube} from "react-icons/ai";

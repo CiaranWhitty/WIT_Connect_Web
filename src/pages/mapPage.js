@@ -1,6 +1,6 @@
 import React from "react";
 import WITMaps from '../components/witMaps'
-import Timetable from '../components/WITTimetable'
+import Timetable from '../components/witTimetable'
 import { useAuth } from "../contexts/AuthContext";
 
 import { Container, Segment } from 'semantic-ui-react'

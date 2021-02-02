@@ -3,11 +3,6 @@
   padding-bottom: 0px;
 }
 
-.jumbotron {
-  padding: 0rem 0rem !important;
-  background-color: inherit !important;
-}
-
 @media (max-width: 770px){
 
 .sidenav a {
