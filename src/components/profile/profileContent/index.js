@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import { Accordion, Icon, Segment } from 'semantic-ui-react'
 import PortfoliosForm from '../../portfolios/portfolioForm'
 import PortfoliosList from '../../portfolios/portfolioList'
+// import Portfolio from '../../portfolios/portfolio'
+
 import './style.css'
 
-export default class AccordionExampleStyled extends Component {
+export default class ProfileAccordion extends Component {
   state = { activeIndex: 0 }
 
   handleClick = (e, titleProps) => {
@@ -41,8 +43,10 @@ export default class AccordionExampleStyled extends Component {
           <Accordion.Content active={activeIndex === 0}>
             
             <h1>Items:</h1>
-
+            
             <PortfoliosList />
+
+            {/* <PortfoliosList /> */}
 
           </Accordion.Content>
 {/*  */}
@@ -58,7 +62,7 @@ export default class AccordionExampleStyled extends Component {
           
           <h1>Items:</h1>
 
-          <PortfoliosList />
+          {/* <PortfoliosList /> */}
             
           </Accordion.Content>
 {/*  */}
@@ -74,7 +78,7 @@ export default class AccordionExampleStyled extends Component {
           
           <h1>Items:</h1>
 
-          <PortfoliosList />
+          {/* <PortfoliosList /> */}
             
           </Accordion.Content>
 {/*  */}
@@ -90,7 +94,7 @@ export default class AccordionExampleStyled extends Component {
           
           <h1>Items:</h1>
 
-          <PortfoliosList />
+          {/* <PortfoliosList /> */}
             
           </Accordion.Content>
 {/*  */}
