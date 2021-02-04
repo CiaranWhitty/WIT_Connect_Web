@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import app from "../../../firebase/firebase";
 import { useAuth } from "../../../contexts/AuthContext";
 
-import Ports from "../Ports";
+import Portfolios from "../portfolios";
 
-export default function PortfolioList() {
+export default function PortfolioMain() {
   const [portfolioList, setPortfolioList] = useState([]);
 
   const { currentUser } = useAuth();
@@ -33,7 +33,7 @@ export default function PortfolioList() {
 
   return (
     <>
-      <Ports portfolioList={portfolioList} />
+      <Portfolios portfolioList={portfolioList} />
     </>
   );
 }

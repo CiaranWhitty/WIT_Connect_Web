@@ -1,7 +1,7 @@
 import React from "react";
 import Portfolio from "../portfolio";
 
-export default function Ports({ portfolioList }) {
+export default function Portfolios({ portfolioList }) {
   return (
     <>
       {portfolioList.map((portfolio) => (

@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Accordion, Icon, Segment } from 'semantic-ui-react'
-import PortfoliosForm from '../../portfolios/portfolioForm'
-import PortfoliosList from '../../portfolios/portfolioList'
-// import Portfolio from '../../portfolios/portfolio'
+import PortfoliosForm from '../../portfolioComponents/portfolioForm'
+import PortfoliosList from '../../portfolioComponents/portfolioMain'
 
 import './style.css'
 
@@ -46,8 +45,6 @@ export default class ProfileAccordion extends Component {
             
             <PortfoliosList />
 
-            {/* <PortfoliosList /> */}
-
           </Accordion.Content>
 {/*  */}
           <Accordion.Title
@@ -61,8 +58,6 @@ export default class ProfileAccordion extends Component {
           <Accordion.Content active={activeIndex === 1}>
           
           <h1>Items:</h1>
-
-          {/* <PortfoliosList /> */}
             
           </Accordion.Content>
 {/*  */}
@@ -77,8 +72,6 @@ export default class ProfileAccordion extends Component {
           <Accordion.Content active={activeIndex === 2}>
           
           <h1>Items:</h1>
-
-          {/* <PortfoliosList /> */}
             
           </Accordion.Content>
 {/*  */}
@@ -93,8 +86,6 @@ export default class ProfileAccordion extends Component {
           <Accordion.Content active={activeIndex === 3}>
           
           <h1>Items:</h1>
-
-          {/* <PortfoliosList /> */}
             
           </Accordion.Content>
 {/*  */}
