@@ -19,7 +19,7 @@ const homePage = () => {
               </Segment.Group>
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row columns={2}>
+          <Grid.Row columns={2} id="segmentSmallContainer">
             <Grid.Column>
               <Segment.Group id="segmentContainer">
                 <Segment id="segmentSmallContent" basic>
@@ -35,7 +35,7 @@ const homePage = () => {
               </Segment.Group>
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row columns={2}>
+          <Grid.Row columns={2} id="segmentSmallContainer">
             <Grid.Column>
               <Segment.Group id="segmentContainer">
                 <Segment id="segmentSmallContent" basic>
