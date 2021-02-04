@@ -1,160 +1,121 @@
-import React, {useState} from 'react'
-import { Menu } from 'semantic-ui-react'
-import ButnSignIn from '../buttons/butnSignIn'
+import React, { useState } from "react";
+import { Menu } from "semantic-ui-react";
+import ButnSignIn from "../buttons/butnSignIn";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiXCircle } from "react-icons/bi";
-import { Image } from 'semantic-ui-react'
+import { Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-export default function LoggedOut (){
-  
+export default function LoggedOut() {
   const [isNavShowing, setIsNavShowing] = useState(true);
-  
+
+  const closeMenuWhenClicked = () => {
+    document.getElementById("myNav").style.width = "0%";
+
+    document.getElementById("buttonRemove").style.display = "block";
+    setIsNavShowing(true);
+  };
+
+  const menuOpenClose = () => {
+    if (isNavShowing) {
+      document.getElementById("myNav").style.width = "100%";
+      document.getElementById("buttonRemove").style.display = "none";
+      setIsNavShowing(false);
+    } else {
+      document.getElementById("myNav").style.width = "0%";
+      document.getElementById("buttonRemove").style.display = "block";
+      setIsNavShowing(true);
+    }
+  };
+
   return (
-    
     <div>
-      <Menu size='massive' stackable pointing>
-        <Menu.Menu>
-        
-        <Menu.Item>
-          <a 
-          href="#menu"
-          onClick={() => { 
-            if(isNavShowing){
-              document.getElementById("myNav").style.width = "100%"
-              document.getElementById("buttonRemove").style.display = "none"
-              setIsNavShowing(false)
-            }
-            else{
-              document.getElementById("myNav").style.width = "0%"
-              document.getElementById("buttonRemove").style.display = "block"
-              setIsNavShowing(true)
-            }
-            
-
-          }}>
-            <GiHamburgerMenu/>
-          </a> 
-        </Menu.Item>
-        </Menu.Menu>
+      <Menu size="massive" pointing>
         
         <Menu.Menu >
-            <Image
-                className="navLogo"
-                spaced          
-                alt='Logo'
-                as={Link}
-                to='/'
-                href="/"
-                src='https://res.cloudinary.com/a20085909/image/upload/v1610756088/Logos_V2.2_jfc4oi.png'
-                
-              />
-          </Menu.Menu>
 
-          <Menu.Menu position='right'>
-            <Menu.Item
-            id="buttonRemove"
-            >
-              <ButnSignIn />
-            </Menu.Item>
-          </Menu.Menu>
-
-        <Menu.Menu >
-          <div id="myNav" class="overlay"> 
-            <Menu.Item class="closebtn">
-              <a
+          <Menu.Item>
+            <a
               href="#menu"
               onClick={() => {
-                if(isNavShowing){
-                  document.getElementById("myNav").style.width = "100%"
-                  document.getElementById("buttonRemove").style.display = "none"
-                  setIsNavShowing(false)
-                }
-                else{
-                  document.getElementById("myNav").style.width = "0%"
-                  document.getElementById("buttonRemove").style.display = "block"
-                  setIsNavShowing(true)
-                }
+                menuOpenClose();
+              }}
+            >
+              <GiHamburgerMenu />
+            </a>
+          </Menu.Item>
+          
+            <Image
+              className="navLogo"
+              spaced
+              alt="Logo"
+              as={Link}
+              to="/"
+              href="/"
+              src="https://res.cloudinary.com/a20085909/image/upload/v1610756088/Logos_V2.2_jfc4oi.png"
+            />
+        </Menu.Menu>
 
-              }}>
-                <BiXCircle/>
+        <Menu.Item position="right" id="buttonRemove">
+          <ButnSignIn />
+        </Menu.Item>
+
+
+        <Menu.Menu>
+          <div id="myNav" class="overlay">
+            <Menu.Item class="closebtn">
+              <a
+                href="#menu"
+                onClick={() => {
+                  menuOpenClose();
+                }}
+              >
+                <BiXCircle />
               </a>
             </Menu.Item>
 
-              <div id="myNavItems"> 
-
-                <Menu.Item
-                  name='Home'
-                  as={Link} to='/'
-                  onClick={() => { 
-                    
-                      document.getElementById("myNav").style.width = "0%";
-    
-                      document.getElementById("buttonRemove").style.display = "block"
-                      setIsNavShowing(true)
-                    
-                  }}
-                />
-
-                <Menu.Item
-                  name='Wit-Map'
-                  as={Link} to='/witmap'
-                  onClick={() => { 
-                    
-                    document.getElementById("myNav").style.width = "0%";
-  
-                    document.getElementById("buttonRemove").style.display = "block"
-                    setIsNavShowing(true)
-                  
+            <div id="myNavItems">
+              <Menu.Item
+                name="Home"
+                as={Link}
+                to="/"
+                onClick={() => {
+                  closeMenuWhenClicked();
                 }}
-                />
-                <Menu.Item
-                  name='Bounties'
-                  as={Link} to='/bounties'
-                  onClick={() => { 
-                    
-                    document.getElementById("myNav").style.width = "0%";
-  
-                    document.getElementById("buttonRemove").style.display = "block"
-                    setIsNavShowing(true)
-                  
-                }}
-                />
-                <Menu.Item
-                  name='Mentors'
-                  as={Link} to='/mentors'
-                  onClick={() => { 
-                    
-                    document.getElementById("myNav").style.width = "0%";
-  
-                    document.getElementById("buttonRemove").style.display = "block"
-                    setIsNavShowing(true)
-                  
-                }}
-                />
-                <Menu.Item
-                  name='Support'
-                  as={Link} to='/support'
-                  onClick={() => { 
-                    
-                    document.getElementById("myNav").style.width = "0%";
-  
-                    document.getElementById("buttonRemove").style.display = "block"
-                    setIsNavShowing(true)
-                  
-                }}
-                />
+              />
 
-                <Menu.Item>
-                  <ButnSignIn />
-                </Menu.Item>
+              <Menu.Item
+                name="Wit-Map"
+                as={Link}
+                to="/witmap"
+                onClick={() => {
+                  closeMenuWhenClicked();
+                }}
+              />
+              <Menu.Item
+                name="Mentors"
+                as={Link}
+                to="/mentors"
+                onClick={() => {
+                  closeMenuWhenClicked();
+                }}
+              />
+              <Menu.Item
+                name="Support"
+                as={Link}
+                to="/support"
+                onClick={() => {
+                  closeMenuWhenClicked();
+                }}
+              />
 
-              </div>
+              <Menu.Item>
+                <ButnSignIn />
+              </Menu.Item>
             </div>
-            
+          </div>
         </Menu.Menu>
       </Menu>
     </div>
-
-    );
+  );
 }

@@ -3,16 +3,15 @@
   padding-bottom: 0px;
 }
 
-@media (max-width: 770px){
-
-.sidenav a {
-  padding: 2%;
-  text-decoration: none;
-  font-size: 50px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
+@media (max-width: 770px) {
+  .sidenav a {
+    padding: 2%;
+    text-decoration: none;
+    font-size: 50px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
 }
 
 .ui.huge.borderless.menu {
@@ -26,8 +25,8 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -40,7 +39,7 @@
   margin-top: 30px;
 }
 
-.overlay a{
+.overlay a {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
@@ -56,12 +55,19 @@
   padding-left: 0%;
 }
 
-#myNavItems button, #myNavItems.Item.a{
+#myNavItems button,
+#myNavItems.Item.a {
   margin-left: auto;
   margin-right: auto;
 }
 
-.overlay a:hover, .overlay a:focus {
+#myNav a:hover,
+#myNav a:focus {
+  color: #f1f1f1 !important;
+}
+
+.overlay a:hover,
+.overlay a:focus {
   color: #f1f1f1;
 }
 
@@ -73,42 +79,36 @@
 }
 
 @media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
+  .overlay a {
+    font-size: 20px;
+  }
   .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
 
-
-#myNav{
-
+#myNav {
   width: 0%;
-
 }
-.navLogo{
-
+.navLogo {
   padding-top: 11px;
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px) {
   .ui.stackable.menu .item {
-    width: 100%!important;
+    width: 100% !important;
   }
 }
-#buttonRemove{
-  
+#buttonRemove {
   display: "block" !important;
-
 }
 
-
-
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px) {
   .ui.container {
-      width: auto!important;
-      margin-right: 0 !important;
-      margin-left: 0 !important;
+    width: auto !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 }
