@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { Button, Form, Message, Container, Segment } from 'semantic-ui-react'
 
 import { useAuth } from "../../contexts/AuthContext";
-import { useHistory, Link } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 export default function UpdatePassword() {
 
