@@ -109,7 +109,7 @@ const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 export default function App() {
   return (
-    <div class="MapContainer" >
+    <div className="MapContainer" >
       <WrappedMap
         googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_googleMaps_KEY}`}
         loadingElement={<div style={{ height: "100%"}}/>}

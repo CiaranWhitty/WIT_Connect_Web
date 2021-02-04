@@ -45,7 +45,7 @@ const timetable = () => {
   return (
     <>
 
-      <div class="timetableMainContainer">
+      <div className="timetableMainContainer">
       
         <div>
             { listTT }

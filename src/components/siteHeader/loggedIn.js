@@ -68,8 +68,8 @@ export default function LoggedIn() {
 
 
         <Menu.Menu>
-          <div id="myNav" class="overlay">
-            <Menu.Item class="closebtn">
+          <div id="myNav" className="overlay">
+            <Menu.Item className="closebtn">
               <a
                 href="#menu"
                 onClick={() => {
