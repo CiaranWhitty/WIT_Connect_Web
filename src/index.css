@@ -162,12 +162,19 @@ a {
 }
 
 /* Home Page CSS */
+
 #homePageContainer {
+  padding: 0 !important;
+  margin: 0px -15px 0px 15px !important;
+  width: auto !important; 
 }
 
-#contentContainer {
-  margin-right: -30px !important;
-  margin-left: 1px !important;
+@media only screen and (max-width: 767px) {
+  #homePageContainer {
+    padding: 0 !important;
+    margin: 0px 0px 0px 0px !important;
+    width: auto !important; 
+  }
 }
 
 #segmentContainer {
@@ -186,15 +193,15 @@ a {
   background-color: #ffffff;
 }
 
+#segmentSmallContainer {
+  margin-left: 0rem !important;
+  margin-right: 2.5rem !important;
+}
+
 @media only screen and (max-width: 767px) {
-  #contentContainer {
-    margin-left: -1rem !important;
-    margin-right: -1rem !important;
+  #segmentSmallContainer {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
   }
 }
-
-#segmentSmallContainer {
-  margin-left: 2rem !important;
-  margin-right: 2rem !important;
-}
-
+/* Home Page CSS */

@@ -1,10 +1,10 @@
 import React from "react";
-import { Segment, Header, Grid } from "semantic-ui-react";
+import { Segment, Header, Grid, Container } from "semantic-ui-react";
 
 const homePage = () => {
   return (
     <>
-      <div id="homePageContainer">
+      <Container id="homePageContainer">
         <Grid id="contentContainer" stackable>
           <Grid.Row columns={1}>
             <Grid.Column>
@@ -61,7 +61,7 @@ const homePage = () => {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      </div>
+      </Container>
     </>
   );
 };
