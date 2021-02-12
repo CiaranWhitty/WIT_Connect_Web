@@ -166,14 +166,14 @@ a {
 #homePageContainer {
   padding: 0 !important;
   margin: 0px -15px 0px 15px !important;
-  width: auto !important; 
+  width: auto !important;
 }
 
 @media only screen and (max-width: 767px) {
   #homePageContainer {
     padding: 0 !important;
     margin: 0px 0px 0px 0px !important;
-    width: auto !important; 
+    width: auto !important;
   }
 }
 
@@ -183,8 +183,20 @@ a {
 
 #segmentBigContent {
   width: auto;
-  height: 600px;
-  background-color: #ffffff;
+  background-size: cover;
+  background-position: 50% 100%;
+  padding: 0;
+  /* background: linear-gradient(to bottom, #7927b2, #fb3182); */
+}
+
+@media only screen and (max-width: 1600px) {
+  #segmentBigContent img{
+    height: 60vh;
+  }
+}
+
+#segmentBigContent img {
+  width: -webkit-fill-available;
 }
 
 #segmentSmallContent {

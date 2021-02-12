@@ -1,5 +1,6 @@
 import React from "react";
 import { Segment, Header, Grid, Container } from "semantic-ui-react";
+import BigPicture from "../components/pageComponents/bigPicture";
 
 const homePage = () => {
   return (
@@ -10,11 +11,12 @@ const homePage = () => {
             <Grid.Column>
               <Segment.Group id="segmentContainer">
                 <Segment id="segmentBigContent" basic>
-                  <Header
+                  {/* <Header
                     as="h2"
                     content="Home"
                     subheader="Picuture/Carousel"
-                  />
+                  /> */}
+                  <BigPicture/>
                 </Segment>
               </Segment.Group>
             </Grid.Column>
