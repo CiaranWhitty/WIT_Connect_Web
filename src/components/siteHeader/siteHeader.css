@@ -112,3 +112,7 @@
     margin-left: 0 !important;
   }
 }
+
+#headerMargin {
+  margin-top: 0;
+}
