@@ -83,11 +83,9 @@ const homePage = () => {
           <i className="fa fa-linkedin w3-hover-opacity"></i>
         </div>
         <p>
-          Developed  by{" "}
-          <a href="http://ciaranwhitty.com/">ciaranwhitty.com</a>
+          Developed by <a href="http://ciaranwhitty.com/">Ciaran Whitty</a>
         </p>
       </footer>
-
     </>
   );
 };
