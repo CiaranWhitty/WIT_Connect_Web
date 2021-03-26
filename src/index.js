@@ -28,7 +28,6 @@ const Profile = lazy(() => import("./pages/profile"));
 const App = () => {
   return (
     <>
-      <div className="content">
         <BrowserRouter>
           <AuthProvider>
             <SiteHeader />
@@ -85,11 +84,6 @@ const App = () => {
             </div>
           </AuthProvider>
         </BrowserRouter>
-      </div>
-      {/* Background animation - https://codepen.io/chris22smith/pen/RZogMa */}
-      <div className="bg"></div>
-      <div className="bg bg2"></div>
-      <div className="bg bg3"></div>
     </>
   );
 };
