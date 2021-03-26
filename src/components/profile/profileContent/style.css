@@ -1,4 +1,4 @@
-#portfolioCon{
+.profileContent #portfolioCon{
   
   width: auto ;
   margin: auto;
@@ -6,7 +6,7 @@
 }
 
 @media only screen and (min-width: 1300px) {
-  #portfolioCon{
+  .profileContent #portfolioCon{
 
     width: 65% ;
     margin: auto;

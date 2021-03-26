@@ -29,8 +29,7 @@ export default function LoggedIn() {
   };
 
   return (
-    <div>
-      
+    <div id="headerFixed">
       <div className="w3-bar w3-black">
         <a href="#facebook" className="w3-bar-item w3-button">
           <i className="fa fa-facebook-official"></i>
@@ -49,7 +48,7 @@ export default function LoggedIn() {
         </a>
       </div>
 
-      <Menu id="headerMargin" size="massive" stackable pointing>
+      <Menu id="headerMargin" size="massive" pointing>
         <Menu.Menu>
           <Menu.Item>
             <a
@@ -76,9 +75,9 @@ export default function LoggedIn() {
         </Menu.Menu>
 
         <Menu.Menu position="right">
-          <Menu.Item>
+          {/* <Menu.Item>
             <Input icon="search" placeholder="Search..." />
-          </Menu.Item>
+          </Menu.Item> */}
           <Menu.Item id="buttonRemove">
             <ButnLogOut />
           </Menu.Item>
@@ -123,9 +122,9 @@ export default function LoggedIn() {
                 }}
               />
               <Menu.Item
-                name="Bounties"
+                name="Mentors"
                 as={Link}
-                to="/u/bounties"
+                to="/u/mentors"
                 onClick={() => {
                   closeMenuWhenClicked();
                 }}

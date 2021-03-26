@@ -14,16 +14,15 @@ export default function SiteHeader() {
   return context.isAuthenticated ? (
     
   //When logged in
-    //<Sticky>
-      <LoggedIn />
-    //</Sticky>
+      <div className="siteHeader">
+        <LoggedIn />
+      </div>
 
   ) : (
 
   //When logged out
-    //<Sticky>
-      <LoggedOut />
-    //</Sticky>
-    
+      <div className="siteHeader">
+        <LoggedOut />
+      </div>
   );
 };

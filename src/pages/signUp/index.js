@@ -39,57 +39,59 @@ export default function Signup() {
   return (
     <>
           
-    <div id="signinContainer">
+    <div className="signUp">
+      <div id="signinContainer">
 
-      <Container fluid>
-        <Segment.Group>
-          <Segment>
+        <Container fluid>
+          <Segment.Group>
+            <Segment>
 
-            <h2>SignUp</h2>
-            {/* testing user */}
-            {/* {currentUser.email} */}
-            {message && <Message warning={true}>{message}</Message>}
-            <Form onSubmit={handleSubmit}>
-              <Form.Field>
-                <label>Email Address:</label>
-                <input
-                name="email"
-                type="text"
-                placeholder="Email Address"
-                ref={emailRef}
-                required
-                />
-              </Form.Field>
-              <Form.Field>
-                <label>Password:</label>
-                <input
-                name="passwordOne"
-                type="password"
-                placeholder="Password"
-                ref={passwordRef}
-                required
-                />
-              </Form.Field>
-              <Form.Field>
-                <label>Confirm Password:</label>
-                <input
-                name="passwordTwo"
-                type="password"
-                placeholder="Confirm Password"
-                ref={passwordConfirmRef}
-                required
-                />
-              </Form.Field>
-              <Form.Field>
-                <label>Already have an account? <Link to="/login">Log In</Link></label>      
-              </Form.Field>
-              <Button disabled={loading} className="btnSignUp" type='submit'>Sign Up</Button>
-            </Form>
-        
-          </Segment>
-        </Segment.Group>
-      </Container>
+              <h2>SignUp</h2>
+              {/* testing user */}
+              {/* {currentUser.email} */}
+              {message && <Message warning={true}>{message}</Message>}
+              <Form onSubmit={handleSubmit}>
+                <Form.Field>
+                  <label>Email Address:</label>
+                  <input
+                  name="email"
+                  type="text"
+                  placeholder="Email Address"
+                  ref={emailRef}
+                  required
+                  />
+                </Form.Field>
+                <Form.Field>
+                  <label>Password:</label>
+                  <input
+                  name="passwordOne"
+                  type="password"
+                  placeholder="Password"
+                  ref={passwordRef}
+                  required
+                  />
+                </Form.Field>
+                <Form.Field>
+                  <label>Confirm Password:</label>
+                  <input
+                  name="passwordTwo"
+                  type="password"
+                  placeholder="Confirm Password"
+                  ref={passwordConfirmRef}
+                  required
+                  />
+                </Form.Field>
+                <Form.Field>
+                  <label>Already have an account? <Link to="/login">Log In</Link></label>      
+                </Form.Field>
+                <Button disabled={loading} className="btnSignUp" type='submit'>Sign Up</Button>
+              </Form>
+          
+            </Segment>
+          </Segment.Group>
+        </Container>
 
+      </div>
     </div>
     </>
   )

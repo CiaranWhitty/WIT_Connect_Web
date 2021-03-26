@@ -72,7 +72,7 @@ export default function Portfolios() {
   ]
   
   return (
-    <div>
+    <div className="portfolioForm">
       
       <Grid centered columns={3}>
 

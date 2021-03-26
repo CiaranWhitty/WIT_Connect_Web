@@ -20,16 +20,18 @@ export default function LoggedOut() {
     if (isNavShowing) {
       document.getElementById("myNav").style.width = "100%";
       document.getElementById("buttonRemove").style.display = "none";
+
       setIsNavShowing(false);
     } else {
       document.getElementById("myNav").style.width = "0%";
       document.getElementById("buttonRemove").style.display = "block";
+
       setIsNavShowing(true);
     }
   };
 
   return (
-    <div>
+    <div id="headerFixed">
       <div className="w3-bar w3-black">
         <a href="#facebook" className="w3-bar-item w3-button">
           <i className="fa fa-facebook-official"></i>

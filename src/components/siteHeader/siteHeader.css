@@ -1,10 +1,10 @@
-.fixed-top {
+.siteHeader .fixed-top {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
 @media (max-width: 770px) {
-  .sidenav a {
+  .siteHeader .sidenav a {
     padding: 2%;
     text-decoration: none;
     font-size: 50px;
@@ -14,11 +14,11 @@
   }
 }
 
-.ui.huge.borderless.menu {
+.siteHeader .ui.huge.borderless.menu {
   height: 60px;
 }
 
-.overlay {
+.siteHeader .overlay {
   height: 100%;
   width: 0;
   position: fixed;
@@ -31,7 +31,7 @@
   transition: 0.5s;
 }
 
-.overlay-content {
+.siteHeader .overlay-content {
   position: relative;
   top: 25%;
   width: 100%;
@@ -39,7 +39,7 @@
   margin-top: 30px;
 }
 
-.overlay a {
+.siteHeader .overlay a {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
@@ -48,71 +48,78 @@
   transition: 0.3s;
 }
 
-#myNavItems {
+.siteHeader #myNavItems {
   text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
   padding-left: 0%;
+  margin: -70px;
+  font-size: 25px;
 }
 
-#myNavItems button,
-#myNavItems.Item.a {
+.siteHeader #myNavItems button,
+.siteHeader #myNavItems.Item.a {
   margin-left: auto;
   margin-right: auto;
 }
 
-#myNav a:hover,
-#myNav a:focus {
+.siteHeader #myNav a:hover,
+.siteHeader #myNav a:focus {
   color: #f1f1f1 !important;
 }
 
-.overlay a:hover,
-.overlay a:focus {
+.siteHeader .overlay a:hover,
+.siteHeader .overlay a:focus {
   color: #f1f1f1;
 }
 
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
+.siteHeader .overlay .closebtn {
+  /* position: absolute; */
+  top: -20px;
+  right: 60px;
   font-size: 60px;
 }
 
 @media screen and (max-height: 450px) {
-  .overlay a {
+  .siteHeader .overlay a {
     font-size: 20px;
   }
-  .overlay .closebtn {
+  .siteHeader .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
   }
 }
 
-#myNav {
+.siteHeader #myNav {
   width: 0%;
 }
-.navLogo {
+.siteHeader .navLogo {
   padding-top: 11px;
 }
 
 @media only screen and (max-width: 767px) {
-  .ui.stackable.menu .item {
+  .siteHeader .ui.stackable.menu .item {
     width: 100% !important;
   }
 }
-#buttonRemove {
+.siteHeader #buttonRemove {
   display: "block" !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .ui.container {
+  .siteHeader .ui.container {
     width: auto !important;
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
 }
 
-#headerMargin {
+.siteHeader #headerMargin {
   margin-top: 0;
+}
+
+.siteHeader #headerFixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2020;
 }

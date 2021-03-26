@@ -17,6 +17,9 @@ function Map(){
       defaultZoom={17} //18
       defaultCenter={location}
       clickableIcons={false}
+      
+      disableDefaultUI={true}
+      fullscreenControl={false}
 
       >
 

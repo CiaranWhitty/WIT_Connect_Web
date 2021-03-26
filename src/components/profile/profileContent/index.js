@@ -6,7 +6,7 @@ import PortfoliosList from '../../portfolioComponents/portfolioMain'
 import './style.css'
 
 export default class ProfileAccordion extends Component {
-  state = { activeIndex: 0 }
+  state = { activeIndex: 99 }
 
   handleClick = (e, titleProps) => {
     const { index } = titleProps
@@ -21,6 +21,7 @@ export default class ProfileAccordion extends Component {
 
     return (
       
+    <div className="profileContent">
       
       <Segment id = "portfolioCon" padded basic size={"big"}>
         <Segment attached='top'>
@@ -92,7 +93,8 @@ export default class ProfileAccordion extends Component {
         </Accordion>
 
       </Segment>
-
+      
+    </div>
     )
   }
 }

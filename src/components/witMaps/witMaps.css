@@ -1,34 +1,24 @@
-.MapContainer{
-
-  width: auto; 
+.MapContainer {
+  width: auto;
   height: 85vh;
-
 }
 
-.gm-style-iw-t{
-  
+.MapContainer .gm-style-iw-t {
   bottom: 50px !important;
-
 }
-.gm-style-iw-d{
-
+.MapContainer .gm-style-iw-d {
   overflow: hidden !important;
-
 }
-.gm-style-iw-c {
-
+.MapContainer .gm-style-iw-c {
   max-width: 320px !important;
-  
-
 }
 
-.gm-style .gm-style-iw-c{
-
+.MapContainer.gm-style .gm-style-iw-c {
   padding: 10px 10px 10px 10px !important;
 }
 
 /*style the arrow*/
-.gm-style div div div div div div div div {
+.MapContainer .gm-style div div div div div div div div {
   background-color: #8c8c8c !important;
   padding: 0;
   margin: 0;
@@ -39,41 +29,47 @@
 }
 
 /*style the link*/
-.gm-style div div div div div div div div a {
+.MapContainer .gm-style div div div div div div div div a {
   color: #f1f1f1;
   font-weight: bold;
-
 }
 
-.gm-style .gm-style-iw-t::after {
-  background: 
-  linear-gradient(45deg,
-  rgb(140, 140, 140) 50%,
-  rgba(255,255,255,0) 51%,
-  rgba(255,255,255,0) 100%);
+.MapContainer .gm-style .gm-style-iw-t::after {
+  background: linear-gradient(
+    45deg,
+    rgb(140, 140, 140) 50%,
+    rgba(255, 255, 255, 0) 51%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
-.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+.MapContainer .container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
   width: 100%;
-  padding-right: 0 !important; 
-  padding-left: 0 !important; 
-  margin-right: 0 !important; 
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-right: 0 !important;
   margin-left: 0 !important;
 }
 
-#mapTable {
+.MapContainer #mapTable {
   font-family: arial, sans-serif;
 }
 
-#mapTable td, #mapTable th {
+.MapContainer #mapTable td,
+.MapContainer #mapTable th {
   border: 1px solid #fff;
-  color:  #fff;
+  color: #fff;
   text-align: left;
   padding: 8px;
 }
 
-#mapTable td a { 
-  display: block; 
+.MapContainer #mapTable td a {
+  display: block;
   border: 1px solid black;
-  padding: 16px; 
+  padding: 16px;
 }

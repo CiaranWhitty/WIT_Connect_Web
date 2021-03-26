@@ -37,52 +37,52 @@ export default function LoginPage() {
 
   return (
     <>      
-    
-    <div id="signinContainer">
-        
-        <Container fluid>
-          <Segment.Group>
-            <Segment>
-            
-              <h2>Login page</h2>
+    <div className="login">
+      <div id="signinContainer">
+          
+          <Container fluid>
+            <Segment.Group>
+              <Segment>
+              
+                <h2>Login page</h2>
 
-              {message && <Message warning={true}>{message}</Message>}
-              <Form onSubmit={handleSubmit}>
-                <Form.Field>
-                  <label>Email Address:</label>
-                  <input
-                  name="email"
-                  type="text"
-                  placeholder="Email Address"
-                  ref={emailRef}
-                  required
-                  />
-                </Form.Field>
-                <Form.Field>
-                  <label>Password:</label>
-                  <input
-                  name="passwordOne"
-                  type="password"
-                  placeholder="Password"
-                  ref={passwordRef}
-                  required
-                  />
-                </Form.Field>
-                <Form.Field>
-                  <Link to="/forgotPassword">Forgot Password?</Link>   
-                </Form.Field>
-                <Form.Field>
-                  <label>Need an account? <Link to="/signup">Sign Up</Link></label>      
-                </Form.Field>
-                <Button disabled={loading} className="btnSignUp" type='submit'>Log In</Button>
-              </Form>
-            
-            </Segment>
-          </Segment.Group>
-        </Container>
+                {message && <Message warning={true}>{message}</Message>}
+                <Form onSubmit={handleSubmit}>
+                  <Form.Field>
+                    <label>Email Address:</label>
+                    <input
+                    name="email"
+                    type="text"
+                    placeholder="Email Address"
+                    ref={emailRef}
+                    required
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <label>Password:</label>
+                    <input
+                    name="passwordOne"
+                    type="password"
+                    placeholder="Password"
+                    ref={passwordRef}
+                    required
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Link to="/forgotPassword">Forgot Password?</Link>   
+                  </Form.Field>
+                  <Form.Field>
+                    <label>Need an account? <Link to="/signup">Sign Up</Link></label>      
+                  </Form.Field>
+                  <Button disabled={loading} className="btnSignUp" type='submit'>Log In</Button>
+                </Form>
+              
+              </Segment>
+            </Segment.Group>
+          </Container>
 
+        </div>
       </div>
-      
     </>
   )
 }
