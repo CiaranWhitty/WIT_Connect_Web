@@ -76,21 +76,14 @@ export default function Portfolios() {
       
       <Grid centered columns={3}>
 
-        <Grid.Column>
-         
-        </Grid.Column>
-
-        <Grid.Column verticalAlign={'middle'}>
+        <Grid.Column id="addToPortfolio" verticalAlign={'middle'}>
          <Button 
           onClick={() => dispatch({ type: 'OPEN_MODAL' })}
           >
           Add To Portfolio
           </Button>
         </Grid.Column>
-        
-        <Grid.Column>
-         
-        </Grid.Column>
+
       </Grid>
       
 

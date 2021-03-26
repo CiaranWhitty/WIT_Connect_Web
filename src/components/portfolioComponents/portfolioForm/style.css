@@ -30,3 +30,7 @@
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+.portfolioForm #addToPortfolio {
+  width: 100% !important;
+}

@@ -38,13 +38,12 @@ export default function Profile({ Users }) {
 
   return (
     <>
-
       <div className="profile">
         {/* should be profileCon */}
         <Grid id="profileMainCon">
-          <Grid.Row textAlign="center">
+          <Grid.Row textAlign="center" id="profileRow">
             <Grid.Column width={16} id="profileCol">
-              <Container fluid id="profileCon">
+              <Container id="profileCon">
                 <Segment.Group>
                   <Segment>
                     <div id="profileHeader">
@@ -57,18 +56,11 @@ export default function Profile({ Users }) {
 
                           <div>
                             <a href="/u/update-profile">
-                              <h1>
-                                {currentUser.name || <h1>Ciaran Whitty</h1>}
-                              </h1>
+                              <h1>{currentUser.name || <h1>(Name)</h1>}</h1>
                             </a>
-
-                            <small>
-                              {currentUser.age || <small>(AGE),</small>}
-                            </small>
-
-                            <small>
+                            <h5>
                               {currentUser.course || <small>(Course)</small>}
-                            </small>
+                            </h5>
                           </div>
                         </div>
                         <nav>

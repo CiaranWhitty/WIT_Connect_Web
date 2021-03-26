@@ -23,7 +23,7 @@ export default class ProfileAccordion extends Component {
       
     <div className="profileContent">
       
-      <Segment id = "portfolioCon" padded basic size={"big"}>
+      <Segment id = "portfolioCon" basic size={"big"}>
         <Segment attached='top'>
         
         <PortfoliosForm />
