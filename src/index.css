@@ -70,7 +70,7 @@ a {
 }
 
 .contentMain {
-  margin-top: 105px;
+  /* margin-top: 105px; */
 }
 
 /* Home Page CSS */
@@ -97,26 +97,26 @@ a {
 
 /* Profile Page CSS */
 
-.profile #portfolioHeader {
+.profile #profileHeader {
   margin: 0 40px;
 }
 
-.profile #portfolioHeader svg {
+.profile #profileHeader svg {
   width: 40px;
   height: 40px;
 }
 
-.profile #portfolioHeader header {
+.profile #profileHeader header {
   display: flex;
   justify-content: space-between;
 }
 
-.profile #portfolioHeader header > div {
+.profile #profileHeader header > div {
   display: flex;
   align-items: center;
 }
 
-.profile #portfolioHeader header nav {
+.profile #profileHeader header nav {
   font-family: Lato;
   font-weight: 700;
 }
@@ -126,14 +126,14 @@ a {
   color: unset;
 }
 
-.profile #portfolioHeader header img {
+.profile #profileHeader header img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   margin-right: 20px;
 }
 
-.profile #portfolioHeader header small {
+.profile #profileHeader header small {
   display: inline-block;
   margin-bottom: 7px;
   font-family: Lato;
@@ -142,40 +142,57 @@ a {
   letter-spacing: 0.2px;
 }
 
-.profile #portfolioHeader header nav ul {
+.profile #profileHeader header nav ul {
   list-style: none;
   padding: 0;
   margin-top: 25px !important;
   margin-bottom: 0 !important;
 }
 
-.profile #portfolioHeader header nav ul li {
+.profile #profileHeader header nav ul li {
   display: inline-block;
   color: #313131;
   letter-spacing: 0.1px;
 }
 
-.profile #portfolioHeader header nav ul li:not(:first-child) {
+.profile #profileHeader header nav ul li:not(:first-child) {
   margin-left: 50px;
 }
 
 @media (max-width: 800px) {
-  .profile #portfolioHeader header {
+  .profile #profileHeader header {
     display: block;
     text-align: center;
   }
 }
 
 @media (max-width: 800px) {
-  .profile #portfolioHeader header > div {
+  .profile #profileHeader header > div {
     justify-content: center;
   }
 }
 
 @media (max-width: 800px) {
-  .profile #portfolioHeader header nav {
+  .profile #profileHeader header nav {
     margin-top: 30px;
   }
+}
+
+.profile #profileMainCon {
+  margin-right: 0px !important;  
+  margin-left: 0px !important;  
+  margin-top: 0px !important;  
+  padding-right: 0px !important;
+}
+
+.profile #profileCol {
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+}
+
+.profile #profileCon {
+  margin-right: 0px !important;
+  padding-right: 0px !important;
 }
 
 /* Profile Page CSS */
@@ -187,3 +204,20 @@ a {
 }
 
 /* mapPage Page CSS */
+
+/* Scroll Bar CSS */
+
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2185d0;
+  outline: 1px solid slategrey;
+}
+
+/* Scroll Bar CSS */

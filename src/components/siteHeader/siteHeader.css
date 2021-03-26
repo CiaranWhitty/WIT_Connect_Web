@@ -118,8 +118,8 @@
 }
 
 .siteHeader #headerFixed {
-  position: fixed;
+  /* position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2020;
+  z-index: 2020; */
 }

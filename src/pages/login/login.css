@@ -4,10 +4,9 @@
   outline: none !important;
 }
 
-.login .btnSignIn,
-.login .btnSignUp {
+.login .btnSignIn {
   display: inline-block;
-  padding: 0.3em 1.2em;
+  /* padding: 0.3em 1.2em; */
   margin: 0 0.3em 0.3em 0;
   border-radius: 2em;
   box-sizing: border-box;
@@ -21,21 +20,18 @@
   border-width: 0;
 }
 
-.login .btnSignIn:hover,
-.login .btnSignUp:hover {
+.login .btnSignIn:hover {
   background-color: #4095c6;
   font-size: large;
 }
 
-.login .btnSignIn:active,
-.login .btnSignUp:active {
+.login .btnSignIn:active {
   box-shadow: inset 0 0.6em 2em -0.3em rgba(0, 0, 0, 0.15),
     inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
 }
 
 @media all and (max-width: 30em) {
-   .login a.btnSignIn,
-  .login a.btnSignUp {
+   .login a.btnSignIn {
     display: block;
     margin: 0.2em auto;
   }

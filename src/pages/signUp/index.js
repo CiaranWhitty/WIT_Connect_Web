@@ -40,7 +40,7 @@ export default function Signup() {
     <>
           
     <div className="signUp">
-      <div id="signinContainer">
+      <div id="signupContainer">
 
         <Container fluid>
           <Segment.Group>

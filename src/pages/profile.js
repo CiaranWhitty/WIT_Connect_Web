@@ -41,13 +41,13 @@ export default function Profile({ Users }) {
 
       <div className="profile">
         {/* should be profileCon */}
-        <Grid id="portfolioCon">
+        <Grid id="profileMainCon">
           <Grid.Row textAlign="center">
-            <Grid.Column width={16}>
-              <Container fluid>
+            <Grid.Column width={16} id="profileCol">
+              <Container fluid id="profileCon">
                 <Segment.Group>
                   <Segment>
-                    <div id="portfolioHeader">
+                    <div id="profileHeader">
                       <header>
                         <div>
                           <img
