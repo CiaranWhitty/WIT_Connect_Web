@@ -1,27 +1,17 @@
-.portfolioForm .ui.modal {
+.ui.modal {
   position: unset !important;
   text-align: center !important;
 }
 
-.portfolioForm .modal {
+.modal {
   height: auto;
 }
 
-.portfolioForm .ui.modal > .content {
+.ui.modal > .content {
   margin-bottom: 12%;
 }
 
-.portfolioForm #formTextArea {
-  width: 75%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.portfolioForm #formSelect {
+#formTitle, #formTextArea, #formSelect {
   width: 75%;
   padding: 12px 20px;
   margin: 8px 0;

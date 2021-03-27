@@ -93,8 +93,14 @@
   width: 0%;
 }
 .siteHeader .navLogo {
-  padding-top: 11px;
+  padding-top: 15px;
 }
+.siteHeader .navLogo .ui.spaced.image {
+  display: inline-block!important;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+
 
 @media only screen and (max-width: 767px) {
   .siteHeader .ui.stackable.menu .item {
@@ -122,4 +128,11 @@
   top: 0;
   width: 100%;
   z-index: 2020; */
+}
+
+@media screen and (max-width: 499px) {
+  #buttonRemove button {
+    font-size: 0.6em;
+    padding: 1.3em;
+  }
 }
