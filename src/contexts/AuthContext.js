@@ -23,7 +23,7 @@ const AuthProvider = (props) => {
   }
 
   function logout() {
-    setTimeout(() => setIsAuthenticated(false), 100);
+    setIsAuthenticated(false);
     return auth.signOut();
   }
 
@@ -41,6 +41,9 @@ const AuthProvider = (props) => {
       setLoading(false)      
 
     })
+
+
+
 
     return unsubscribe
   }, [])
