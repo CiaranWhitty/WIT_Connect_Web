@@ -17,7 +17,7 @@ import {
 
 export default function Profile({ Users }) {
   // const [error, setError] = useState("")
-  const { currentUser } = useAuth();
+  const { currentUser, logout } = useAuth();
 
   const panes = [
     {
@@ -35,6 +35,13 @@ export default function Profile({ Users }) {
       render: () => <Tab.Pane>Tab 3 Content</Tab.Pane>,
     },
   ];
+
+  if (currentUser.emailVerified) {
+    console.log("So True");
+  } else {
+    console.log("So False");
+    logout();
+  }
 
   return (
     <>
