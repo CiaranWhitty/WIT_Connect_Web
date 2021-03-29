@@ -6,7 +6,7 @@ import { Button, Modal, TextArea, Select, Grid } from 'semantic-ui-react'
 import './style.css'
 import date from 'date-and-time';
 
-function exampleReducer(state, action) {
+function portfolioReducer(state, action) {
   switch (action.type) {
     case 'OPEN_MODAL':
       return { open: true, dimmer: action.dimmer }
@@ -24,7 +24,7 @@ export default function Portfolios() {
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [year, setYear] = useState('');
+  const [year, setYear] = useState();
 
   
   const now = new Date();
@@ -37,10 +37,6 @@ export default function Portfolios() {
   const handleOnChangeDescribe = (e) => {
     setDescription(e.target.value);
   };
-  
-  // const handleOnChangeYear = (e) => {
-  //   setYear(e.target.value);
-  // };
 
   const createportfolio = () => {
     const portfolioRef = app.database().ref("Portfolio");
@@ -58,7 +54,7 @@ export default function Portfolios() {
 
   };
 
-  const [state, dispatch] = React.useReducer(exampleReducer, {
+  const [state, dispatch] = React.useReducer(portfolioReducer, {
     open: false,
     dimmer: undefined,
   })
@@ -113,7 +109,7 @@ export default function Portfolios() {
             <Select 
               id="formSelect" 
               placeholder='Select your Year'
-              onChange={(e, { value }) => setYear({ value })}  
+              onChange={(e, { value }) => setYear( value )}  
               options={yearsOptions} 
               required
               
