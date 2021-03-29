@@ -38,7 +38,7 @@ export default function Portfolios() {
     setDescription(e.target.value);
   };
 
-  const createportfolio = () => {
+  const createPortfolio = () => {
     const portfolioRef = app.database().ref("Portfolio");
     
     const portfolio = {
@@ -120,7 +120,7 @@ export default function Portfolios() {
 
         <Modal.Actions>
 
-          <Button positive onClick={createportfolio}>
+          <Button positive onClick={createPortfolio}>
             Add item
           </Button>
 
