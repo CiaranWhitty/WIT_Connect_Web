@@ -1,21 +1,11 @@
 import React from "react";
 import { useAuth } from "../contexts/AuthContext";
-import { Link } from "react-router-dom";
+import { Grid, Container, Tab } from "semantic-ui-react";
+import UserDetails from "../components/userDetails";
 
-import { Button, Card, Grid, Segment, Container, Tab } from "semantic-ui-react";
-//  Icon, Image Container,
-import ButnLogOut from "../components/buttons/butnLogOut";
 import ProfileContent from "../components/profile/profileContent";
-//import ProfileDetailsList from '../components/profileDetailsList'
 
-import {
-  AiFillGithub,
-  AiFillTwitterCircle,
-  AiOutlineMail,
-  AiFillYoutube,
-} from "react-icons/ai";
-
-export default function Profile({ Users }) {
+export default function Profile() {
   // const [error, setError] = useState("")
   const { currentUser, logout } = useAuth();
 
@@ -51,65 +41,7 @@ export default function Profile({ Users }) {
           <Grid.Row textAlign="center" id="profileRow">
             <Grid.Column width={16} id="profileCol">
               <Container id="profileCon">
-                <Segment.Group>
-                  <Segment>
-                    <div id="profileHeader">
-                      <header>
-                        <div>
-                          <img
-                            alt="Profile_Image"
-                            src="https://res.cloudinary.com/a20085909/image/upload/v1592601611/nedjkjyve4j8j2gbr8ak.jpg"
-                          />
-
-                          <div>
-                            <a href="/u/update-profile">
-                              <h1>{currentUser.name || <h1>(Name)</h1>}</h1>
-                            </a>
-                            <h5>
-                              {currentUser.course || <small>(Course)</small>}
-                            </h5>
-                          </div>
-                        </div>
-                        <nav>
-                          <ul>
-                            <li>
-                              <a
-                                href="https://www.youtube.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <AiFillYoutube />
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="https://github.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <AiFillGithub />
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href="https://twitter.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <AiFillTwitterCircle />
-                              </a>
-                            </li>
-                            <li>
-                              <a href={`mailto:${currentUser.email}`}>
-                                <AiOutlineMail />
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                      </header>
-                    </div>
-                  </Segment>
-                </Segment.Group>
+                <UserDetails />
 
                 <Tab panes={panes} />
               </Container>

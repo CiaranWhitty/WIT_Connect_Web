@@ -27,7 +27,7 @@ export default function Signup() {
   const [loading, setLoading] = useState(false);
 
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [userEmail, setUserEmail] = useState("");
   const [course, setCourse] = useState();
 
   const now = new Date();
@@ -40,25 +40,25 @@ export default function Signup() {
   };
 
   const handleOnChangeEmail = (e) => {
-    setEmail(e.target.value);
+    setUserEmail(e.target.value);
   };
   
   const createUser = () => {
     const userRef = app.database().ref("Users");
     
-    const users = {
+    const user = {
       name,
-      email,
+      userEmail,
       course,
       creationDate,
     };
 
-    userRef.push(users);
+    userRef.push(user);
   };
 
   const CourseOptions = [
-    { key: "C1", value: "c1", text: "Course 01" },
-    { key: "C2", value: "c2", text: "Course 02" },
+    { key: "SSD", value: "BSc (Hons) in Software Systems Development", text: "BSc (Hons) in Software Systems Development" },
+    { key: "NSSD", value: "NOT BSc (Hons) in Software Systems Development", text: "NOT BSc (Hons) in Software Systems Development" },
   ];
 
   async function handleSubmit(e) {
