@@ -304,3 +304,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Scroll Bar CSS */
+
+/* Students Page */
+
+#totalStudentNum{
+  width: fit-content;
+  margin: auto;
+}
+
+/* Students Page */
