@@ -4,7 +4,7 @@ import FilterControls from "../components/filterControls";
 import StudentsList from "../components/studentsList";
 import app from "../firebase/firebase";
 
-const Students = ({action}) => {
+const Students = ({ action }) => {
   const [userList, setUserList] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
 
@@ -13,15 +13,11 @@ const Students = ({action}) => {
       const userRef = app.database().ref("Users");
       userRef.on("value", (snapshot) => {
         const users = snapshot.val();
-        console.log(snapshot.val());
         const userList = [];
         for (let id in users) {
           userList.push({ id, ...users[id] });
         }
-
         setUserList(userList.filter((user) => user.userEmail));
-        console.log("userList");
-        console.log(userList);
       });
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
     []
@@ -47,7 +43,9 @@ const Students = ({action}) => {
           onUserInput={handleChange}
           numStudents={displayedStudents.length}
         />
-        <Label id="totalStudentNum" color='blue'>Number Of Students: {displayedStudents.length}</Label>
+        <Label id="totalStudentNum" color="blue">
+          Number Of Students: {displayedStudents.length}
+        </Label>
       </Segment>
 
       <StudentsList action={action} students={displayedStudents} />

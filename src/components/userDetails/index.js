@@ -20,7 +20,6 @@ export default function UserDetails() {
       const userRef = app.database().ref("Users");
       userRef.on("value", (snapshot) => {
         const users = snapshot.val();
-        console.log(snapshot.val());
         const userList = [];
         for (let id in users) {
           userList.push({ id, ...users[id] });
@@ -29,7 +28,6 @@ export default function UserDetails() {
         setUserList(
           userList.filter((user) => user.userEmail === currentUserEmail)
         );
-        console.log(userList);
       });
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
     []
@@ -51,7 +49,7 @@ export default function UserDetails() {
 
                     <div>
                       <a href="/u/update-profile">
-                        <h1>{<h1>{user.name}</h1> || <h1>(Name)</h1>}</h1>
+                        {<h1>{user.name}</h1> || <h1>(Name)</h1>}
                       </a>
                       <h5>
                         {<small>{user.course}</small> || (
