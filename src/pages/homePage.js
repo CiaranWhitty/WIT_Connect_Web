@@ -11,16 +11,16 @@ const HomePage = () => {
     <>
       <div className="homePage">
         <header className="w3-container w3-red w3-center" id="headerHomePage">
-          <h1 className="w3-margin w3-jumbo">START PAGE</h1>
+          <h1 className="w3-margin w3-jumbo">WIT Connect</h1>
           <Button as={Link} to="/u/students" size="big" color="black">
-            Search!
+            Start Connecting!
           </Button>
         </header>
 
         <div className="w3-row-padding w3-padding-64 w3-container">
           <div className="w3-content">
             <div className="w3-twothird">
-              <h1>Lorem Ipsum</h1>
+              <h1>Connect</h1>
               <h5 className="w3-padding-32">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -42,7 +42,7 @@ const HomePage = () => {
             </div>
 
             <div className="w3-third w3-center">
-              <i className="fa fa-anchor w3-padding-64 w3-text-red"></i>
+              <i id="iconConnect" className="fas fa-people-arrows w3-padding-64 w3-text-red"></i>
             </div>
           </div>
         </div>
@@ -50,11 +50,11 @@ const HomePage = () => {
         <div className="w3-row-padding w3-light-grey w3-padding-64 w3-container">
           <div className="w3-content">
             <div className="w3-third w3-center">
-              <i className="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+              <i id="iconCollaborate" className="fas fa-people-carry w3-padding-64 w3-text-red w3-margin-right"></i>
             </div>
 
             <div className="w3-twothird">
-              <h1>Lorem Ipsum</h1>
+              <h1>Collaborate</h1>
               <h5 className="w3-padding-32">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -77,7 +77,38 @@ const HomePage = () => {
           </div>
         </div>
 
+        <div className="w3-row-padding w3-padding-64 w3-container">
+          <div className="w3-content">
+            <div className="w3-twothird">
+              <h1>Create</h1>
+              <h5 className="w3-padding-32">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </h5>
+
+              <p className="w3-text-grey">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+
+            <div className="w3-third w3-center">
+              <i id="iconCreate" className="far fa-check-square w3-padding-64 w3-text-red"></i>
+            </div>
+          </div>
+        </div>
+
         <div className="w3-container w3-black w3-center w3-opacity w3-padding-64">
+          {/* Maybe pull quotes from an api? */}
           <h1 className="w3-margin w3-xlarge">Quote of the day: live life</h1>
         </div>
 
@@ -100,16 +131,16 @@ const HomePage = () => {
     <>
       <div className="homePage">
         <header className="w3-container w3-red w3-center" id="headerHomePage">
-          <h1 className="w3-margin w3-jumbo">START PAGE</h1>
-          <button className="w3-button w3-black w3-padding-large w3-large w3-margin-top">
-            Get Started
-          </button>
+          <h1 className="w3-margin w3-jumbo">WIT Connect</h1>
+          <Button as={Link} to="/signup" size="big" color="black">
+            Join Today!
+          </Button>
         </header>
-
+        {/*  */}
         <div className="w3-row-padding w3-padding-64 w3-container">
           <div className="w3-content">
             <div className="w3-twothird">
-              <h1>Lorem Ipsum</h1>
+              <h1>REACT JS</h1>
               <h5 className="w3-padding-32">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -131,7 +162,10 @@ const HomePage = () => {
             </div>
 
             <div className="w3-third w3-center">
-              <i className="fa fa-anchor w3-padding-64 w3-text-red"></i>
+              <i
+                id="iconREACTJS"
+                className="fab fa-react w3-padding-64 w3-text-blue"
+              ></i>
             </div>
           </div>
         </div>
@@ -139,11 +173,14 @@ const HomePage = () => {
         <div className="w3-row-padding w3-light-grey w3-padding-64 w3-container">
           <div className="w3-content">
             <div className="w3-third w3-center">
-              <i className="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+              <i
+                id="iconFIREBASE"
+                className="fas fa-fire w3-padding-64 w3-text-amber w3-margin-right"
+              ></i>
             </div>
-
+            {/*  */}
             <div className="w3-twothird">
-              <h1>Lorem Ipsum</h1>
+              <h1>FIREBASE</h1>
               <h5 className="w3-padding-32">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -165,8 +202,42 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+        {/*  */}
+        <div className="w3-row-padding w3-padding-64 w3-container">
+          <div className="w3-content">
+            <div className="w3-twothird">
+              <h1>AWS</h1>
+              <h5 className="w3-padding-32">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </h5>
 
+              <p className="w3-text-grey">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+
+            <div className="w3-third w3-center">
+              <i
+                id="iconAWS"
+                className="fab fa-aws w3-padding-64 w3-text-orange"
+              ></i>
+            </div>
+          </div>
+        </div>
+        {/*  */}
         <div className="w3-container w3-black w3-center w3-opacity w3-padding-64">
+          {/* Maybe pull quotes from an api? */}
           <h1 className="w3-margin w3-xlarge">Quote of the day: live life</h1>
         </div>
 

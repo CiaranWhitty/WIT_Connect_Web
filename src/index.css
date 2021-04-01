@@ -306,21 +306,18 @@ body::-webkit-scrollbar-thumb {
   body::-webkit-scrollbar {
     width: 0.6em;
   }
-
 }
-
 
 /* Scroll Bar CSS */
 
 /* Students Page */
 
-#totalStudentNum{
+#totalStudentNum {
   width: fit-content;
   margin: auto;
 }
 
 /* Students Page */
-
 
 /* UpdateProfile Page CSS */
 
@@ -374,4 +371,13 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-/* Profile Page CSS */
+#iconREACTJS,
+#iconFIREBASE,
+#iconAWS,
+#iconConnect,
+#iconCollaborate,
+#iconCreate{
+  font-size: 195px;
+}
+
+/* UpdateProfile Page CSS */
