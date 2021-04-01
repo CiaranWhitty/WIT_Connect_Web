@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Menu, Input } from "semantic-ui-react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiXCircle } from "react-icons/bi";
-import { Image } from "semantic-ui-react";
+import { Image, Icon } from "semantic-ui-react";
 import ButnLogOut from "../buttons/butnLogOut";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ export default function LoggedIn() {
   const closeMenuWhenClicked = () => {
     document.getElementById("myNav").style.width = "0%";
 
-    document.getElementById("buttonRemove").style.display = "block";
+    document.getElementById("buttonRemove").style.display = "flex";
     setIsNavShowing(true);
   };
 
@@ -23,7 +23,7 @@ export default function LoggedIn() {
       setIsNavShowing(false);
     } else {
       document.getElementById("myNav").style.width = "0%";
-      document.getElementById("buttonRemove").style.display = "block";
+      document.getElementById("buttonRemove").style.display = "flex";
       setIsNavShowing(true);
     }
   };
@@ -72,12 +72,37 @@ export default function LoggedIn() {
             href="/u/"
             src="https://res.cloudinary.com/a20085909/image/upload/v1610756088/Logos_V2.2_jfc4oi.png"
           />
+          
+          {/* <Image
+            className="navLogoMob"
+            spaced
+            alt="Logo"
+            as={Link}
+            to="/u/"
+            href="/u/"
+            src="https://res.cloudinary.com/a20085909/image/upload/v1617285100/BigFavicon_ix0yn7.png"
+          /> */}
+        
         </Menu.Menu>
 
-        <Menu.Menu position="right">
-          {/* <Menu.Item>
-            <Input icon="search" placeholder="Search..." />
-          </Menu.Item> */}
+
+
+        <Menu.Menu id="navMenuRight" position="right">
+          <Menu.Item as={Link} to="/u/students">
+            <Icon name="users" size={"big"}/>
+          </Menu.Item>
+
+          <Menu.Item>
+          <Image
+            id="navProfileImg"
+            alt="Profile_Image"
+            as={Link}
+            to="/u/profile"
+            href="/u/profile"
+            src="https://res.cloudinary.com/a20085909/image/upload/v1592601611/nedjkjyve4j8j2gbr8ak.jpg"
+          />
+          {/* src on img need to pull from database */}
+          </Menu.Item>
           <Menu.Item id="buttonRemove">
             <ButnLogOut />
           </Menu.Item>

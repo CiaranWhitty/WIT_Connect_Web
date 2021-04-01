@@ -302,6 +302,13 @@ body::-webkit-scrollbar-thumb {
   background-color: #2185d0;
   outline: 1px solid slategrey;
 }
+@media screen and (max-width: 700px) {
+  body::-webkit-scrollbar {
+    width: 0.6em;
+  }
+
+}
+
 
 /* Scroll Bar CSS */
 

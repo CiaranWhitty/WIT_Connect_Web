@@ -12,7 +12,7 @@ export default function LoggedOut() {
   const closeMenuWhenClicked = () => {
     document.getElementById("myNav").style.width = "0%";
 
-    document.getElementById("buttonRemove").style.display = "block";
+    document.getElementById("buttonRemove").style.display = "flex";
     setIsNavShowing(true);
   };
 
@@ -24,7 +24,7 @@ export default function LoggedOut() {
       setIsNavShowing(false);
     } else {
       document.getElementById("myNav").style.width = "0%";
-      document.getElementById("buttonRemove").style.display = "block";
+      document.getElementById("buttonRemove").style.display = "flex";
 
       setIsNavShowing(true);
     }

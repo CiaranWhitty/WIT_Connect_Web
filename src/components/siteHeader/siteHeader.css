@@ -93,14 +93,56 @@
   width: 0%;
 }
 .siteHeader .navLogo {
-  padding-top: 15px;
+  padding-top: 18px;
 }
 .siteHeader .navLogo .ui.spaced.image {
-  display: inline-block!important;
+  display: inline-block !important;
   margin-left: 0em;
   margin-right: 0em;
 }
 
+.siteHeader .navLogoMob {
+  padding-top: 5px;
+  max-width: 18% !important;
+}
+
+.siteHeader .navLogoMob .ui.spaced.image {
+  display: inline-block !important;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+.siteHeader #navMenuRight .item i{
+  margin: 0%;
+}
+@media screen and (max-width: 700px) {
+  .siteHeader .navLogo img {
+    display: none;
+  }
+  .siteHeader #navMenuRight {
+    margin-right: 8% !important;
+  }
+  .siteHeader #navMenuRight .item {
+    padding: 3% !important;
+  }
+  .siteHeader #navMenuRight .item img{
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+}
+
+/* @media screen and (max-width: 500px) {
+.siteHeader .navLogoMob {
+  padding-top: 5px;
+  max-width: 50%;
+}
+} */
+
+/* @media screen and (min-width: 700px) {
+  .siteHeader .navLogoMob img {
+    display: none;
+  }
+} */
 
 @media only screen and (max-width: 767px) {
   .siteHeader .ui.stackable.menu .item {
@@ -108,7 +150,7 @@
   }
 }
 .siteHeader #buttonRemove {
-  display: "block" !important;
+  display: "flex" !important;
 }
 
 @media only screen and (max-width: 767px) {
@@ -120,7 +162,8 @@
 }
 
 .siteHeader #headerMargin {
-  margin-top: 0;
+  margin-top: 0;    
+  height: 80px;
 }
 
 .siteHeader #headerFixed {
@@ -135,4 +178,10 @@
     font-size: 0.6em;
     padding: 1.3em;
   }
+}
+
+#navProfileImg img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
