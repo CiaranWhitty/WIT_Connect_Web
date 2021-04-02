@@ -12,6 +12,7 @@ import PrivateRoute from "./routes/PrivateRoute";
 import AuthProvider from "./contexts/AuthContext";
 import SiteHeader from "./components/siteHeader";
 import homePage from "./pages/homePage";
+import studentsPage from "./components/studentsDetailsPage";
 
 import signupPage from "./pages/signUp";
 import loginPage from "./pages/login";
@@ -51,6 +52,7 @@ const App = () => {
                 {/* When logged in */}
                 <PrivateRoute exact path="/u/witmap" component={mapPage} />
                 <PrivateRoute exact path="/u/support" component={support} />
+                <PrivateRoute exact path="/u/students/:userEmail" component={studentsPage} />
                 <PrivateRoute exact path="/u/students" component={students} />
                 <PrivateRoute exact path="/u/mentors" component={mentors} />
                 <PrivateRoute exact path="/u/profile" component={Profile} />
