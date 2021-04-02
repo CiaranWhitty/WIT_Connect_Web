@@ -12,7 +12,7 @@ import PrivateRoute from "./routes/PrivateRoute";
 import AuthProvider from "./contexts/AuthContext";
 import SiteHeader from "./components/siteHeader";
 import homePage from "./pages/homePage";
-import studentsPage from "./components/studentsDetailsPage";
+// import studentsPage from "./components/studentsDetailsPage";
 
 import signupPage from "./pages/signUp";
 import loginPage from "./pages/login";
@@ -24,6 +24,7 @@ import updatePassword from "./pages/userFunction/updatePassword";
 const mapPage = lazy(() => import("./pages/mapPage"));
 const support = lazy(() => import("./pages/support"));
 const students = lazy(() => import("./pages/students"));
+const studentsPage = lazy(() => import("./components/studentsDetailsPage"));
 const mentors = lazy(() => import("./pages/mentors"));
 const Profile = lazy(() => import("./pages/profile"));
 
