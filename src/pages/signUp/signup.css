@@ -142,3 +142,19 @@
     width: 100%;
   }
 }
+
+.signUp #fName {
+  width: 50%;
+}
+.signUp #lName {
+  width: 50%;
+}
+
+.signUp #male {
+  padding-right: 50px !important;
+}
+.signUp #male,
+#female {
+  display: -webkit-inline-box;
+  padding: 0px 5px;
+}

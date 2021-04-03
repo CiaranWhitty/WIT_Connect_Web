@@ -1,22 +1,13 @@
 import React, { useRef, useState } from "react";
-import {
-  Button,
-  Form,
-  Message,
-  Container,
-  Segment,
-  Select,
-} from "semantic-ui-react";
-import app from "../../firebase/firebase"
+import { Button, Form, Message, Container, Segment } from "semantic-ui-react";
+import app from "../../firebase/firebase";
 import { useAuth } from "../../contexts/AuthContext";
 import { useHistory, Link } from "react-router-dom";
-import date from 'date-and-time';
+import date from "date-and-time";
 
 import "./signup.css";
 
 export default function Signup() {
-  const nameRef = useRef();
-  const courseRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
@@ -26,39 +17,68 @@ export default function Signup() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const [name, setName] = useState("");
+  const [fName, setFName] = useState("");
+  const [lName, setLName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [course, setCourse] = useState();
 
   const now = new Date();
-  const creationDate = date.format(now, 'ddd, MMM DD YYYY');
-  
+  const creationDate = date.format(now, "ddd, MMM DD YYYY");
+
   const history = useHistory();
 
-  const handleOnChangeName = (e) => {
-    setName(e.target.value);
+  const handleOnChangeFName = (e) => {
+    setFName(e.target.value);
+  };
+
+  const handleOnChangeLName = (e) => {
+    setLName(e.target.value);
   };
 
   const handleOnChangeEmail = (e) => {
     setUserEmail(e.target.value);
   };
-  
+
+  const handleOnChangeCourse = (e) => {
+    setCourse(e.target.value);
+  };
+
   const createUser = () => {
     const userRef = app.database().ref("Users");
-    
+
+    const id = userEmail.substring(0, 8);
+    const name = fName + " " + lName;
+
     const user = {
+      id,
+      fName,
+      lName,
       name,
       userEmail,
       course,
       creationDate,
     };
+    console.log(user);
 
     userRef.push(user);
   };
 
   const CourseOptions = [
-    { key: "SSD", value: "BSc (Hons) in Software Systems Development", text: "BSc (Hons) in Software Systems Development" },
-    { key: "NSSD", value: "NOT BSc (Hons) in Software Systems Development", text: "NOT BSc (Hons) in Software Systems Development" },
+    {
+      key: "DEFAULT",
+      value: "DEFAULT",
+      text: "Please Select Your Course",
+    },
+    {
+      key: "SSD",
+      value: "BSc (Hons) in Software Systems Development",
+      text: "BSc (Hons) in Software Systems Development",
+    },
+    {
+      key: "NSSD",
+      value: "NOT BSc (Hons) in Software Systems Development",
+      text: "NOT BSc (Hons) in Software Systems Development",
+    },
   ];
 
   async function handleSubmit(e) {
@@ -72,8 +92,8 @@ export default function Signup() {
       setMessage("");
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
-      send_verification();
       createUser();
+      send_verification();
       setMessage("Congratulations Account created");
       history.push("/login");
     } catch {
@@ -98,11 +118,19 @@ export default function Signup() {
                   <Form.Field>
                     <label>Name:</label>
                     <input
-                      name="name"
+                      id="fName"
+                      name="fname"
                       type="text"
-                      placeholder="Full Name"
-                      onChange={handleOnChangeName}
-                      ref={nameRef}
+                      placeholder="First Name"
+                      onChange={handleOnChangeFName}
+                      required
+                    />
+                    <input
+                      id="lName"
+                      name="lname"
+                      type="text"
+                      placeholder="last Name"
+                      onChange={handleOnChangeLName}
                       required
                     />
                   </Form.Field>
@@ -113,6 +141,7 @@ export default function Signup() {
                       type="email"
                       pattern=".+@mail.wit.ie"
                       placeholder="200*****@mail.wit.ie"
+                      maxlength="20"
                       onChange={handleOnChangeEmail}
                       ref={emailRef}
                       required
@@ -120,14 +149,19 @@ export default function Signup() {
                   </Form.Field>
                   <Form.Field>
                     <label>Course:</label>
-                    <Select
+                    <select
                       id="formSelect"
+                      name="courses"
                       placeholder="Select your Course"
-                      options={CourseOptions}
-                      onChange={(e, { value }) => setCourse( value )}  
-                      ref={courseRef}
+                      onChange={handleOnChangeCourse}
                       required
-                    />
+                    >
+                      {CourseOptions.map((CourseOptions) => (
+                        <option value={CourseOptions.value}>
+                          {CourseOptions.text}
+                        </option>
+                      ))}
+                    </select>
                   </Form.Field>
                   <Form.Field>
                     <label>Password:</label>

@@ -20,17 +20,17 @@ export default function LoginPage() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-      try {
-        setMessage("");
-        setLoading(true);
-        await login(emailRef.current.value, passwordRef.current.value);
-        setIsAuthenticated(true);
-        history.push("u/profile");
-      } catch {
-        setMessage("Failed to log in");
-        setIsAuthenticated(false);
-      }
-     
+    try {
+      setMessage("");
+      setLoading(true);
+      await login(emailRef.current.value, passwordRef.current.value);
+      setIsAuthenticated(true);
+      history.push("u/profile");
+    } catch {
+      setMessage("Failed to log in");
+      setIsAuthenticated(false);
+    }
+
     setLoading(false);
   }
 
@@ -52,6 +52,7 @@ export default function LoginPage() {
                       type="email"
                       pattern=".+@mail.wit.ie"
                       placeholder="Email Address"
+                      maxlength="20"
                       ref={emailRef}
                       required
                     />
