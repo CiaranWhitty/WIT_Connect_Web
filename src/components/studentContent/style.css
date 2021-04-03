@@ -1,0 +1,19 @@
+.profileContent #portfolioCon{
+  
+  width: auto ;
+  margin: auto;
+  padding: 0px ;
+}
+
+@media only screen and (min-width: 1300px) {
+  .profileContent #portfolioCon{
+
+    width: 65% ;
+    margin: auto;
+  
+  }
+}
+
+
+
+
