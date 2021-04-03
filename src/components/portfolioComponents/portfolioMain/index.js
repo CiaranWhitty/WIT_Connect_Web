@@ -4,7 +4,7 @@ import { useAuth } from "../../../contexts/AuthContext";
 
 import Portfolios from "../portfolios";
 
-export default function PortfolioMain() {
+export default function PortfolioMain({ year }) {
   const [portfolioList, setPortfolioList] = useState([]);
 
   const { currentUser } = useAuth();
@@ -22,9 +22,10 @@ export default function PortfolioMain() {
         }
 
         setPortfolioList(
-          portfolioList.filter(
-            (portfolio) => portfolio.userEmail === currentUserEmail
-          )
+          portfolioList
+            .filter((portfolio) => portfolio.userEmail === currentUserEmail)
+            .filter((portfolio) => portfolio.year === year)
+            // .filter((portfolio) => portfolio.publicItem === true)
         );
       });
     }, // eslint-disable-next-line react-hooks/exhaustive-deps

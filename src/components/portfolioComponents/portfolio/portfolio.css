@@ -1,0 +1,15 @@
+.portfolio .extra {
+  margin-top: 15% !important;
+}
+
+.portfolio #butnDelete i {
+  margin: 0px !important;
+}
+.portfolio #butnEdit i {
+  margin: 0px !important;
+}
+
+.portfolio .extra .ui.checkbox {
+  float: right;
+  margin-top: 5%;
+}

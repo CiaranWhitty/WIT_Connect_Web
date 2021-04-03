@@ -25,6 +25,7 @@ export default function Portfolios() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [year, setYear] = useState();
+  const [publicItem, setpublicItem] = useState(false);
 
   
   const now = new Date();
@@ -47,6 +48,7 @@ export default function Portfolios() {
       description,
       creationDate,
       year,
+      publicItem,
     };
 
     portfolioRef.push(portfolio);
