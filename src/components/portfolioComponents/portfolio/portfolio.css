@@ -1,5 +1,5 @@
 .portfolio .extra {
-  margin-top: 15% !important;
+  /* margin-top: 15% !important; */
 }
 
 .portfolio #butnDelete i {
@@ -12,4 +12,12 @@
 .portfolio .extra .ui.checkbox {
   float: right;
   margin-top: 5%;
+}
+
+.portfolio .extra h4 {
+  float: right;
+}
+.portfolio #studentsPortfolioDesc.description p {
+  text-align: justify;
+  line-height: 1.5;
 }

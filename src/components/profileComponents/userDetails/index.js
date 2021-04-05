@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import app from "../../firebase/firebase";
-import { useAuth } from "../../contexts/AuthContext";
+import app from "../../../firebase/firebase";
+import { useAuth } from "../../../contexts/AuthContext";
 import { Segment, Icon } from "semantic-ui-react";
 import {
   AiFillGithub,
@@ -69,7 +69,7 @@ export default function UserDetails() {
                   </div>
                   <nav>
                     <ul>
-                      <li>
+                      {/* <li>
                         <a
                           href="https://www.youtube.com/"
                           target="_blank"
@@ -95,7 +95,7 @@ export default function UserDetails() {
                         >
                           <AiFillTwitterCircle />
                         </a>
-                      </li>
+                      </li> */}
                       <li>
                         <a href={`mailto:${currentUser.email}`}>
                           <AiOutlineMail />

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Accordion, Icon, Segment } from "semantic-ui-react";
-import StudentsPortfoliosList from "../studentsPorfoliosMain";
+import StudentsPortfoliosList from "../../studentsPortfolioComponents/studentsPorfoliosMain";
 
 import "./style.css";
 

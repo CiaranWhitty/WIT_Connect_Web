@@ -41,7 +41,17 @@ export default function Portfolio({ portfolio }) {
                   <span>{portfolio.data}</span>
                 </Item.Meta>
 
-                <Item.Description>{portfolio.description}</Item.Description>
+                <Item.Description id="studentsPortfolioDesc">
+                  {" "}
+                  <p>{portfolio.description}</p>
+                </Item.Description>
+
+                <Item.Extra>
+                  {portfolio.files}
+                  <h4>*File*</h4>
+                  <h4>*File*</h4>
+                  <h4>*File*</h4>
+                </Item.Extra>
 
                 <Item.Extra>
                   <Button

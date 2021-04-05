@@ -35,7 +35,7 @@ const student = ({ student }) => {
                     </div>
                     <nav>
                       <ul>
-                        <li>
+                        {/* <li>
                           <a
                             href="https://www.youtube.com/"
                             target="_blank"
@@ -61,7 +61,7 @@ const student = ({ student }) => {
                           >
                             <AiFillTwitterCircle />
                           </a>
-                        </li>
+                        </li> */}
                         <li>
                           <a href={`mailto:${student.userEmail}`}>
                             <AiOutlineMail />

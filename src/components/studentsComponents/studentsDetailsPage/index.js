@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import { Grid, Container, Tab } from "semantic-ui-react";
 import StudentsDetails from "../studentsDetails";
 import PageTemplate from "../templateStudentsPage";
-import useStudent from "../../hooks/useStudent";
+import useStudent from "../../../hooks/useStudent";
 import StudentContent from "../studentContent";
 
 const StudentsPage = (props) => {

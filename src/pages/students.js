@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { Header, Icon, Segment, Label } from "semantic-ui-react";
 import FilterControls from "../components/filterControls";
-import StudentsList from "../components/studentsList";
+import StudentsList from "../components/studentsComponents/studentsList";
 import app from "../firebase/firebase";
 
 const Students = ({ action }) => {

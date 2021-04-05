@@ -1,9 +1,9 @@
 import React from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Grid, Container, Tab } from "semantic-ui-react";
-import UserDetails from "../components/userDetails";
+import UserDetails from "../components/profileComponents/userDetails";
 
-import ProfileContent from "../components/profile/profileContent";
+import ProfileContent from "../components/profileComponents/profileContent";
 
 export default function Profile() {
   // const [error, setError] = useState("")

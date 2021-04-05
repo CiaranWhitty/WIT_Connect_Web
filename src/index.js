@@ -24,7 +24,7 @@ import updatePassword from "./pages/userFunction/updatePassword";
 const mapPage = lazy(() => import("./pages/mapPage"));
 const support = lazy(() => import("./pages/support"));
 const students = lazy(() => import("./pages/students"));
-const studentsPage = lazy(() => import("./components/studentsDetailsPage"));
+const studentsPage = lazy(() => import("./components/studentsComponents/studentsDetailsPage"));
 const mentors = lazy(() => import("./pages/mentors"));
 const Profile = lazy(() => import("./pages/profile"));
 
