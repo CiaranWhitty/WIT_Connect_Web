@@ -21,6 +21,8 @@ export default function Signup() {
   const [lName, setLName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [course, setCourse] = useState();
+  const [allowEmployers, setallowEmployers] = useState(false);
+  const [publicAccount, setpublicAccount] = useState(true);
 
   const now = new Date();
   const creationDate = date.format(now, "ddd, MMM DD YYYY");
@@ -46,17 +48,19 @@ export default function Signup() {
   const createUser = () => {
     const userRef = app.database().ref("Users");
 
-    const id = userEmail.substring(0, 8);
+    const uId = userEmail.substring(0, 8);
     const name = fName + " " + lName;
 
     const user = {
-      id,
+      uId,
       fName,
       lName,
       name,
       userEmail,
       course,
       creationDate,
+      allowEmployers,
+      publicAccount,
     };
     console.log(user);
 

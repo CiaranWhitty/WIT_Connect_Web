@@ -17,7 +17,11 @@ const Students = ({ action }) => {
         for (let id in users) {
           userList.push({ id, ...users[id] });
         }
-        setUserList(userList.filter((user) => user.userEmail));
+        setUserList(
+          userList
+            .filter((user) => user.userEmail)
+            .filter((user) => user.publicAccount === true)
+        );
       });
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
     []

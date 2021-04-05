@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { Grid, Container, Tab } from "semantic-ui-react";
 import StudentsDetails from "../studentsDetails";
-import PageTemplate from "../templateStudentsPage";
+import PageTemplate from "../studentsTemplatePage";
 import useStudent from "../../../hooks/useStudent";
 import StudentContent from "../studentContent";
 
