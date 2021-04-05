@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import app from "../../firebase/firebase";
 import { useAuth } from "../../contexts/AuthContext";
-import { Segment } from "semantic-ui-react";
+import { Segment, Icon } from "semantic-ui-react";
 import {
   AiFillGithub,
   AiFillTwitterCircle,
@@ -46,11 +46,20 @@ export default function UserDetails() {
                       alt="Profile_Image"
                       src="https://res.cloudinary.com/a20085909/image/upload/v1592601611/nedjkjyve4j8j2gbr8ak.jpg"
                     />
-
                     <div>
-                      <a href="/u/update-profile">
-                        {<h1>{user.name}</h1> || <h1>(Name)</h1>}
-                      </a>
+                      {(
+                        <>
+                          <div>
+                            <h1>
+                              {user.name}
+                              <a href="/u/update-profile">
+                                <Icon id="iconSetting" name="settings" />
+                              </a>
+                            </h1>
+                          </div>
+                        </>
+                      ) || <h1>(Name)</h1>}
+
                       <h5>
                         {<small>{user.course}</small> || (
                           <small>(Course)</small>

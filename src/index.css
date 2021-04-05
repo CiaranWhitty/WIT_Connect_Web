@@ -171,7 +171,6 @@ a {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  margin-right: 20px;
 }
 
 .profile #profileHeader header small {
@@ -277,6 +276,10 @@ a {
     align-items: center;
   }
 }
+#iconSetting {
+  font-size: 0.8em;
+  padding-left: 15px;
+}
 
 /* Profile Page CSS */
 
@@ -376,7 +379,7 @@ body::-webkit-scrollbar-thumb {
 #iconAWS,
 #iconConnect,
 #iconCollaborate,
-#iconCreate{
+#iconCreate {
   font-size: 195px;
 }
 
