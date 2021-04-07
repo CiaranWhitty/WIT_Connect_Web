@@ -9,7 +9,7 @@ const StudentsCard = ({ student, action }) => {
     <>
       <Card>
         <Card.Content>
-          <Link to={`/u/students/${student.userEmail}`}>
+          <Link to={`/u/students/${student.uId}`}>
             <Image
               fluid
               className="card-img-tag center "

@@ -25,6 +25,7 @@ const mapPage = lazy(() => import("./pages/mapPage"));
 const support = lazy(() => import("./pages/support"));
 const students = lazy(() => import("./pages/students"));
 const studentsPage = lazy(() => import("./components/studentsComponents/studentsDetailsPage"));
+const portfolioItemPage = lazy(() => import("./components/portfolioItemsComponents/portfolioItemsDetailsPage"));
 const mentors = lazy(() => import("./pages/mentors"));
 const Profile = lazy(() => import("./pages/profile"));
 
@@ -53,7 +54,8 @@ const App = () => {
                 {/* When logged in */}
                 <PrivateRoute exact path="/u/witmap" component={mapPage} />
                 <PrivateRoute exact path="/u/support" component={support} />
-                <PrivateRoute exact path="/u/students/:userEmail" component={studentsPage} />
+                <PrivateRoute exact path="/u/students/:uId" component={studentsPage} />
+                <PrivateRoute exact path="/u/students/:uId/:id" component={portfolioItemPage} />
                 <PrivateRoute exact path="/u/students" component={students} />
                 <PrivateRoute exact path="/u/mentors" component={mentors} />
                 <PrivateRoute exact path="/u/profile" component={Profile} />

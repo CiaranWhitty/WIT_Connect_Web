@@ -7,8 +7,8 @@ import useStudent from "../../../hooks/useStudent";
 import StudentContent from "../studentContent";
 
 const StudentsPage = (props) => {
-  const { userEmail } = props.match.params;
-  const [student] = useStudent(userEmail);
+  const { uId } = props.match.params;
+  const [student] = useStudent(uId);
 
   const panes = [
     {
@@ -16,7 +16,7 @@ const StudentsPage = (props) => {
       render: () => (
         <Tab.Pane>
           {" "}
-          <StudentContent studentEmail={userEmail} />{" "}
+          <StudentContent studentuId={uId} />{" "}
         </Tab.Pane>
       ),
     },

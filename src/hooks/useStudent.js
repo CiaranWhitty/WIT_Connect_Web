@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import app from "../firebase/firebase";
 
-const useStudent = (userEmail) => {
+const useStudent = (uId) => {
   const [student, setStudent] = useState([]);
-
 
   useEffect(
     () => {
@@ -15,9 +14,7 @@ const useStudent = (userEmail) => {
           student.push({ id, ...users[id] });
         }
 
-        setStudent(
-          student.filter((user) => user.userEmail === userEmail)
-        );
+        setStudent(student.filter((user) => user.uId === uId));
       });
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
     []

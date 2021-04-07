@@ -34,7 +34,7 @@ export default class StudentsAccordion extends Component {
             <Accordion.Content active={activeIndex === 0}>
               <StudentsPortfoliosList
                 year={"y1"}
-                studentEmail={this.props.studentEmail}
+                studentuId={this.props.studentuId}
               />
             </Accordion.Content>
             {/*  */}
@@ -49,7 +49,7 @@ export default class StudentsAccordion extends Component {
             <Accordion.Content active={activeIndex === 1}>
               <StudentsPortfoliosList
                 year={"y2"}
-                studentEmail={this.props.studentEmail}
+                studentuId={this.props.studentuId}
               />
             </Accordion.Content>
             {/*  */}
@@ -64,7 +64,7 @@ export default class StudentsAccordion extends Component {
             <Accordion.Content active={activeIndex === 2}>
               <StudentsPortfoliosList
                 year={"y3"}
-                studentEmail={this.props.studentEmail}
+                studentuId={this.props.studentuId}
               />
             </Accordion.Content>
             {/*  */}
@@ -80,7 +80,7 @@ export default class StudentsAccordion extends Component {
               {" "}
               <StudentsPortfoliosList
                 year={"y4"}
-                studentEmail={this.props.studentEmail}
+                studentuId={this.props.studentuId}
               />
             </Accordion.Content>
             {/*  */}

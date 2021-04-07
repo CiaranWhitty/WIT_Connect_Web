@@ -3,9 +3,9 @@ import app from "../../../firebase/firebase";
 
 import StudentsPortfolios from "../studentsPorfolios";
 
-export default function StudentsPortfolioMain({ year, studentEmail }) {
+export default function StudentsPortfolioMain({ year, studentuId }) {
   const [portfolioList, setPortfolioList] = useState([]);
-  
+
   useEffect(
     () => {
       const portfolioRef = app.database().ref("Portfolio");
@@ -19,7 +19,7 @@ export default function StudentsPortfolioMain({ year, studentEmail }) {
 
         setPortfolioList(
           portfolioList
-            .filter((portfolio) => portfolio.userEmail === studentEmail)
+            .filter((portfolio) => portfolio.uId === studentuId)
             .filter((portfolio) => portfolio.year === year)
             .filter((portfolio) => portfolio.publicItem === true)
         );

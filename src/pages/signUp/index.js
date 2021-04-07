@@ -50,7 +50,8 @@ export default function Signup() {
 
     const uId = userEmail.substring(0, 8);
     const name = fName + " " + lName;
-
+    setallowEmployers(false);
+    setpublicAccount(true);
     const user = {
       uId,
       fName,

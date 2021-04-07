@@ -1,13 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Container,
   Header,
   Item,
-  Divider,
-  Description,
 } from "semantic-ui-react";
-import './studentsPortfolio.css'
-
+import "./studentsPortfolio.css";
 
 export default function StudentsPortfolio({ portfolio }) {
   return (
@@ -20,7 +18,9 @@ export default function StudentsPortfolio({ portfolio }) {
               <Item.Image src="https://res.cloudinary.com/a20085909/image/upload/v1570916144/yifz1tahn11luai14fis.png" />
 
               <Item.Content>
-                <Item.Header as="a">{portfolio.title}</Item.Header>
+                <Link to={`/u/students/${portfolio.uId}/${portfolio.id}/`}>
+                  <Item.Header>{portfolio.title}</Item.Header>
+                </Link>
                 <Item.Description id="studentsPortfolioDesc">
                   <p>{portfolio.description}</p>
                 </Item.Description>
