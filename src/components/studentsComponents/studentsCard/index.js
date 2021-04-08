@@ -18,7 +18,7 @@ const StudentsCard = ({ student, action }) => {
               //   student.studentImg ? `/u/students/${student.name}` : "/u/students"
               // }
               src={
-                "https://res.cloudinary.com/a20085909/image/upload/v1592601611/nedjkjyve4j8j2gbr8ak.jpg"
+                "https://res.cloudinary.com/a20085909/image/upload/v1617890932/profile-placeholder-genderless_w9v4r5.png"
               }
             />
           </Link>

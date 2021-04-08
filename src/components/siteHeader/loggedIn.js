@@ -72,7 +72,7 @@ export default function LoggedIn() {
             href="/u/"
             src="https://res.cloudinary.com/a20085909/image/upload/v1610756088/Logos_V2.2_jfc4oi.png"
           />
-          
+
           {/* <Image
             className="navLogoMob"
             spaced
@@ -82,26 +82,23 @@ export default function LoggedIn() {
             href="/u/"
             src="https://res.cloudinary.com/a20085909/image/upload/v1617285100/BigFavicon_ix0yn7.png"
           /> */}
-        
         </Menu.Menu>
-
-
 
         <Menu.Menu id="navMenuRight" position="right">
           <Menu.Item as={Link} to="/u/students">
-            <Icon name="users" size={"big"}/>
+            <Icon name="users" size={"big"} />
           </Menu.Item>
 
           <Menu.Item>
-          <Image
-            id="navProfileImg"
-            alt="Profile_Image"
-            as={Link}
-            to="/u/profile"
-            href="/u/profile"
-            src="https://res.cloudinary.com/a20085909/image/upload/v1592601611/nedjkjyve4j8j2gbr8ak.jpg"
-          />
-          {/* src on img need to pull from database */}
+            <Image
+              id="navProfileImg"
+              alt="Profile_Image"
+              as={Link}
+              to="/u/profile"
+              href="/u/profile"
+              src="https://res.cloudinary.com/a20085909/image/upload/v1617890932/profile-placeholder-genderless_w9v4r5.png"
+            />
+            {/* src on img need to pull from database */}
           </Menu.Item>
           <Menu.Item id="buttonRemove">
             <ButnLogOut />
