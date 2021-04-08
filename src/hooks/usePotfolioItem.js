@@ -16,7 +16,9 @@ const usePotfolioItem = (id) => {
         }
 
         setPortfolioList(
-          portfolioList.filter((portfolio) => portfolio.id === id)
+          portfolioList
+            .filter((portfolio) => portfolio.id === id)
+            .filter((portfolio) => portfolio.publicItem === true)
         );
       });
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
