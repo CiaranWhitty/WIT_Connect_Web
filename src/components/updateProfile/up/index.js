@@ -61,13 +61,13 @@ export default function Up({ user }) {
                   </Card.Content>
                   <Checkbox
                     toggle
-                    label="Allow Other Students to see your Profile"
+                    label="Allow Your Account to be Discoverable to Other Students "
                     checked={user.publicAccount}
                     onClick={publicAccount}
                   />
                   <Checkbox
                     toggle
-                    label="Allow Employers to see your Profile"
+                    label="Allow Your Account to be Discoverable to Employers"
                     checked={user.allowEmployers}
                     onClick={allowEmployers}
                   />
