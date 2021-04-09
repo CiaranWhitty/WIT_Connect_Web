@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import app from "../../../firebase/firebase";
 import { useAuth } from "../../../contexts/AuthContext";
-import { Button, Modal, TextArea, Select, Grid } from "semantic-ui-react";
+import {
+  Button,
+  Modal,
+  TextArea,
+  Select,
+  Grid,
+  Popup,
+  Icon,
+} from "semantic-ui-react";
 
 import "./style.css";
 import date from "date-and-time";
@@ -77,6 +85,13 @@ export default function Portfolios() {
           <Button onClick={() => dispatch({ type: "OPEN_MODAL" })}>
             Add To Portfolio
           </Button>
+          <Popup
+            id="popups1"
+            trigger={<Icon name="help circle" />}
+            content="Used to Add Items to Your Portfolio"
+            on="click"
+            hideOnScroll
+          />
         </Grid.Column>
       </Grid>
 

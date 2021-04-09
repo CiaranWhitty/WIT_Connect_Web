@@ -1,5 +1,13 @@
 import React, { useRef, useState } from "react";
-import { Button, Form, Message, Container, Segment } from "semantic-ui-react";
+import {
+  Button,
+  Form,
+  Message,
+  Container,
+  Segment,
+  Popup,
+  Icon,
+} from "semantic-ui-react";
 import app from "../../firebase/firebase";
 import { useAuth } from "../../contexts/AuthContext";
 import { useHistory, Link } from "react-router-dom";
@@ -121,7 +129,7 @@ export default function Signup() {
                 {message && <Message warning={true}>{message}</Message>}
                 <Form onSubmit={handleSubmit}>
                   <Form.Field>
-                    <label>Name:</label>
+                    <label>Name: </label>
                     <input
                       id="fName"
                       name="fname"
@@ -140,20 +148,38 @@ export default function Signup() {
                     />
                   </Form.Field>
                   <Form.Field>
-                    <label>Email Address:</label>
+                    <label>
+                      Email Address:{" "}
+                      <Popup
+                        id="popups1"
+                        trigger={<Icon name="help circle" />}
+                        content="Enter Your Student Email: 200******@mail.wit.ie"
+                        on="click"
+                        hideOnScroll
+                      />
+                    </label>
                     <input
                       name="email"
                       type="email"
                       pattern=".+@mail.wit.ie"
                       placeholder="200*****@mail.wit.ie"
-                      maxlength="20"
+                      maxLength="20"
                       onChange={handleOnChangeEmail}
                       ref={emailRef}
                       required
                     />
                   </Form.Field>
                   <Form.Field>
-                    <label>Course:</label>
+                    <label>
+                      Course:{" "}
+                      <Popup
+                        id="popups2"
+                        trigger={<Icon name="help circle" />}
+                        content="Please Choose Your Course"
+                        on="click"
+                        hideOnScroll
+                      />
+                    </label>
                     <select
                       id="formSelect"
                       name="courses"
@@ -169,7 +195,16 @@ export default function Signup() {
                     </select>
                   </Form.Field>
                   <Form.Field>
-                    <label>Password:</label>
+                    <label>
+                      Password:{" "}
+                      <Popup
+                        id="popups3"
+                        trigger={<Icon name="help circle" />}
+                        content="Your Password Must Be 8 Character or More"
+                        on="click"
+                        hideOnScroll
+                      />
+                    </label>
                     <input
                       name="passwordOne"
                       type="password"
@@ -179,7 +214,17 @@ export default function Signup() {
                     />
                   </Form.Field>
                   <Form.Field>
-                    <label>Confirm Password:</label>
+                    <label>
+                      Confirm Password:{" "}
+                      <Popup
+                        id="popups4"
+                        trigger={<Icon name="help circle" />}
+                        content="Re-enter the Password From the Above Field"
+                        on="click"
+                        hideOnScroll
+                      />
+                    </label>
+
                     <input
                       name="passwordTwo"
                       type="password"

@@ -1,5 +1,13 @@
 import React, { useRef, useState } from "react";
-import { Button, Form, Message, Container, Segment } from "semantic-ui-react";
+import {
+  Button,
+  Form,
+  Message,
+  Container,
+  Segment,
+  Popup,
+  Icon,
+} from "semantic-ui-react";
 
 import { useAuth } from "../../contexts/AuthContext";
 import { useHistory, Link } from "react-router-dom";
@@ -46,13 +54,22 @@ export default function LoginPage() {
                 {message && <Message warning={true}>{message}</Message>}
                 <Form onSubmit={handleSubmit}>
                   <Form.Field>
-                    <label>Email Address:</label>
+                    <label>
+                      Email Address:
+                      <Popup
+                        id="popups1"
+                        trigger={<Icon name="help circle" />}
+                        content="Enter Your Student Email: 200******@mail.wit.ie"
+                        on="click"
+                        hideOnScroll
+                      />
+                    </label>
                     <input
                       name="email"
                       type="email"
                       pattern=".+@mail.wit.ie"
-                      placeholder="Email Address"
-                      maxlength="20"
+                      placeholder="200*****@mail.wit.ie"
+                      maxLength="20"
                       ref={emailRef}
                       required
                     />

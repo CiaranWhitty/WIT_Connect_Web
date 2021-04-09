@@ -153,8 +153,9 @@
 .signUp #male {
   padding-right: 50px !important;
 }
-.signUp #male,
+#male,
 #female {
   display: -webkit-inline-box;
   padding: 0px 5px;
 }
+
