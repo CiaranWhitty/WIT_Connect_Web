@@ -15,12 +15,12 @@ const PortfolioItemPage = (props) => {
       {portfolioList ? (
         <>
           {" "}
-          <PortfolioItemHeader />
           <div className="profile">
             <Grid id="profileMainCon">
               <Grid.Row textAlign="center" id="profileRow">
                 <Grid.Column width={16} id="profileCol">
                   <Container id="profileCon">
+                    <PortfolioItemHeader />
                     <PortfolioItems portfolioList={portfolioList} />
                   </Container>
                 </Grid.Column>
