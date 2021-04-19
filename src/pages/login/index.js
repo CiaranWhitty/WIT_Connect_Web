@@ -25,7 +25,7 @@ export default function LoginPage() {
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
       setIsAuthenticated(true);
-      history.push("u/profile");
+      history.push("/u/");
     } catch {
       setMessage("Failed to log in");
       setIsAuthenticated(false);
@@ -67,12 +67,18 @@ export default function LoginPage() {
                       required
                     />
                   </Form.Field>
-                  <Form.Field>
-                    <Link to="/forgotPassword">Forgot Password?</Link>
-                  </Form.Field>
+
                   <Form.Field>
                     <label>
-                      Need an account? <Link to="/signup">Sign Up</Link>
+                      Need an account?{" "}
+                      <Link
+                        target="_blank"
+                        to={{
+                          pathname: "https://www.witconnect.ie/signup",
+                        }}
+                      >
+                        Sign Up
+                      </Link>
                     </label>
                   </Form.Field>
                   <Button

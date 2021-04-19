@@ -117,22 +117,18 @@ a {
 /* Home Page CSS */
 
 .homePage #homePageContainer {
-  padding: 0 !important;
-  margin: 30px -15px 0px 15px !important;
-  width: auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
 }
 
-@media only screen and (max-width: 767px) {
-  .homePage #homePageContainer {
-    padding: 0 !important;
-    margin: 30px 0px 0px 0px !important;
-    width: auto !important;
-  }
-}
-
-.homePage #headerHomePage {
-  padding: 200px 16px;
-}
+/* .homePage #homePageContainer button.ui.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
 
 /* Home Page CSS */
 

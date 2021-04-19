@@ -10,24 +10,21 @@ import "./index.css";
 
 import PrivateRoute from "./routes/PrivateRoute";
 import AuthProvider from "./contexts/AuthContext";
+
 import SiteHeader from "./components/siteHeader";
+
 import homePage from "./pages/homePage";
-// import studentsPage from "./components/studentsDetailsPage";
+import HomePage from "./pages/homePage";
+import LoginPage from "./pages/login";
 
-import signupPage from "./pages/signUp";
-import loginPage from "./pages/login";
-import updateProfile from "./pages/UpdateProfile";
-import ForgotPassword from "./pages/userFunction/forgotPassword";
-import updatePassword from "./pages/userFunction/updatePassword";
-// import updateDetails from "./pages/userFunction/updateDetails";
-
-const mapPage = lazy(() => import("./pages/mapPage"));
 const support = lazy(() => import("./pages/support"));
 const students = lazy(() => import("./pages/students"));
-const studentsPage = lazy(() => import("./components/studentsComponents/studentsDetailsPage"));
-const portfolioItemPage = lazy(() => import("./components/portfolioItemsComponents/portfolioItemsDetailsPage"));
-const mentors = lazy(() => import("./pages/mentors"));
-const Profile = lazy(() => import("./pages/profile"));
+const studentsPage = lazy(() =>
+  import("./components/studentsComponents/studentsDetailsPage")
+);
+const portfolioItemPage = lazy(() =>
+  import("./components/portfolioItemsComponents/portfolioItemsDetailsPage")
+);
 
 const App = () => {
   return (
@@ -52,39 +49,16 @@ const App = () => {
               {/* <Loader active inline='centered' /> */}
               <Switch>
                 {/* When logged in */}
-                <PrivateRoute exact path="/u/witmap" component={mapPage} />
-                <PrivateRoute exact path="/u/support" component={support} />
+                <PrivateRoute path="/u/employers" component={support} />{" "}
                 <PrivateRoute exact path="/u/students/:uId" component={studentsPage} />
                 <PrivateRoute exact path="/u/students/:uId/:id" component={portfolioItemPage} />
-                <PrivateRoute exact path="/u/students" component={students} />
-                <PrivateRoute exact path="/u/mentors" component={mentors} />
-                <PrivateRoute exact path="/u/profile" component={Profile} />
-                {/* <PrivateRoute
-                  exact
-                  path="/u/update-details"
-                  component={updateDetails}
-                /> */}
-                <PrivateRoute
-                  exact
-                  path="/u/update-password"
-                  component={updatePassword}
-                />
-                <PrivateRoute
-                  exact
-                  path="/u/update-profile"
-                  component={updateProfile}
-                />
+                <PrivateRoute path="/u/students" component={students} />
+                <PrivateRoute path="/u/support" component={support} />                
                 <PrivateRoute exact path="/u/" component={homePage} />
 
                 {/* Normal view */}
-                <Route path="/forgotpassword" component={ForgotPassword} />
-                <Route path="/login" component={loginPage} />
-                <Route path="/signup" component={signupPage} />
-                <Route path="/witmap" component={mapPage} />
-                <Route path="/support" component={support} />
-                <Route path="/mentors" component={mentors} />
-
-                <Route path="/" component={homePage} />
+                <Route path="/login" component={LoginPage} />
+                <Route path="/" component={HomePage} />
                 <Redirect from="*" to="/" />
               </Switch>
             </Suspense>

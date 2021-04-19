@@ -12,8 +12,6 @@ export default function ButnSignIn() {
   async function handleToLogin() {
     
     history.push("/login")
-    document.getElementById("myNav").style.width = "0%";
-    document.getElementById("buttonRemove").style.display = "flex"
 
   }
   return (

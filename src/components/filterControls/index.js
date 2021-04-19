@@ -1,13 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./filterControls.css";
 
-const FilterControls = props => {
-
+const FilterControls = (props) => {
   const handleChange = (e, type, value) => {
     e.preventDefault();
     props.onUserInput(type, value);
   };
-  const handleTextChange = e => {
+  const handleTextChange = (e) => {
     handleChange(e, "name", e.target.value);
   };
   // const handleGenreChange = e => {
@@ -20,23 +19,22 @@ const FilterControls = props => {
         <div className="row">
           <div className="col-md-12">
             <h4>
-
               {/* Search Bar - https://codepen.io/takaneichinose/pen/gKVXXL */}
               <div className="flexbox">
                 <div className="search">
                   <div>
-                    <input 
-                    type="text" 
-                    placeholder="Search . . ." 
-                    onChange={handleTextChange}
-                    required 
+                    <input
+                      type="text"
+                      placeholder="Search . . ."
+                      onChange={handleTextChange}
+                      required
                     />
                   </div>
                 </div>
 
                 {/* Select - https://www.filamentgroup.com/lab/select-css.html */}
                 {/* <h2>Genre:</h2> */}
-                
+
                 {/* <select  className="select-css" id="genre" onChange={handleGenreChange}>
                   {context.genres.map(genre => {
                     return (
@@ -46,9 +44,7 @@ const FilterControls = props => {
                     );
                   })}
                 </select> */}
-
               </div>
-              
             </h4>
           </div>
         </div>

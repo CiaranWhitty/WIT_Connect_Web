@@ -9,20 +9,6 @@ import LoggedOut from "./loggedOut";
 
 export default function SiteHeader() {
   const context = useAuth();
-  const { isAuthenticated, setIsAuthenticated } = useAuth();
-
-  // Getting and checking IsAuthenticated to make such it is true
-  useEffect(() => {
-    const logData = window.localStorage.getItem("logItem");
-    const logSaved = JSON.parse(logData);
-    setIsAuthenticated(logSaved.isAuthenticated); // eslint-disable-next-line
-  }, []);
-
-  // Saving IsAuthenticated locally
-  useEffect(() => {
-    const logValue = { isAuthenticated };
-    window.localStorage.setItem("logItem", JSON.stringify(logValue));
-  });
 
   return context.isAuthenticated ? (
     //When logged in

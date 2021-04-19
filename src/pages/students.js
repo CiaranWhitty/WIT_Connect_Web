@@ -21,6 +21,7 @@ const Students = ({ action }) => {
           userList
             .filter((user) => user.userEmail)
             .filter((user) => user.publicAccount === true)
+            .filter((user) => user.allowEmployers === true)
         );
       });
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
