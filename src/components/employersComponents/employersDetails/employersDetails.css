@@ -1,0 +1,75 @@
+.student #profileHeader {
+  /* margin: 0 40px; */
+}
+
+.student #profileHeader svg {
+  width: 40px;
+  height: 40px;
+}
+
+.student #profileHeader header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.student #profileHeader header > div {
+  display: flex;
+  align-items: center;
+}
+
+.student #profileHeader header nav {
+  font-family: Lato;
+  font-weight: 700;
+}
+
+.student #profileHeader header img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.student #profileHeader header small {
+  display: inline-block;
+  margin-bottom: 7px;
+  font-family: Lato;
+  font-weight: 700;
+  color: #686868;
+  letter-spacing: 0.2px;
+}
+
+.student #profileHeader header nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px !important;
+  margin-bottom: 0 !important;
+}
+
+.student #profileHeader header nav ul li {
+  display: inline-block;
+  color: #313131;
+  letter-spacing: 0.1px;
+}
+
+.student #profileHeader header nav ul li:not(:first-child) {
+  margin-left: 50px;
+}
+
+@media (max-width: 800px) {
+  .student #profileHeader header {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .student #profileHeader header > div {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .student #profileHeader header nav {
+    margin-top: 30px;
+  }
+}

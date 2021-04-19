@@ -18,6 +18,7 @@ import HomePage from "./pages/homePage";
 import LoginPage from "./pages/login";
 
 const support = lazy(() => import("./pages/support"));
+
 const students = lazy(() => import("./pages/students"));
 const studentsPage = lazy(() =>
   import("./components/studentsComponents/studentsDetailsPage")
@@ -26,6 +27,10 @@ const portfolioItemPage = lazy(() =>
   import("./components/portfolioItemsComponents/portfolioItemsDetailsPage")
 );
 
+const Employers = lazy(() => import("./pages/employers"));
+const employersPage = lazy(() =>
+  import("./components/employersComponents/employersDetailsPage")
+);
 const App = () => {
   return (
     <>
@@ -49,11 +54,25 @@ const App = () => {
               {/* <Loader active inline='centered' /> */}
               <Switch>
                 {/* When logged in */}
-                <PrivateRoute path="/u/employers" component={support} />{" "}
-                <PrivateRoute exact path="/u/students/:uId" component={studentsPage} />
-                <PrivateRoute exact path="/u/students/:uId/:id" component={portfolioItemPage} />
+                <PrivateRoute
+                  exact
+                  path="/u/students/:uId"
+                  component={studentsPage}
+                />
+                <PrivateRoute
+                  exact
+                  path="/u/students/:uId/:id"
+                  component={portfolioItemPage}
+                />
                 <PrivateRoute path="/u/students" component={students} />
-                <PrivateRoute path="/u/support" component={support} />                
+                <PrivateRoute
+                  exact
+                  path="/u/employers/:name"
+                  component={employersPage}
+                />
+                {/* <PrivateRoute exact path="/u/employers/:eId/:id" component={} /> */}
+                <PrivateRoute path="/u/employers" component={Employers} />
+                <PrivateRoute path="/u/support" component={support} />
                 <PrivateRoute exact path="/u/" component={homePage} />
 
                 {/* Normal view */}
