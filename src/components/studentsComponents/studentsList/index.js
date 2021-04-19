@@ -9,7 +9,7 @@ const StudentsList = ({ students, action }) => {
     <StudentCard key={s.userEmail} student={s} action={action} />
   ));
   return (
-    <Card.Group centered stackable doubling itemsPerRow={4}>
+    <Card.Group id="studentsCards" centered stackable doubling itemsPerRow={4}>
       {studentsCards}
     </Card.Group>
   );

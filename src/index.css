@@ -108,6 +108,16 @@ a {
   }
 }
 
+#popups1,
+#popups2,
+#popups3,
+#popups4 {
+  margin: 5px -13px !important;
+}
+#popups3 {
+  width: 70%;
+}
+
 /* general Forms */
 
 .contentMain {

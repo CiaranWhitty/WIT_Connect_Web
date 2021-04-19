@@ -14,7 +14,11 @@ const useStudent = (uId) => {
           student.push({ id, ...users[id] });
         }
 
-        setStudent(student.filter((user) => user.uId === uId));
+        setStudent(
+          student
+            .filter((user) => user.uId === uId)
+            .filter((user) => user.publicAccount === true)
+        );
       });
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
     []

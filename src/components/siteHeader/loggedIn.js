@@ -5,7 +5,6 @@ import ButnLogOut from "../buttons/butnLogOut";
 import { Link } from "react-router-dom";
 
 export default function LoggedIn() {
-
   return (
     <div id="headerFixed">
       <div className="w3-bar w3-black">

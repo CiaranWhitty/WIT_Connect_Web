@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { Grid, Button, Icon, Header } from "semantic-ui-react";
 
-const StudentHeader = ({ student, history }) => {
+const PortfolioItemHeader = ({ history }) => {
   return (
     <>
       <Grid columns={2} padded centered>
@@ -24,4 +24,4 @@ const StudentHeader = ({ student, history }) => {
   );
 };
 
-export default withRouter(StudentHeader);
+export default withRouter(PortfolioItemHeader);
