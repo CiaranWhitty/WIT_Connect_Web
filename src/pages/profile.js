@@ -19,11 +19,11 @@ export default function Profile() {
         </Tab.Pane>
       ),
     },
-    { menuItem: "Timeline", render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
-    {
-      menuItem: "Work Experience",
-      render: () => <Tab.Pane>Tab 3 Content</Tab.Pane>,
-    },
+    // { menuItem: "Timeline", render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
+    // {
+    //   menuItem: "Work Experience",
+    //   render: () => <Tab.Pane>Tab 3 Content</Tab.Pane>,
+    // },
   ];
 
   if (currentUser.emailVerified) {

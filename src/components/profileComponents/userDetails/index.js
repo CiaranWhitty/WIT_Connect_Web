@@ -69,33 +69,6 @@ export default function UserDetails() {
                   </div>
                   <nav>
                     <ul>
-                      {/* <li>
-                        <a
-                          href="https://www.youtube.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <AiFillYoutube />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://github.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <AiFillGithub />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://twitter.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <AiFillTwitterCircle />
-                        </a>
-                      </li> */}
                       <li>
                         <a href={`mailto:${currentUser.email}`}>
                           <AiOutlineMail />

@@ -3,7 +3,7 @@ import { Accordion, Icon, Segment } from "semantic-ui-react";
 import PortfoliosForm from "../../portfolioComponents/portfolioForm";
 import PortfoliosList from "../../portfolioComponents/portfolioMain";
 
-import "./style.css";
+import "./profileContent.css";
 
 export default class ProfileAccordion extends Component {
   state = { activeIndex: 99 };

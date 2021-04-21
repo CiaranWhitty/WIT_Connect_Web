@@ -5,6 +5,7 @@ import StudentsDetails from "../studentsDetails";
 import PageTemplate from "../studentsTemplatePage";
 import useStudent from "../../../hooks/useStudent";
 import StudentContent from "../studentContent";
+import StudentTimeline from "../studentTimeline";
 
 const StudentsPage = (props) => {
   const { uId } = props.match.params;
@@ -15,16 +16,23 @@ const StudentsPage = (props) => {
       menuItem: "Portfolio Items",
       render: () => (
         <Tab.Pane>
-          {" "}
-          <StudentContent studentuId={uId} />{" "}
+          <StudentContent studentuId={uId} />
         </Tab.Pane>
       ),
     },
-    { menuItem: "Timeline", render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
     {
-      menuItem: "Work Experience",
-      render: () => <Tab.Pane>Tab 3 Content</Tab.Pane>,
+      menuItem: "Timeline",
+      render: () => (
+        <Tab.Pane>
+          <StudentTimeline studentuId={uId} />
+        </Tab.Pane>
+      ),
     },
+
+    // {
+    //   menuItem: "Work Experience",
+    //   render: () => <Tab.Pane>Tab 3 Content</Tab.Pane>,
+    // },
   ];
 
   return (

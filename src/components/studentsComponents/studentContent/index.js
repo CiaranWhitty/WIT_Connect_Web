@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Accordion, Icon, Segment } from "semantic-ui-react";
-import StudentsPortfoliosList from "../../studentsPortfolioComponents/studentsPorfoliosMain";
+import StudentsPortfoliosMain from "../../studentsPortfolioComponents/main/studentsPortfoliosMain";
 
-import "./style.css";
+import "./studentContent.css";
 
 export default class StudentsAccordion extends Component {
   state = { activeIndex: 99 };
@@ -19,8 +19,8 @@ export default class StudentsAccordion extends Component {
     const { activeIndex } = this.state;
 
     return (
-      <div className="profileContent">
-        <Segment id="portfolioCon" basic size={"big"}>
+      <div className="studentContent">
+        <Segment id="studentCon" basic size={"big"}>
           <Accordion fluid styled>
             {/*  */}
             <Accordion.Title
@@ -32,7 +32,7 @@ export default class StudentsAccordion extends Component {
               First Year
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 0}>
-              <StudentsPortfoliosList
+              <StudentsPortfoliosMain
                 year={"y1"}
                 studentuId={this.props.studentuId}
               />
@@ -47,7 +47,7 @@ export default class StudentsAccordion extends Component {
               Second Year
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 1}>
-              <StudentsPortfoliosList
+              <StudentsPortfoliosMain
                 year={"y2"}
                 studentuId={this.props.studentuId}
               />
@@ -62,7 +62,7 @@ export default class StudentsAccordion extends Component {
               Third Year
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 2}>
-              <StudentsPortfoliosList
+              <StudentsPortfoliosMain
                 year={"y3"}
                 studentuId={this.props.studentuId}
               />
@@ -78,7 +78,7 @@ export default class StudentsAccordion extends Component {
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 3}>
               {" "}
-              <StudentsPortfoliosList
+              <StudentsPortfoliosMain
                 year={"y4"}
                 studentuId={this.props.studentuId}
               />
