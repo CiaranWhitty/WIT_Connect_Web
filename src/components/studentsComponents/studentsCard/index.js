@@ -29,7 +29,7 @@ const StudentsCard = ({ student, action }) => {
           "https://res.cloudinary.com/a20085909/image/upload/v1617227524/profile-placeholder-female_g7lxtq.png" 
           */}
           <Card.Description>
-            <Card.Header as={"h2"} textAlign={"center"}>
+            <Card.Header id="nameCap" as={"h2"} textAlign={"center"}>
               {student.name}
             </Card.Header>
 

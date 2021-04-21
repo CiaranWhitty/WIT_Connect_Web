@@ -50,7 +50,7 @@ export default function UserDetails() {
                       {(
                         <>
                           <div>
-                            <h1>
+                            <h1 id="nameCap">
                               {user.name}
                               <a href="/u/update-profile">
                                 <Icon id="iconSetting" name="settings" />

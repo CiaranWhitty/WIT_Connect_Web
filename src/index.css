@@ -62,6 +62,9 @@ a {
   color: unset;
 }
 
+#nameCap {
+  text-transform: capitalize;
+}
 /* general Forms */
 
 #Forms {

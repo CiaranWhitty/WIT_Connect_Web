@@ -25,7 +25,7 @@ const student = ({ student }) => {
                       />
 
                       <div key={student.id}>
-                        {<h1>{student.name}</h1> || <h1>(Name)</h1>}
+                        {<h1 id="nameCap">{student.name}</h1> || <h1>(Name)</h1>}
                         <h5>
                           {<small>{student.course}</small> || (
                             <small>(Course)</small>
