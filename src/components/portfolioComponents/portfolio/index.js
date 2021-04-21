@@ -35,15 +35,11 @@ export default function Portfolio({ portfolio }) {
             <Item>
               <Item.Image src="https://res.cloudinary.com/a20085909/image/upload/v1570916144/yifz1tahn11luai14fis.png" />
               <Item.Content>
-                <Item.Header as="a">{portfolio.title}</Item.Header>
-
-                <Item.Meta>
-                  <span>{portfolio.data}</span>
-                </Item.Meta>
+                <Item.Header as="a">Title: {portfolio.title}</Item.Header>
 
                 <Item.Description id="studentsPortfolioDesc">
                   {" "}
-                  <p>{portfolio.description}</p>
+                  <p>Description: {portfolio.description}</p>
                 </Item.Description>
 
                 <Item.Extra>
@@ -71,13 +67,9 @@ export default function Portfolio({ portfolio }) {
                     onClick={publicPortfolio}
                   />
                 </Item.Extra>
-
-                {/* <Item.Description>
-                  Created By: {portfolio.userEmail}
-                </Item.Description> */}
               </Item.Content>
             </Item>
-
+              Date Created: {portfolio.creationDate}
             <Divider />
           </Item.Group>
         </Container>

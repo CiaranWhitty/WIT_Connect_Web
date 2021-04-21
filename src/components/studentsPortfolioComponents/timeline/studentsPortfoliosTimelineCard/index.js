@@ -19,6 +19,7 @@ export default function StudentsPortfoliosTimelineCard({ portfolio }) {
                 <span>Created By: {portfolio.userEmail}</span>
               </Item.Meta>
             </Item>
+            {portfolio.creationDate}
 
         </Card.Content>
       </Card>
