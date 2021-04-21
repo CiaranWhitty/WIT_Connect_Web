@@ -10,17 +10,5 @@ export default function StudentsPortfoliosTimeline({ portfolioList }) {
     />
   ));
 
-  return (
-    <>
-      <Card.Group
-        id="studentsCards"
-        centered
-        stackable
-        doubling
-        itemsPerRow={1}
-      >
-        {studentsPortfoliosCards}
-      </Card.Group>
-    </>
-  );
+  return <>{studentsPortfoliosCards}</>;
 }

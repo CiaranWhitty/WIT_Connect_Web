@@ -1,28 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Item, Card } from "semantic-ui-react";
+import "./studentsPortfoliosTimelineCard.css";
 
 export default function StudentsPortfoliosTimelineCard({ portfolio }) {
   return (
     <>
-      <Card centered>
-        <Card.Content>
-          
-            <Item>
+      {/* https://codepen.io/NilsWe/pen/FemfK */}
+      <ul class="timeline">
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
               <Link to={`/u/students/${portfolio.uId}/${portfolio.id}/`}>
-                <Item.Image src="https://res.cloudinary.com/a20085909/image/upload/v1570916144/yifz1tahn11luai14fis.png" />
+                <span class="flag">{portfolio.title}</span>
               </Link>
-              <Link to={`/u/students/${portfolio.uId}/${portfolio.id}/`}>
-                <Item.Header>{portfolio.title}</Item.Header>
-              </Link>
-              <Item.Meta>
-                <span>Created By: {portfolio.userEmail}</span>
-              </Item.Meta>
-            </Item>
-            {portfolio.creationDate}
-
-        </Card.Content>
-      </Card>
+              <span class="time-wrapper">
+                <span class="time">{portfolio.creationDate}</span>
+              </span>
+            </div>
+            <div class="desc">{portfolio.shortDesc}</div>
+          </div>
+        </li>
+      </ul>
     </>
   );
 }
