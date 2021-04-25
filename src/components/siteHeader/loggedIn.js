@@ -48,6 +48,20 @@ export default function LoggedIn() {
         </a>
       </div>
 
+      <Menu id="topHeaderMargin" size="massive" pointing>
+        <Menu.Menu>
+          <Image
+            className="navLogo"
+            centered
+            alt="Logo"
+            as={Link}
+            to="/u/"
+            href="/u/"
+            src="https://res.cloudinary.com/a20085909/image/upload/v1610756088/Logos_V2.2_jfc4oi.png"
+          />
+        </Menu.Menu>
+      </Menu>
+
       <Menu id="headerMargin" size="massive" pointing>
         <Menu.Menu>
           <Menu.Item>
@@ -60,28 +74,6 @@ export default function LoggedIn() {
               <GiHamburgerMenu />
             </a>
           </Menu.Item>
-        </Menu.Menu>
-
-        <Menu.Menu>
-          <Image
-            className="navLogo"
-            spaced
-            alt="Logo"
-            as={Link}
-            to="/u/"
-            href="/u/"
-            src="https://res.cloudinary.com/a20085909/image/upload/v1610756088/Logos_V2.2_jfc4oi.png"
-          />
-
-          {/* <Image
-            className="navLogoMob"
-            spaced
-            alt="Logo"
-            as={Link}
-            to="/u/"
-            href="/u/"
-            src="https://res.cloudinary.com/a20085909/image/upload/v1617285100/BigFavicon_ix0yn7.png"
-          /> */}
         </Menu.Menu>
 
         <Menu.Menu id="navMenuRight" position="right">

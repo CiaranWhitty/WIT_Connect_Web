@@ -11,7 +11,7 @@ export default function MapPage() {
     <>
     <div className="mapPage">
       <WITMaps />
-      <Timetable />
+      {/* <Timetable /> */}
     </div>
     </>
   ) : (

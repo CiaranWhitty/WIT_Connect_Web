@@ -64,7 +64,7 @@ export default function LoggedOut() {
           </Menu.Item>
 
           <Image
-            className="navLogo"
+            className="navLogoLO"
             spaced
             alt="Logo"
             as={Link}

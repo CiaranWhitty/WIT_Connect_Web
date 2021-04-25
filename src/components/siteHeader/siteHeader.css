@@ -92,7 +92,7 @@
 .siteHeader #myNav {
   width: 0%;
 }
-.siteHeader .navLogo {
+.siteHeader .navLogoLO {
   padding-top: 18px;
 }
 .siteHeader .navLogo .ui.spaced.image {
@@ -115,9 +115,9 @@
   margin: 0%;
 }
 @media screen and (max-width: 700px) {
-  .siteHeader .navLogo img {
+  /* .siteHeader .navLogo img {
     display: none;
-  }
+  } */
   .siteHeader #navMenuRight {
     margin-right: 8% !important;
   }
@@ -159,6 +159,15 @@
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
+}
+
+.siteHeader #topHeaderMargin {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 80px;
+}
+.siteHeader #topHeaderMargin .menu {
+  margin: auto;
 }
 
 .siteHeader #headerMargin {
