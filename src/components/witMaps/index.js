@@ -17,75 +17,76 @@ function Map() {
   var location = { lat: 52.245807, lng: -7.138853 };
 
   return (
-    <GoogleMap
-      defaultZoom={17} //18
-      defaultCenter={location}
-      clickableIcons={false}
-      disableDefaultUI={true}
-      fullscreenControl={false}
-    >
-      {buildingData.wit.map((building) => (
-        <Marker
-          key={building.building_Name}
-          position={{
-            lat: building.center[0],
-            lng: building.center[1],
-          }}
-          // icon={{
-          //   path: 'M2 2 H 100 V 60 H 2 L 2 2',
-          //   fillColor: 'white',
-          //   fillOpacity: 0,
-          //   strokeColor: '#000',
-          //   strokeWeight: 1,
+    <>
+      <GoogleMap
+        defaultZoom={17} //18
+        defaultCenter={location}
+        clickableIcons={false}
+        disableDefaultUI={true}
+        fullscreenControl={false}
+      >
+        {buildingData.wit.map((building) => (
+          <Marker
+            key={building.building_Name}
+            position={{
+              lat: building.center[0],
+              lng: building.center[1],
+            }}
+            title={building.building_Name}
+            // icon={{
+            //   path: "M2 2 H 100 V 60 H 2 L 2 2",
+            //   fillColor: "white",
+            //   fillOpacity: 0,
+            //   strokeColor: "#000",
+            //   strokeWeight: 1,
+            // }}
+            onClick={() => {
+              setSelectedBuilding(building);
+            }}
+          />
+        ))}
 
-          // }}
+        {selectedBuilding && (
+          <InfoWindow
+            position={{
+              lat: selectedBuilding.center[0],
+              lng: selectedBuilding.center[1],
+            }}
+            onCloseClick={() => {
+              setSelectedBuilding(null);
+            }}
+          >
+            <div>
+              <h5>{selectedBuilding.building_Name}</h5>
 
-          //icon= {customMaker}
-          onClick={() => {
-            //alert(building.building_Name);
-            setSelectedBuilding(building);
-          }}
-        />
-      ))}
+              <table id="mapTable">
+                <tbody>
+                  <tr>
+                    <th>Floor</th>
+                    <th>Room's</th>
+                  </tr>
 
-      {selectedBuilding && (
-        <InfoWindow
-          position={{
-            lat: selectedBuilding.center[0],
-            lng: selectedBuilding.center[1],
-          }}
-          onCloseClick={() => {
-            setSelectedBuilding(null);
-          }}
-        >
-          <div>
-            <h5>{selectedBuilding.building_Name}</h5>
+                  <tr>
+                    <td>G</td>
+                    <td>{selectedBuilding.floor_G}</td>
+                  </tr>
 
-            <table id="mapTable">
-              <tr>
-                <th>Floor</th>
-                <th>Room's</th>
-              </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>{selectedBuilding.floor_1}</td>
+                  </tr>
 
-              <tr>
-                <td>G</td>
-                <td>{selectedBuilding.floor_G}</td>
-              </tr>
-
-              <tr>
-                <td>1</td>
-                <td>{selectedBuilding.floor_1}</td>
-              </tr>
-
-              <tr>
-                <td>2</td>
-                <td>{selectedBuilding.floor_2}</td>
-              </tr>
-            </table>
-          </div>
-        </InfoWindow>
-      )}
-    </GoogleMap>
+                  <tr>
+                    <td>2</td>
+                    <td>{selectedBuilding.floor_2}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </InfoWindow>
+        )}
+      </GoogleMap>
+    </>
   );
 }
 
