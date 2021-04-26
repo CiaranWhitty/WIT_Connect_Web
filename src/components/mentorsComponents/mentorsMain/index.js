@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Header, Icon, Segment, Label } from "semantic-ui-react";
+import { Header, Icon, Segment } from "semantic-ui-react";
 import app from "../../../firebase/firebase";
 import FilterControls from "../../filterControls";
 
 import Mentors from "../mentors";
+import "./mentorsMain.css";
 
 export default function MentorsMain() {
   const [mentorList, setmentorList] = useState([]);
@@ -38,7 +39,7 @@ export default function MentorsMain() {
     <>
       <Segment placeholder>
         <Header icon dividing>
-          <Icon name="users" />
+          <Icon name="user plus" />
           Search Mentors
         </Header>
 
@@ -49,6 +50,16 @@ export default function MentorsMain() {
         {/* <Label id="totalStudentNum" color="blue">
           Number Of Mentors: {displayedMentors.length}
         </Label> */}
+        <h4 id="witP2PLink">
+          You can find out more information{" "}
+          <a
+            href="https://www.wit.ie/current_students/student_life_and_learning/p2p-peer-mentoring"
+            target="_blank"
+            rel="noreferrer"
+          >
+            here
+          </a>
+        </h4>
       </Segment>
 
       <Mentors mentorList={displayedMentors} />
