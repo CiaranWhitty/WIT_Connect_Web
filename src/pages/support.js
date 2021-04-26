@@ -1,17 +1,14 @@
 import React from "react";
+import OnCampus from "../components/supportComponents/onCampus";
+import OffCampus from "../components/supportComponents/offCampus";
 
 const support = () => {
-
   return (
     <>
-      <div className="row">
-        <div className="col-3">
-
-          <h1>Support</h1>
-
-        </div>
+      <div className="support">
+        <OnCampus />
+        <OffCampus />
       </div>
-
     </>
   );
 };

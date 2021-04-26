@@ -397,3 +397,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* UpdateProfile Page CSS */
+
+/* Support Page CSS */
+
+.support {
+  margin: 5%;
+}
+.support h1 {
+  margin: 3%;
+  text-align: center;
+}
+/* Support Page CSS */
