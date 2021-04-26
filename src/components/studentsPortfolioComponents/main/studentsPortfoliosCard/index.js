@@ -10,7 +10,7 @@ export default function StudentsPortfoliosCard({ portfolio }) {
           
             <Item>
               <Link to={`/u/students/${portfolio.uId}/${portfolio.id}/`}>
-                <Item.Image src="https://res.cloudinary.com/a20085909/image/upload/v1570916144/yifz1tahn11luai14fis.png" />
+                <Item.Image src={portfolio.portfolioImage} />
               </Link>
               <Link to={`/u/students/${portfolio.uId}/${portfolio.id}/`}>
                 <Item.Header>{portfolio.title}</Item.Header>

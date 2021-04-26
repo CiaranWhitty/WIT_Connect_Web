@@ -14,7 +14,7 @@ export default function portfolioItem({ portfolioList }) {
             <Container>
               <Item.Group divided>
                 <Item>
-                  <Item.Image src="https://res.cloudinary.com/a20085909/image/upload/v1570916144/yifz1tahn11luai14fis.png" />
+                  <Item.Image src={portfolio.portfolioImage} />
                   <Item.Content>
                     <Item.Header as="a">{portfolio.title}</Item.Header>
 

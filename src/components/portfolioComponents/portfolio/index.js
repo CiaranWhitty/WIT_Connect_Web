@@ -33,7 +33,7 @@ export default function Portfolio({ portfolio }) {
         <Container>
           <Item.Group divided>
             <Item>
-              <Item.Image src="https://res.cloudinary.com/a20085909/image/upload/v1570916144/yifz1tahn11luai14fis.png" />
+              <Item.Image src={portfolio.portfolioImage} />
               <Item.Content>
                 <Item.Header as="a">Title: {portfolio.title}</Item.Header>
 
@@ -69,7 +69,7 @@ export default function Portfolio({ portfolio }) {
                 </Item.Extra>
               </Item.Content>
             </Item>
-              Date Created: {portfolio.creationDate}
+            Date Created: {portfolio.creationDate}
             <Divider />
           </Item.Group>
         </Container>

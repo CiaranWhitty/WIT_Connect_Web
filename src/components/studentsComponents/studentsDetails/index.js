@@ -21,7 +21,7 @@ const student = ({ student }) => {
                     <div>
                       <img
                         alt="Profile_Image"
-                        src="https://res.cloudinary.com/a20085909/image/upload/v1617890932/profile-placeholder-genderless_w9v4r5.png"
+                        src={student.profileImage}
                       />
 
                       <div key={student.id}>

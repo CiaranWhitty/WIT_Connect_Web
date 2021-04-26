@@ -49,12 +49,16 @@ export default function Portfolios() {
     const portfolioRef = app.database().ref("Portfolio");
 
     const uId = userEmail.substring(0, 8);
+    const portfolioImage =
+      "https://res.cloudinary.com/a20085909/image/upload/v1570916144/yifz1tahn11luai14fis.png";
+
     setpublicItem(false);
 
     const portfolio = {
       uId,
       userEmail,
       title,
+      portfolioImage,
       description,
       creationDate,
       year,

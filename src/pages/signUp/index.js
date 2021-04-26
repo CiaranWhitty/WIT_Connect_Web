@@ -58,6 +58,10 @@ export default function Signup() {
 
     const uId = userEmail.substring(0, 8);
     const name = fName + " " + lName;
+
+    const profileImage =
+      "https://res.cloudinary.com/a20085909/image/upload/v1617890932/profile-placeholder-genderless_w9v4r5.png";
+      
     setallowEmployers(false);
     setpublicAccount(true);
     const user = {
@@ -65,13 +69,14 @@ export default function Signup() {
       fName,
       lName,
       name,
+      profileImage,
       userEmail,
       course,
       creationDate,
       allowEmployers,
       publicAccount,
     };
-    console.log(user);
+    // console.log(user);
 
     userRef.push(user);
   };

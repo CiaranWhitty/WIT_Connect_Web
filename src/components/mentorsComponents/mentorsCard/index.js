@@ -7,17 +7,15 @@ export default function MentorsCard({ mentor }) {
     <>
       <Card centered>
         <Card.Content>
-            <Image
-              fluid
-              className="card-img-tag center "
-              alt={mentor.name}
-              // src={
-              //   student.studentImg ? `/u/students/${student.name}` : "/u/students"
-              // }
-              src={
-                "https://res.cloudinary.com/a20085909/image/upload/v1617890932/profile-placeholder-genderless_w9v4r5.png"
-              }
-            />
+          <Image
+            fluid
+            className="card-img-tag center "
+            alt={mentor.name}
+            // src={
+            //   student.studentImg ? `/u/students/${student.name}` : "/u/students"
+            // }
+            src={mentor.profileImage}
+          />
           <Card.Description>
             <Card.Header id="nameCap" as={"h2"} textAlign={"center"}>
               {mentor.name}
@@ -29,11 +27,7 @@ export default function MentorsCard({ mentor }) {
                 <b>Email: </b>
                 {mentor.userEmail}
               </span>
-              <Divider />{" "}
-              <span>
-                {" "}
-                {mentor.course}
-              </span>
+              <Divider /> <span> {mentor.course}</span>
             </Card.Meta>
           </Card.Description>
         </Card.Content>
