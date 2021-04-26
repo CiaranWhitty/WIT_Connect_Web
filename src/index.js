@@ -82,7 +82,6 @@ const App = () => {
                 <Route path="/signup" component={signupPage} />
                 <Route path="/witmap" component={mapPage} />
                 <Route path="/support" component={support} />
-                <Route path="/mentors" component={mentors} />
 
                 <Route path="/" component={homePage} />
                 <Redirect from="*" to="/" />

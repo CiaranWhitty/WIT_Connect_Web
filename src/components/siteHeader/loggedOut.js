@@ -110,14 +110,6 @@ export default function LoggedOut() {
                 }}
               />
               <Menu.Item
-                name="Mentors"
-                as={Link}
-                to="/mentors"
-                onClick={() => {
-                  closeMenuWhenClicked();
-                }}
-              />
-              <Menu.Item
                 name="Support"
                 as={Link}
                 to="/support"

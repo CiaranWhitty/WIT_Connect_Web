@@ -1,17 +1,10 @@
 import React from "react";
+import MentorsList from "../components/mentorsComponents/mentorsMain";
 
 const mentors = () => {
-
   return (
     <>
-      <div className="row">
-        <div className="col-3">
-
-          <h1>Mentors</h1>
-
-        </div>
-      </div>
-
+      <MentorsList />
     </>
   );
 };
