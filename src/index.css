@@ -270,15 +270,20 @@ a {
     margin-left: 1px !important;
     padding-left: 1px !important;
   }
-  .profile #profileCol {
+  .profile #profileCol1,
+  .profile #profileCol2,
+  .profile #profileCol3 {
     margin-right: 0px !important;
     padding-right: 0px !important;
     padding-left: 0px !important;
     font-size: 0.9rem !important;
   }
-  .profile #profileCol .ui.menu {
+  .profile #profileCol1 .ui.menu,
+  .profile #profileCol2 .ui.menu,
+  .profile #profileCol3 .ui.menu {
     font-size: 0.9rem !important;
   }
+
   .profile #profileHeader header nav ul li {
     display: contents;
     color: #313131;
@@ -408,3 +413,12 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 /* Support Page CSS */
+
+@media screen and (max-width: 1200px) {
+  .profile #profileCol2 {
+    width: 100% !important;
+  }
+  .profile #profileCol3 {
+    display: none;
+  }
+}

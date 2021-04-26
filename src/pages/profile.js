@@ -2,7 +2,7 @@ import React from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Grid, Container, Tab } from "semantic-ui-react";
 import UserDetails from "../components/profileComponents/userDetails";
-
+import Followers from "../components/followersComponents/followsMain";
 import ProfileContent from "../components/profileComponents/profileContent";
 
 export default function Profile() {
@@ -39,29 +39,16 @@ export default function Profile() {
         {/* should be profileCon */}
         <Grid id="profileMainCon">
           <Grid.Row textAlign="center" id="profileRow">
-            <Grid.Column width={16} id="profileCol">
+            <Grid.Column width={4} id="profileCol1"></Grid.Column>
+            <Grid.Column width={8} id="profileCol2">
               <Container id="profileCon">
                 <UserDetails />
-
                 <Tab panes={panes} />
               </Container>
-
-              {/* <Card centered>
-                <Card.Content>
-                  <Button
-                    as={Link}
-                    to="/u/update-profile"
-                    size="big"
-                    color="blue"
-                  >
-                    Update Profile
-                  </Button>
-                </Card.Content>
-
-                <Card.Content>
-                  <ButnLogOut />
-                </Card.Content>
-              </Card> */}
+            </Grid.Column>
+            <Grid.Column width={4} id="profileCol3">
+              {" "}
+              {/* <Followers /> */}
             </Grid.Column>
           </Grid.Row>
         </Grid>

@@ -6,6 +6,7 @@ import PageTemplate from "../studentsTemplatePage";
 import useStudent from "../../../hooks/useStudent";
 import StudentContent from "../studentContent";
 import StudentTimeline from "../studentTimeline";
+import Followers from "../../followersComponents/followsMain";
 
 const StudentsPage = (props) => {
   const { uId } = props.match.params;
@@ -28,11 +29,15 @@ const StudentsPage = (props) => {
         </Tab.Pane>
       ),
     },
+    {
+      menuItem: "Followers",
+      render: () => (
+        <Tab.Pane >
+          <Followers studentuId={uId} />
+        </Tab.Pane>
+      ),
+    },
 
-    // {
-    //   menuItem: "Work Experience",
-    //   render: () => <Tab.Pane>Tab 3 Content</Tab.Pane>,
-    // },
   ];
 
   return (
@@ -42,14 +47,18 @@ const StudentsPage = (props) => {
           <div className="profile">
             <Grid id="profileMainCon">
               <Grid.Row textAlign="center" id="profileRow">
-                <Grid.Column width={16} id="profileCol">
+                <Grid.Column width={4} id="profileCol1"></Grid.Column>
+                <Grid.Column width={8} id="profileCol2">
                   <Container id="profileCon">
                     <PageTemplate student={student}>
-                      <StudentsDetails student={student} />
+                      <StudentsDetails student={student} studentuId={uId} />
                     </PageTemplate>
-
                     <Tab panes={panes} />
                   </Container>
+                </Grid.Column>
+                <Grid.Column width={4} id="profileCol3">
+                  {" "}
+                  <Followers studentuId={uId} />
                 </Grid.Column>
               </Grid.Row>
             </Grid>
