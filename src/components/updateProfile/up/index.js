@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import app from "../../../firebase/firebase";
+import FileUploader from "../../fileUploaderProfile";
 
 import {
   Header,
@@ -36,19 +37,8 @@ export default function Up({ user }) {
             <Grid.Column width={16} id="updateProfileCol">
               <Container id="updateProfileCon">
                 <Header as="h2">Profile Settings</Header>
-
                 <Card centered>
-                  {/* <Card.Content>
-                    <Button
-                      as={Link}
-                      to="/u/update-details"
-                      size="big"
-                      color="blue"
-                    >
-                      Update Details
-                    </Button>
-                  </Card.Content> */}
-
+                  <FileUploader userId={user.uId} user={user} />
                   <Card.Content>
                     <Button
                       as={Link}
@@ -59,18 +49,22 @@ export default function Up({ user }) {
                       Update Password
                     </Button>
                   </Card.Content>
-                  <Checkbox
-                    toggle
-                    label="Allow Your Account to be Discoverable to Other Students "
-                    checked={user.publicAccount}
-                    onClick={publicAccount}
-                  />
-                  <Checkbox
-                    toggle
-                    label="Allow Your Account to be Discoverable to Employers"
-                    checked={user.allowEmployers}
-                    onClick={allowEmployers}
-                  />
+                  <Card.Content>
+                    <Checkbox
+                      toggle
+                      label="Allow Your Account to be Discoverable to Other Students "
+                      checked={user.publicAccount}
+                      onClick={publicAccount}
+                    />
+                  </Card.Content>
+                  <Card.Content>
+                    <Checkbox
+                      toggle
+                      label="Allow Your Account to be Discoverable to Employers"
+                      checked={user.allowEmployers}
+                      onClick={allowEmployers}
+                    />
+                  </Card.Content>
                   <Card.Content>
                     <Link to="/u/profile">Cancel</Link>
                   </Card.Content>

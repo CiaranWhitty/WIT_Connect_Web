@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, Input } from "semantic-ui-react";
+import { Menu } from "semantic-ui-react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiXCircle } from "react-icons/bi";
 import { Image, Icon } from "semantic-ui-react";
@@ -81,17 +81,10 @@ export default function LoggedIn() {
             <Icon name="users" size={"big"} />
           </Menu.Item>
 
-          <Menu.Item>
-            <Image
-              id="navProfileImg"
-              alt="Profile_Image"
-              as={Link}
-              to="/u/profile"
-              href="/u/profile"
-              src="https://res.cloudinary.com/a20085909/image/upload/v1617890932/profile-placeholder-genderless_w9v4r5.png"
-            />
-            {/* src on img need to pull from database */}
+          <Menu.Item as={Link} to="/u/profile">
+            <Icon name="user" size={"big"} />
           </Menu.Item>
+          
           <Menu.Item id="buttonRemove">
             <ButnLogOut />
           </Menu.Item>
