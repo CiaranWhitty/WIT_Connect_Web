@@ -14,7 +14,7 @@ const EmployersCard = ({ employer, action }) => {
               fluid
               className="card-img-tag center "
               alt={"employer_Image"}
-              src={employer.img}
+              src={employer.profileImage}
             />
           </Link>
 

@@ -4,6 +4,7 @@ import { Grid, Container, Tab } from "semantic-ui-react";
 import EmployersDetails from "../employersDetails";
 import PageTemplate from "../employersTemplatePage";
 import useEmployer from "../../../hooks/useEmployer";
+import EmployersContent from "../employersContent";
 
 const EmployersPage = (props) => {
   const { name } = props.match.params;
@@ -20,6 +21,7 @@ const EmployersPage = (props) => {
                   <Container id="profileCon">
                     <PageTemplate>
                       <EmployersDetails employer={employer} />
+                      <EmployersContent />
                       {/* Add jobs Component Here */}
                     </PageTemplate>
                   </Container>

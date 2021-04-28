@@ -14,7 +14,7 @@ const employers = ({ employer }) => {
                 <div id="profileHeader">
                   <header>
                     <div>
-                      <img alt={"employer_Image"} src={employer.img} />
+                      <img alt={"employer_Image"} src={employer.profileImage} />
 
                       <div key={employer.eid}>
                         {<h1>{employer.name}</h1> || <h1>(Name)</h1>}
