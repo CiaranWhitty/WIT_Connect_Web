@@ -1,14 +1,13 @@
 import React from "react";
-import { Segment } from "semantic-ui-react";
+import { Segment, Icon } from "semantic-ui-react";
+
 import {
-  AiFillGithub,
-  AiFillTwitterCircle,
   AiOutlineMail,
-  AiFillYoutube,
 } from "react-icons/ai";
 import "./studentsDetails.css";
 
-const student = ({ student }) => {
+const Student = ({ student }) => {
+
   return (
     <>
       {student.map((student) => (
@@ -19,13 +18,12 @@ const student = ({ student }) => {
                 <div id="profileHeader">
                   <header>
                     <div>
-                      <img
-                        alt="Profile_Image"
-                        src="https://res.cloudinary.com/a20085909/image/upload/v1617890932/profile-placeholder-genderless_w9v4r5.png"
-                      />
+                      <img alt="Profile_Image" src={student.profileImage} />
 
                       <div key={student.id}>
-                        {<h1>{student.name}</h1> || <h1>(Name)</h1>}
+                        {<h1 id="nameCap">{student.name}</h1> || (
+                          <h1>(Name)</h1>
+                        )}
                         <h5>
                           {<small>{student.course}</small> || (
                             <small>(Course)</small>
@@ -35,33 +33,6 @@ const student = ({ student }) => {
                     </div>
                     <nav>
                       <ul>
-                        {/* <li>
-                          <a
-                            href="https://www.youtube.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <AiFillYoutube />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://github.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <AiFillGithub />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://twitter.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <AiFillTwitterCircle />
-                          </a>
-                        </li> */}
                         <li>
                           <a href={`mailto:${student.userEmail}`}>
                             <AiOutlineMail />
@@ -79,4 +50,4 @@ const student = ({ student }) => {
     </>
   );
 };
-export default student;
+export default Student;

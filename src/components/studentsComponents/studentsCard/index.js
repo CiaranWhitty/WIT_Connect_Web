@@ -14,12 +14,7 @@ const StudentsCard = ({ student, action }) => {
               fluid
               className="card-img-tag center "
               alt={student.name}
-              // src={
-              //   student.studentImg ? `/u/students/${student.name}` : "/u/students"
-              // }
-              src={
-                "https://res.cloudinary.com/a20085909/image/upload/v1617890932/profile-placeholder-genderless_w9v4r5.png"
-              }
+              src={student.profileImage}
             />
           </Link>
           {/* 
@@ -29,7 +24,7 @@ const StudentsCard = ({ student, action }) => {
           "https://res.cloudinary.com/a20085909/image/upload/v1617227524/profile-placeholder-female_g7lxtq.png" 
           */}
           <Card.Description>
-            <Card.Header as={"h2"} textAlign={"center"}>
+            <Card.Header id="nameCap" as={"h2"} textAlign={"center"}>
               {student.name}
             </Card.Header>
 
@@ -44,11 +39,7 @@ const StudentsCard = ({ student, action }) => {
                 <br />
                 <b>Join Date: </b> {student.creationDate}
               </span>
-              <Divider />{" "}
-              <span>
-                {" "}
-                {student.course}
-              </span>
+              <Divider /> <span> {student.course}</span>
             </Card.Meta>
           </Card.Description>
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import app from "../../../firebase/firebase";
+import app from "../../../../firebase/firebase";
 
-import StudentsPortfolios from "../studentsPorfolios";
+import StudentsPortfoliosTimeline from "../../timeline/studentsPortfoliosTimeline";
 
-export default function StudentsPortfolioMain({ year, studentuId }) {
+export default function StudentsPortfolioTimelineMain({ year, studentuId }) {
   const [portfolioList, setPortfolioList] = useState([]);
 
   useEffect(
@@ -20,7 +20,6 @@ export default function StudentsPortfolioMain({ year, studentuId }) {
         setPortfolioList(
           portfolioList
             .filter((portfolio) => portfolio.uId === studentuId)
-            .filter((portfolio) => portfolio.year === year)
             .filter((portfolio) => portfolio.publicItem === true)
         );
       });
@@ -30,7 +29,7 @@ export default function StudentsPortfolioMain({ year, studentuId }) {
 
   return (
     <>
-      <StudentsPortfolios portfolioList={portfolioList} />
+      <StudentsPortfoliosTimeline portfolioList={portfolioList} />
     </>
   );
 }

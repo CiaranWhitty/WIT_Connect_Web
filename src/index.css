@@ -34,18 +34,25 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Rubik", sans-serif !important;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", sans-serif !important;
+  font-weight: 400;
+  margin: 10px 0;
+}
 .container-fluid {
   background-color: transparent !important;
 }
 
 .content {
   padding: 0 0 0 0;
-}
-
-h1 {
-  font-family: monospace;
 }
 
 @keyframes slide {
@@ -62,6 +69,9 @@ a {
   color: unset;
 }
 
+#nameCap {
+  text-transform: capitalize;
+}
 /* general Forms */
 
 #Forms {
@@ -133,12 +143,21 @@ a {
   margin-top: 5%;
 }
 
-/* .homePage #homePageContainer button.ui.button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
+@media only screen and (max-width: 767px) {
+  .homePage #homePageContainer {
+    padding: 0 !important;
+    margin: 30px 0px 0px 0px !important;
+    width: auto !important;
+  }
+}
+
+.homePage #headerHomePage {
+  padding: 200px 16px;
+}
+
+.homePage #iconPadding {
+  padding-right: 10px;
+}
 
 /* Home Page CSS */
 
@@ -263,15 +282,20 @@ a {
     margin-left: 1px !important;
     padding-left: 1px !important;
   }
-  .profile #profileCol {
+  .profile #profileCol1,
+  .profile #profileCol2,
+  .profile #profileCol3 {
     margin-right: 0px !important;
     padding-right: 0px !important;
     padding-left: 0px !important;
     font-size: 0.9rem !important;
   }
-  .profile #profileCol .ui.menu {
+  .profile #profileCol1 .ui.menu,
+  .profile #profileCol2 .ui.menu,
+  .profile #profileCol3 .ui.menu {
     font-size: 0.9rem !important;
   }
+
   .profile #profileHeader header nav ul li {
     display: contents;
     color: #313131;
@@ -390,3 +414,23 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* UpdateProfile Page CSS */
+
+/* Support Page CSS */
+
+.support {
+  margin: 5%;
+}
+.support h1 {
+  margin: 3%;
+  text-align: center;
+}
+/* Support Page CSS */
+
+@media screen and (max-width: 1200px) {
+  .profile #profileCol2 {
+    width: 100% !important;
+  }
+  .profile #profileCol3 {
+    display: none;
+  }
+}

@@ -5,6 +5,7 @@ import StudentsDetails from "../studentsDetails";
 import PageTemplate from "../studentsTemplatePage";
 import useStudent from "../../../hooks/useStudent";
 import StudentContent from "../studentContent";
+import StudentTimeline from "../studentTimeline";
 
 const StudentsPage = (props) => {
   const { uId } = props.match.params;
@@ -15,15 +16,17 @@ const StudentsPage = (props) => {
       menuItem: "Portfolio Items",
       render: () => (
         <Tab.Pane>
-          {" "}
-          <StudentContent studentuId={uId} />{" "}
+          <StudentContent studentuId={uId} />
         </Tab.Pane>
       ),
     },
-    { menuItem: "Timeline", render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
     {
-      menuItem: "Work Experience",
-      render: () => <Tab.Pane>Tab 3 Content</Tab.Pane>,
+      menuItem: "Timeline",
+      render: () => (
+        <Tab.Pane>
+          <StudentTimeline studentuId={uId} />
+        </Tab.Pane>
+      ),
     },
   ];
 
@@ -34,15 +37,16 @@ const StudentsPage = (props) => {
           <div className="profile">
             <Grid id="profileMainCon">
               <Grid.Row textAlign="center" id="profileRow">
-                <Grid.Column width={16} id="profileCol">
+                <Grid.Column width={4} id="profileCol1"></Grid.Column>
+                <Grid.Column width={8} id="profileCol2">
                   <Container id="profileCon">
                     <PageTemplate student={student}>
-                      <StudentsDetails student={student} />
+                      <StudentsDetails student={student} studentuId={uId} />
                     </PageTemplate>
-
                     <Tab panes={panes} />
                   </Container>
                 </Grid.Column>
+                <Grid.Column width={4} id="profileCol3"></Grid.Column>
               </Grid.Row>
             </Grid>
           </div>
