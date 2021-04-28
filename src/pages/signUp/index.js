@@ -210,7 +210,7 @@ export default function Signup() {
                       <Popup
                         id="popups3"
                         trigger={<Icon name="help circle" />}
-                        content="Your Password Must Be 8 Character or More"
+                        content="Your Password Must Be 6 Character or More"
                         on="click"
                         hideOnScroll
                       />
