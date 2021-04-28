@@ -93,9 +93,14 @@ export default function Signup() {
       text: "BSc (Hons) in Software Systems Development",
     },
     {
-      key: "NSSD",
-      value: "NOT BSc (Hons) in Software Systems Development",
-      text: "NOT BSc (Hons) in Software Systems Development",
+      key: "SCP",
+      value: "BSc (Hons) in Social Care Practice",
+      text: "BSc (Hons) in Social Care Practice",
+    },
+    {
+      key: "Other",
+      value: "Other",
+      text: "Other",
     },
   ];
 
