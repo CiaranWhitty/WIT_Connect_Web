@@ -10,6 +10,7 @@ import {
   Divider,
   Checkbox,
 } from "semantic-ui-react";
+import PortfolioEditForm from "../portfolioEditForm";
 
 export default function Portfolio({ portfolio }) {
   const deletePortfolio = () => {
@@ -25,6 +26,8 @@ export default function Portfolio({ portfolio }) {
       publicItem: !portfolio.publicItem,
     });
   };
+
+
 
   return (
     <>
@@ -55,9 +58,9 @@ export default function Portfolio({ portfolio }) {
                   >
                     <Icon name="delete" size={"large"} />
                   </Button>
-                  <Button id="butnEdit" floated="right">
-                    <Icon name="edit" size={"large"} />
-                  </Button>
+
+                  <PortfolioEditForm portfolio={portfolio} />
+
                   <Checkbox
                     label="Make public"
                     checked={portfolio.publicItem}
