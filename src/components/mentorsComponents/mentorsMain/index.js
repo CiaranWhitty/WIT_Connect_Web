@@ -51,14 +51,16 @@ export default function MentorsMain() {
           Number Of Mentors: {displayedMentors.length}
         </Label> */}
         <h4 id="witP2PLink">
-          You can find out more information{" "}
-          <a
-            href="https://www.wit.ie/current_students/student_life_and_learning/p2p-peer-mentoring"
-            target="_blank"
-            rel="noreferrer"
-          >
-            here
-          </a>
+          You can find out more information about mentors programme{" "}
+          <b>
+            <a
+              href="https://www.wit.ie/current_students/student_life_and_learning/p2p-peer-mentoring"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Here
+            </a>
+          </b>
         </h4>
       </Segment>
 
