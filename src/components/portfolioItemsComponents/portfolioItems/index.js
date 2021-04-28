@@ -28,10 +28,7 @@ export default function portfolioItem({ portfolioList }) {
                     </Item.Description>
 
                     <Item.Extra>
-                      {portfolio.files}
-                      <h4>*File*</h4>
-                      <h4>*File*</h4>
-                      <h4>*File*</h4>
+                      <a href={portfolio.portfolioFile}>Download File</a>
                     </Item.Extra>
 
                     <Item.Description>

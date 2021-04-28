@@ -35,7 +35,7 @@ export default function Portfolio({ portfolio }) {
             <Item>
               <Item.Image src={portfolio.portfolioImage} />
               <Item.Content>
-                <Item.Header as="a">Title: {portfolio.title}</Item.Header>
+                <Item.Header>Title: {portfolio.title}</Item.Header>
 
                 <Item.Description id="studentsPortfolioDesc">
                   {" "}
@@ -43,10 +43,7 @@ export default function Portfolio({ portfolio }) {
                 </Item.Description>
 
                 <Item.Extra>
-                  {portfolio.files}
-                  <h4>*File*</h4>
-                  <h4>*File*</h4>
-                  <h4>*File*</h4>
+                  <a href={portfolio.portfolioFile}>Download File</a>
                 </Item.Extra>
 
                 <Item.Extra>

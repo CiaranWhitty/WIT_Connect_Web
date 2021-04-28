@@ -45,7 +45,7 @@ export default function FileUploader({ user, userId }) {
       <Card.Content>
         <div className="fileUploader">
           <img id="picture" alt="Profile_Image" src={user.profileImage} />
-          <input type="file" id="files" name="Files[]" multiple />
+          <input type="file" id="files" name="Files[]" />
           <progress value="0" max="100" id="uploader">
             0%
           </progress>

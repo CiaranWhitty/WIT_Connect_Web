@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Item, Card } from "semantic-ui-react";
+import './studentsPortfoliosCard.css'
 
 export default function StudentsPortfoliosCard({ portfolio }) {
   return (
@@ -10,7 +11,7 @@ export default function StudentsPortfoliosCard({ portfolio }) {
           
             <Item>
               <Link to={`/u/students/${portfolio.uId}/${portfolio.id}/`}>
-                <Item.Image src={portfolio.portfolioImage} />
+                <Item.Image id="portfolioImage" src={portfolio.portfolioImage} />
               </Link>
               <Link to={`/u/students/${portfolio.uId}/${portfolio.id}/`}>
                 <Item.Header>{portfolio.title}</Item.Header>

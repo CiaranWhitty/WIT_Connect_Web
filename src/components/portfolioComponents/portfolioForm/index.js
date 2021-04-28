@@ -9,6 +9,7 @@ import {
   Grid,
   Popup,
   Icon,
+  Divider,
 } from "semantic-ui-react";
 
 import "./style.css";
@@ -31,8 +32,12 @@ export default function Portfolios() {
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [year, setYear] = useState();
+  const [year, setYear] = useState("");
   const [publicItem, setpublicItem] = useState(false);
+  const [portfolioImage, setPortfolioImage] = useState(
+    "https://res.cloudinary.com/a20085909/image/upload/v1570916144/yifz1tahn11luai14fis.png"
+  );
+  const [portfolioFile, setPortfolioFile] = useState("");
 
   const now = new Date();
   const creationDate = date.format(now, "ddd, MMM DD YYYY");
@@ -45,12 +50,72 @@ export default function Portfolios() {
     setDescription(e.target.value);
   };
 
+  const handleOnChangePI = (e) => {
+    // Uploading image
+    const storageRef = app.storage().ref(`Users/PortfolioItems/Images`);
+
+    const uploader = document.getElementById("uploaderImage");
+    const file = document.getElementById("filesI").files[0];
+
+    const thisRef = storageRef.child(file.name);
+    const task = thisRef.put(file);
+
+    task.on(
+      "state_Changed",
+      function progress(snapshot) {
+        var percentage =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        uploader.value = percentage;
+      },
+
+      function error(err) {},
+      function complete() {
+        storageRef
+          .child(file.name)
+          .getDownloadURL()
+          .then((url) => {
+            setPortfolioImage(url);
+          });
+      }
+    );
+    // Uploading image
+  };
+
+  const handleOnChangePF = (e) => {
+    // Uploading file
+    const storageRef = app.storage().ref(`Users/PortfolioItems/Files`);
+
+    const uploader = document.getElementById("uploader");
+    const file = document.getElementById("files").files[0];
+
+    const thisRef = storageRef.child(file.name);
+    const task = thisRef.put(file);
+
+    task.on(
+      "state_Changed",
+      function progress(snapshot) {
+        var percentage =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        uploader.value = percentage;
+      },
+
+      function error(err) {},
+      function complete() {
+        storageRef
+          .child(file.name)
+          .getDownloadURL()
+          .then((url) => {
+            setPortfolioFile(url);
+          });
+      }
+    );
+    // Uploading file
+  };
+
   const createPortfolio = () => {
     const portfolioRef = app.database().ref("Portfolio");
 
     const uId = userEmail.substring(0, 8);
-    const portfolioImage =
-      "https://res.cloudinary.com/a20085909/image/upload/v1570916144/yifz1tahn11luai14fis.png";
 
     setpublicItem(false);
 
@@ -59,6 +124,7 @@ export default function Portfolios() {
       userEmail,
       title,
       portfolioImage,
+      portfolioFile,
       description,
       creationDate,
       year,
@@ -113,15 +179,37 @@ export default function Portfolios() {
             onChange={handleOnChangeTitle}
             required
           />
-
           <TextArea
             id="formTextArea"
             placeholder="Describe the Item..."
             onChange={handleOnChangeDescribe}
             style={{ minHeight: 100 }}
             required
-          />
-
+          />{" "}
+          <Divider />
+          <h2>Portfilio Image:</h2>
+          <input
+            type="file"
+            id="filesI"
+            name="files[]"
+            onChange={handleOnChangePI}
+            accept="image/*"
+          />{" "}
+          <progress value="0" max="100" id="uploaderImage">
+            0%
+          </progress>
+          <Divider />
+          <h2>Portfilio File:</h2>
+          <input
+            type="file"
+            id="files"
+            name="Files[]"
+            onChange={handleOnChangePF}
+          />{" "}
+          <progress value="0" max="100" id="uploader">
+            0%
+          </progress>
+          <Divider />
           <Select
             id="formSelect"
             placeholder="Select your Year"
