@@ -425,6 +425,10 @@ body::-webkit-scrollbar-thumb {
 }
 /* Support Page CSS */
 
+#quickFix {
+  width: 100% !important;
+}
+
 @media screen and (max-width: 1200px) {
   .profile #profileCol2 {
     width: 100% !important;

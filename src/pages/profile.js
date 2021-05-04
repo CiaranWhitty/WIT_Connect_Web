@@ -40,7 +40,7 @@ export default function Profile() {
         <Grid id="profileMainCon">
           <Grid.Row textAlign="center" id="profileRow">
             <Grid.Column width={4} id="profileCol1"></Grid.Column>
-            <Grid.Column width={8} id="profileCol2">
+            <Grid.Column width={8} id="profileCol2" id="quickFix">
               <Container id="profileCon">
                 <UserDetails />
                 <Tab panes={panes} />
